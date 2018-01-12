@@ -1,0 +1,13 @@
+input[type="text"] {
+    border-radius: 50%;
+    color: $color;
+    font-style: italic;
+    display: block;
+    padding: 5px 12px;
+    margin: 0 0 $layout_indent;
+    transition: .2s ease-in border-color;
+
+    &:focus {
+        border-color: rgba(120, 120, 92, .8);
+    }
+}

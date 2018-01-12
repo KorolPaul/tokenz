@@ -1,0 +1,34 @@
+%button {
+    box-sizing: border-box;
+    background: linear-gradient(to right, #d23266, #e76748);
+    border: none;
+    border-radius: 35px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font: 800 18px $font-family;
+    line-height: 70px;
+    height: 70px;
+    min-width: 200px;
+    padding: 0 $layout_indent;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+    transition: .2s ease opacity;
+
+    &:hover {
+        opacity: .7;
+    }
+    &:active {
+        opacity: .7;
+    }
+}
+
+.button,
+.fw-btn,
+button, 
+input[type="button"],  {
+    @extend %button;
+}

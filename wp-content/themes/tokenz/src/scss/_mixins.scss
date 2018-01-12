@@ -1,0 +1,47 @@
+@mixin inline-block-wrapper {
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -0.31em;
+    word-spacing: -0.43em;
+}
+@mixin inline-block-optimized($font-size: $font-size, $line-height: normal) {
+    font-size: $font-size;
+    letter-spacing: normal;
+    line-height: $line-height;
+    word-spacing: normal;
+}
+@mixin invisible-text {
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+@mixin cutted-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@mixin small-screen() {
+    @media all and (max-width: $small-screen-breakpoint) { @content; }
+}
+@mixin media($resolution) {
+    @media all and (max-width: $resolution) { @content; }
+}
+@mixin placeholder-color($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &::-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder
+    {
+        color: $color;
+    }
+}
+@mixin text-shadow($color) {
+    text-shadow: 0 0 1px $color,
+                 1px 0 7px $color,
+                 0 1px 7px $color,
+                 -1px 0 7px $color,
+                 0 -1px 7px $color;
+}
