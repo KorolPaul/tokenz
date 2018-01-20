@@ -1,8 +1,9 @@
 "use strict"
 
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer');
+const gulp = require('gulp'),
+      sass = require('gulp-sass'),
+      autoprefixer = require('gulp-autoprefixer'),
+      imagemin = require('gulp-imagemin');;
 
 
 gulp.task('sass', function () {
@@ -27,6 +28,12 @@ gulp.task('js', function () {
         .pipe(gulp.dest('./Content'))
         .pipe(connect.reload());
 });
+
+gulp.task('img', () =>
+	gulp.src('src/img/*')
+		.pipe(imagemin())
+        .pipe(gulp.dest('images'))
+);
 
 
 gulp.task('watch', function () {

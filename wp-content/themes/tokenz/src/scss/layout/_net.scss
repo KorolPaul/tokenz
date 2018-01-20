@@ -1,0 +1,21 @@
+.net {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    &_left {
+        position: absolute;
+        top: 0;
+        left: -400px;
+        //transition: .3s ease-in-out transform;
+        transform-origin: 50% 0%;
+    }
+    &_right {
+        position: absolute;
+        top: 0;
+        right: -400px;
+        //transition: .3s ease-in-out transform;
+        transform-origin: 50% 0%;
+    }
+}

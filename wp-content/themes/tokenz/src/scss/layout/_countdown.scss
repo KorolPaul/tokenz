@@ -1,0 +1,35 @@
+.countdown {
+    background: #fff;
+    border-radius: 10px;
+    color: $color;
+    text-align: center;
+
+    .jedi-dashboard {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        width: 80%;
+    }
+    .jedi-dash {
+        background: none;
+        height: auto;
+        width: auto;
+        padding: 0;
+
+        &_title {
+            text-transform: uppercase;
+            transform: translate(-50%, 0);
+            top: 100%;
+            left: 50%;
+            width: auto;
+
+            code {
+                font: 16px $font-family__heading;
+            }
+        }
+    }
+    .jedi-digit {
+        font: bold 96px $font-family__heading;
+        width: 70px;
+    }
+}

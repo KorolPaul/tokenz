@@ -1,4 +1,26 @@
 body {
     background: $bg_color;
-    font-family: $font-family;
+    font: $font-size $font-family;
+}
+
+.bg-dark {
+    background: $dark_gradient;
+    color: $light_color;
+    text-align: center;
+}
+.bg-light {
+    background: $light_gradient;
+    color: $color;    
+    position: relative;
+
+    &:before {
+        content: '';
+        background: url(#{$img-path}/roadmap.png) no-repeat bottom center;
+        background-size: cover;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+    }
 }

@@ -25,6 +25,9 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tokenz' ); ?></a>
 
 	<header id="masthead" class="header">
+		<?php 
+			get_template_part( 'template-parts/content', 'social' );
+		?>
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -42,15 +45,24 @@
 			endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="menu">
+		<nav id="site-navigation" class="menu-container">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tokenz' ); ?></button>
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
+					'menu_class'     => 'menu',
+
 				) );
 			?>
 		</nav><!-- #site-navigation -->
+		<div class="currencies">
+			<?php echo get_option('logo'); ?>
+		</div>
+		<div class="net">
+			<img class="net_left" src="<?php echo get_site_url(). "/wp-content/themes/tokenz/src/img/net-left.svg" ?>" alt=""/>
+			<img class="net_right" src="<?php echo get_site_url(). "/wp-content/themes/tokenz/src/img/net-right.svg" ?>" alt=""/>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

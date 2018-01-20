@@ -1,11 +1,20 @@
+$img-path: "src/img";
+
 /*Colors*/
-$bg_color: #241c38;
+$bg_color: #1C1A28;
+$dark_gradient: linear-gradient(to bottom, #1C1A28, #2A2256);
+$light_gradient: linear-gradient(to bottom, #FAF9F8, #DEDFE3);
 
 /*Typography*/
 $color: #000;
+$light_color: #fff;
+$bright_color: #feffbf;
 
 $font-family: 'Open Sans', sans-serif;
 $font-family__heading: 'Montserrat', sans-serif;
+
+$font-size: 18px;
+$font-size__small: 14px;
 
 /*Indents*/
 $layout_indent: 20px;

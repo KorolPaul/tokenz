@@ -442,32 +442,59 @@ template {
 }
 
 body {
-  background: #241c38;
-  font-family: "Open Sans", sans-serif;
+  background: #1C1A28;
+  font: 18px "Open Sans", sans-serif;
+}
+
+.bg-dark {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1C1A28), to(#2A2256));
+  background: linear-gradient(to bottom, #1C1A28, #2A2256);
+  color: #fff;
+  text-align: center;
+}
+
+.bg-light {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FAF9F8), to(#DEDFE3));
+  background: linear-gradient(to bottom, #FAF9F8, #DEDFE3);
+  color: #000;
+  position: relative;
+}
+
+.bg-light:before {
+  content: '';
+  background: url(src/img/roadmap.png) no-repeat bottom center;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
 }
 
 /*layout*/
 h1,
 .heading-1 {
-  font: bold 40px "Montserrat", sans-serif;
+  color: #feffbf;
+  font: bold 120px "Montserrat", sans-serif;
   margin: 0 0 25px;
+  letter-spacing: .25em;
 }
 
 h2,
 .heading-2 {
-  font: bold 30px "Montserrat", sans-serif;
+  font: bold 60px "Montserrat", sans-serif;
   margin: 0 0 20px;
 }
 
 h3,
 .heading-3 {
-  font: bold 20px "Montserrat", sans-serif;
+  font: bold 36px "Montserrat", sans-serif;
   margin: 0 0 20px;
 }
 
 h4,
 .heading-4 {
-  font: bold 18px "Montserrat", sans-serif;
+  font: bold 24px "Montserrat", sans-serif;
   margin: 35px 0 20px;
 }
 
@@ -496,7 +523,26 @@ h6,
   justify-content: space-between;
 }
 
-.header {
+.footer {
+  background: #2c2836;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer_section {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.footer_title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -504,47 +550,272 @@ h6,
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-item {
+  list-style: none;
+}
+
+.menu-item a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0 25px;
+  text-decoration: none;
+  -webkit-transition: .2s ease-in-out color;
+  transition: .2s ease-in-out color;
+}
+
+.menu-item a:hover {
+  color: #feffbf;
+}
+
+.social {
+  position: relative;
+  z-index: 1;
+}
+
+.social_link {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-position: center center;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 10px 0 0;
+  vertical-align: middle;
+  opacity: 1;
+  -webkit-transition: .2s ease-in-out opacity;
+  transition: .2s ease-in-out opacity;
+}
+
+.social_link:hover {
+  opacity: .6;
+}
+
+.social_link__instagram {
+  background-image: url(src/img/icons/instagram.svg);
+}
+
+.social_link__twitter {
+  background-image: url(src/img/icons/twitter.svg);
+}
+
+.social_link__facebook {
+  background-image: url(src/img/icons/facebook.svg);
+}
+
+.social_link__skype {
+  background-image: url(src/img/icons/skype.svg);
+}
+
+.social_link__slack {
+  background-image: url(src/img/icons/slack.svg);
+}
+
+.social_link__linkedin {
+  background-image: url(src/img/icons/linkedin.svg);
+}
+
+.social_link__medium {
+  background-image: url(src/img/icons/medium.svg);
+}
+
+.social_link__snapchat {
+  background-image: url(src/img/icons/snapchat.svg);
+}
+
+.social_link__youtube {
+  background-image: url(src/img/icons/youtube.svg);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.net {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.net_left {
+  position: absolute;
+  top: 0;
+  left: -400px;
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+}
+
+.net_right {
+  position: absolute;
+  top: 0;
+  right: -400px;
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+}
+
+.press {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-.header {
+.press img {
+  margin: 0 0 50px;
+}
+
+.countdown {
+  background: #fff;
+  border-radius: 10px;
+  color: #000;
+  text-align: center;
+}
+
+.countdown .jedi-dashboard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin: auto;
+  width: 80%;
+}
+
+.countdown .jedi-dash {
+  background: none;
+  height: auto;
+  width: auto;
+  padding: 0;
+}
+
+.countdown .jedi-dash_title {
+  text-transform: uppercase;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  top: 100%;
+  left: 50%;
+  width: auto;
+}
+
+.countdown .jedi-dash_title code {
+  font: 16px "Montserrat", sans-serif;
+}
+
+.countdown .jedi-digit {
+  font: bold 96px "Montserrat", sans-serif;
+  width: 70px;
+}
+
+.team-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.team {
+  position: relative;
+  width: 45%;
+}
+
+.team__compact {
+  text-align: center;
+  width: 22%;
+}
+
+.team_image {
+  border-radius: 50%;
+}
+
+.team_social {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-position: center center;
+  display: inline-block;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  height: 20px;
+  width: 20px;
+  margin: 0 10px 0 0;
+  vertical-align: middle;
+  opacity: 1;
+  -webkit-transition: .2s ease-in-out opacity;
+  transition: .2s ease-in-out opacity;
+}
+
+.team_social:hover {
+  opacity: .6;
+}
+
+.team_social__twitter {
+  background-image: url(src/img/icons/twitter.svg);
+}
+
+.team_social__facebook {
+  background-image: url(src/img/icons/facebook.svg);
+}
+
+.team_social__linkedin {
+  background-image: url(src/img/icons/linkedin.svg);
+}
+
+.team_social__medium {
+  background-image: url(src/img/icons/medium.svg);
+}
+
+.team_job {
+  background: #f2cd3c;
+  border-radius: 5px;
+  padding: 3px 8px;
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 /*Form elements*/
 .button,
 .fw-btn,
 button,
-input[type="button"] {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+input[type="button"], .es_submit_button[type="button"] {
   background: -webkit-gradient(linear, left top, right top, from(#d23266), to(#e76748));
   background: linear-gradient(to right, #d23266, #e76748);
+  color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   border: none;
   border-radius: 35px;
-  color: #fff;
   cursor: pointer;
   display: inline-block;
   font: 800 18px "Open Sans", sans-serif;
   line-height: 70px;
   height: 70px;
   min-width: 200px;
-  padding: 0 20px;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
   position: relative;
+  padding: 0 20px;
   overflow: hidden;
   -webkit-transition: .2s ease opacity;
   transition: .2s ease opacity;
@@ -553,24 +824,24 @@ input[type="button"] {
 .button:hover,
 .fw-btn:hover,
 button:hover,
-input[type="button"]:hover {
+input[type="button"]:hover, .es_submit_button[type="button"]:hover {
   opacity: .7;
 }
 
 .button:active,
 .fw-btn:active,
 button:active,
-input[type="button"]:active {
+input[type="button"]:active, .es_submit_button[type="button"]:active {
   opacity: .7;
 }
 
 input[type="text"] {
-  border-radius: 50%;
-  color: #000;
-  font-style: italic;
-  display: block;
-  padding: 5px 12px;
-  margin: 0 0 20px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid currentColor;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 15px;
   -webkit-transition: .2s ease-in border-color;
   transition: .2s ease-in border-color;
 }
@@ -581,13 +852,13 @@ input[type="text"]:focus {
 
 /*Plugins*/
 /* Small menu. */
-.menu-toggle,
+.menu_toggle,
 .main-navigation.toggled ul {
   display: block;
 }
 
 @media screen and (min-width: 37.5em) {
-  .menu-toggle {
+  .menu_toggle {
     display: none;
   }
   .main-navigation ul {
@@ -875,4 +1146,39 @@ object {
 
 .gallery-caption {
   display: block;
+}
+
+.es_lablebox {
+  display: none;
+}
+
+.es_shortcode_form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.es_msg {
+  color: #fff;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.es_button {
+  padding: 0;
+  margin: 0 0 0 -30px;
+}
+
+.es_submit_button[type="button"] {
+  background: #fff;
+  color: #000;
+  height: 42px;
+  line-height: 42px;
+  min-width: 135px;
+}
+
+.es_textbox_class {
+  padding-right: 30px;
 }

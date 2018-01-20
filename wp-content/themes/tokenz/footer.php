@@ -13,19 +13,17 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'tokenz' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'tokenz' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'tokenz' ), 'tokenz', '<a href="http://underscores.me/">Underscores.me</a>' );
-			?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<footer id="colophon" class="footer">
+		<div class="footer_section">
+			<p class="footer_title">Subscribe for newsletter:</p>
+			<?php es_subbox($namefield = "NO", $desc = "", $group = "Public"); ?>
+			<?php echo('<p>' . get_option('copyright') . '</p>') ?>
+		</div>
+		<div class="footer_section">
+			<p class="footer_title">Find us on:</p>
+			<?php get_template_part( 'template-parts/content', 'social' ) ?>
+		</div>
+	</footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

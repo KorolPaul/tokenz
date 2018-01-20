@@ -1,0 +1,51 @@
+.team-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.team {
+    position: relative;
+    width: 45%;
+
+    &__compact {
+        text-align: center;
+        width: 22%;
+    }
+
+    &_image {
+        border-radius: 50%;
+    }
+    &_social {
+        @include invisible-text;
+        background-position: center center;
+        display: inline-block;
+        filter: grayscale(1);
+        height: 20px;
+        width: 20px;
+        margin: 0 $layout_indent/2 0 0;
+        vertical-align: middle;
+        opacity: 1;
+        transition: .2s ease-in-out opacity;
+
+        &:hover {
+            opacity: .6;
+        }
+
+        $social_networks: twitter, facebook, linkedin, medium;
+        @each $s in $social_networks {
+            &__#{$s} {
+                background-image: url(#{$img-path}/icons/#{$s}.svg);
+            }
+        }
+    }
+    &_job {
+        background: #f2cd3c;
+        border-radius: 5px;
+        padding: 3px 8px;
+        position: absolute;
+        top: 180px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

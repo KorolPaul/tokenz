@@ -1,0 +1,30 @@
+.es {
+    &_lablebox {
+        display: none;
+    }
+    &_shortcode_form {
+        position: relative;
+        display: flex;
+    }
+    &_msg {
+        color: $light_color;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    &_button {
+        padding: 0;
+        margin: 0 0 0 -30px;
+    }
+    &_submit_button[type="button"] {
+        @extend %button;
+        background: $light_color;
+        color: $color;
+        height: 42px;
+        line-height: 42px;
+        min-width: 135px;
+    }
+    &_textbox_class {
+        padding-right: 30px;
+    }
+}
