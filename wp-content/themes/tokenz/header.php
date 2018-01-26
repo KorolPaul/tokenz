@@ -21,6 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tokenz' ); ?></a>
 
@@ -28,22 +29,6 @@
 		<?php 
 			get_template_part( 'template-parts/content', 'social' );
 		?>
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="menu-container">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tokenz' ); ?></button>
@@ -57,12 +42,15 @@
 			?>
 		</nav><!-- #site-navigation -->
 		<div class="currencies">
-			<?php echo get_option('logo'); ?>
+			<img src="<?php echo get_option('currencies_icons'); ?>" alt="" />
 		</div>
-		<div class="net">
-			<img class="net_left" src="<?php echo get_site_url(). "/wp-content/themes/tokenz/src/img/net-left.svg" ?>" alt=""/>
-			<img class="net_right" src="<?php echo get_site_url(). "/wp-content/themes/tokenz/src/img/net-right.svg" ?>" alt=""/>
+		<div class="login">
+			<?php if (is_user_logged_in()) : ?>
+				<a class="login_button" href="<?php echo wp_logout_url(get_permalink()); ?>">Logout</a>
+			<?php else : ?>
+				<a class="login_button" href="<?php echo wp_login_url(get_permalink()); ?>">Investor Login</a>
+			<?php endif;?>
 		</div>
 	</header><!-- #masthead -->
-
+	<div class="net"></div>
 	<div id="content" class="site-content">

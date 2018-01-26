@@ -1,9 +1,24 @@
-.press {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+$press_indent: 50px;
 
+.press {
+    text-align: center;
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: -$press_indent;
+    }
+
+    h3 {
+        margin:  0 0 $press_indent;        
+        width: 100%;
+    }
     img {
-        margin:  0 0 50px;
+        margin:  0 0 $press_indent;
+        transition: .2s ease-in-out filter;
+
+        &:hover {
+            filter: brightness(2);
+        }
     }
 }

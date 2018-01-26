@@ -7,5 +7,10 @@ $options = array(
 		'label' => __('Custom class', 'fw'),
 		'desc'  => __('Cusom CSS class fot column', 'fw'),
 		'type'  => 'text',
+	),
+	'anchor' => array(
+		'label' => __('Anchor', 'fw'),
+		'desc'  => __('Anchor for menu items', 'fw'),
+		'type'  => 'text',
 	)
 );

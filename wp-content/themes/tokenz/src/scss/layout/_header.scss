@@ -1,5 +1,7 @@
 .header {
+    @include layout;
     display: flex;
+    height: 145px;
     flex-direction: row;
     justify-content: space-between;
 }

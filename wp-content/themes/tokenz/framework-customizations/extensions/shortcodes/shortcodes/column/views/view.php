@@ -7,6 +7,10 @@ if ( ! empty( $atts['custom_class'] ) ) {
 	$column_extra_classes .= ' ' . $atts['custom_class'];
 }
 ?>
+
+<?php if ( ! empty( $atts['anchor'] ) ) { ?>
+	<a name="<?php echo $atts['anchor'] ?>" class="anchor"></a>
+<?php } ?>
 <div class="<?php echo esc_attr($class) . $column_extra_classes; ?>">
 	<?php echo do_shortcode($content); ?>
 </div>

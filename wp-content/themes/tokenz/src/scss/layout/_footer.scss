@@ -1,13 +1,19 @@
 .footer {
-    background: #2c2836;
     color: $light_color;
-    display: flex;
+    padding: 60px 0;
 
+    &_content {
+        @include layout;
+        @include tablet {
+            display: flex;
+        }
+    }
     &_section {
         flex-grow: 1;
     }
     &_title {
         font-size: 18px;
         font-weight: bold;
+        margin: 0 0 15px;
     }
 }

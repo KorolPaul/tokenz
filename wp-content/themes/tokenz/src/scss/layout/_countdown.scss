@@ -3,33 +3,64 @@
     border-radius: 10px;
     color: $color;
     text-align: center;
+    padding: 45px;
+    max-width: 820px;
+    margin: 0 $layout_indent /2 ;
+    @include tablet {
+        margin: auto;
+    }
+
+    h3, 
+    p {
+        max-width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .jedi-dashboard {
         display: flex;
         justify-content: space-between;
-        margin: auto;
-        width: 80%;
+        margin: 0 auto 90px;
+        height: auto;
+        width: 100%;
+        @include tablet {
+            height: 100px;
+            width: 90%;
+        }
     }
     .jedi-dash {
         background: none;
-        height: auto;
+        color: #000;
         width: auto;
         padding: 0;
+        @include tablet {
+            height: auto;
+        }
 
         &_title {
             text-transform: uppercase;
-            transform: translate(-50%, 0);
-            top: 100%;
+            transform: translate(-50%, 30px);
+            top: 50%;
             left: 50%;
             width: auto;
+            @include tablet {
+                top: 100%;
+            }
 
             code {
-                font: 16px $font-family__heading;
+                font: 12px $font-family__heading;
+                @include tablet {
+                    font-size: 16px;
+                }
             }
         }
     }
     .jedi-digit {
-        font: bold 96px $font-family__heading;
-        width: 70px;
+        font: bold 40px $font-family__heading;
+        width: 28px;
+        @include tablet {
+            font-size: 96px;
+            width: 70px;
+        }
     }
 }

@@ -1,6 +1,17 @@
 body {
     background: $bg_color;
+    color: $light_color;
     font: $font-size $font-family;
+    overflow: hidden;
+}
+
+a {
+    color: #7f7fff;
+    transition: .2s ease-in-out color;
+
+    &:hover {
+        color: #4b4bdb;
+    }
 }
 
 .bg-dark {
@@ -12,15 +23,34 @@ body {
     background: $light_gradient;
     color: $color;    
     position: relative;
+    padding-top: 145px;
 
     &:before {
         content: '';
         background: url(#{$img-path}/roadmap.png) no-repeat bottom center;
-        background-size: cover;
+        background-size: 100% auto;
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
         height: 100%;
     }
+}
+
+.anchor {
+    position: relative;
+    bottom: 20px;
+}
+.site {
+    perspective: 1px;
+	transform-style: preserve-3d;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    
+}
+
+.noindent {
+    margin-bottom: -145px;
 }

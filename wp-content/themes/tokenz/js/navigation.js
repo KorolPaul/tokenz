@@ -103,12 +103,4 @@
 			}
 		}
 	}( container ) );
-	
-	document.querySelector('.site').addEventListener('mousemove', (e) => {
-		var rotate = (window.innerWidth / 2 - e.clientX) / 50,
-			translate = rotate * 3;
-
-		document.querySelector('.net_left').style.transform = 'rotateY(' + rotate + 'deg) translateX(' + translate + 'px)';
-		document.querySelector('.net_right').style.transform = 'rotateY(' + rotate + 'deg) translateX(' + translate + 'px)';
-	});
 } )();

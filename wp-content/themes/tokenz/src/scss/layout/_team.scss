@@ -1,20 +1,65 @@
 .team-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    @include block-heading;
+    max-width: 940px;
+    margin: 0 auto -25px;
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 
 .team {
     position: relative;
-    width: 45%;
-
+    margin: 40px 0;
+    text-align: center;
+    @include tablet {
+        text-align: inherit;
+        width: 48%;
+    }
+    
     &__compact {
         text-align: center;
-        width: 22%;
+        @include tablet {
+            width: 22%;
+        }
     }
 
+    &_header {
+        @include tablet {
+            display: flex;
+        }
+
+        .team__compact & {
+            display: block;
+        }
+    }
+    &_image-holder {
+        flex-shrink: 0;
+        margin: 0 0 25px 0;
+        text-align: center;
+        @include tablet {
+            width: 150px;
+            margin-right: 32px;
+        }
+
+        .team__compact & {
+            margin: 0 auto 35px;
+        }
+    }
     &_image {
         border-radius: 50%;
+        height: 150px;
+        width: 150px;
+    }
+    &_name {
+        line-height: 1;
+
+        .team__compact & {
+            h3 {
+                font-size: 24px;
+            }
+        }
     }
     &_social {
         @include invisible-text;
@@ -40,12 +85,21 @@
         }
     }
     &_job {
-        background: #f2cd3c;
-        border-radius: 5px;
-        padding: 3px 8px;
-        position: absolute;
-        top: 180px;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        font-size: $font-size__small;
+
+        .team__compact & {
+            background: #f2cd3c;
+            border-radius: 5px;
+            padding: 3px 8px;
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &_text {
+        font-size: $font-size__small;
+        font-weight: 300;
+        line-height: 1.7;
     }
 }

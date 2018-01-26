@@ -16,13 +16,13 @@
     position: relative;
     padding: 0 $layout_indent;        
     overflow: hidden;
-    transition: .2s ease opacity;
+    transition: .2s ease-in-out filter;
 
     &:hover {
-        opacity: .7;
+        filter: contrast(1.4);
     }
     &:active {
-        opacity: .7;
+
     }
 }
 
@@ -31,4 +31,19 @@
 button, 
 input[type="button"],  {
     @extend %button;
+}
+.fw-btn-yellow {
+    background: linear-gradient(to right, #e86c49, #ffe140);
+    color: #221931;
+}
+.fw-btn-white {
+    background: #fff;
+    color: #292154;
+    transition: .2s ease-in-out background,
+                .2s ease-in-out color;
+
+    &:hover {
+        background: #292154;
+        color: #fff;
+    }
 }

@@ -14,14 +14,16 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="footer">
-		<div class="footer_section">
-			<p class="footer_title">Subscribe for newsletter:</p>
-			<?php es_subbox($namefield = "NO", $desc = "", $group = "Public"); ?>
-			<?php echo('<p>' . get_option('copyright') . '</p>') ?>
-		</div>
-		<div class="footer_section">
-			<p class="footer_title">Find us on:</p>
-			<?php get_template_part( 'template-parts/content', 'social' ) ?>
+		<div class="footer_content">
+			<div class="footer_section">
+				<p class="footer_title">Subscribe for newsletter:</p>
+				<?php es_subbox($namefield = "NO", $desc = "", $group = "Public"); ?>
+				<?php dynamic_sidebar( 'sidebar-2' ); ?>
+			</div>
+			<div class="footer_section">
+				<p class="footer_title">Find us on:</p>
+				<?php get_template_part( 'template-parts/content', 'social' ) ?>
+			</div>
 		</div>
 	</footer>
 </div><!-- #page -->

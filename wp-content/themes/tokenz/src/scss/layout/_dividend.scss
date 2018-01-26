@@ -1,0 +1,129 @@
+.dividend {
+    border-radius: 20px;
+    padding: 60px 0;
+    text-align: center;
+    @include tablet {
+        border: 1px solid #3e3958;
+        padding: 60px 13%;
+    }
+    
+    p {
+        line-height: 2;
+    }
+    &_invest-sum {
+        @extend %heading-3;
+        color:$extra-bright_color; 
+    }
+    &_data {
+        position: relative;
+        text-align: left;
+        @include tablet {
+            padding: 180px 0 0;
+        }
+    }
+    &_range {
+        @include tablet {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 33%;
+        }
+    }
+    &_legend {
+        @include tablet {
+            position: absolute;
+            top: 0;
+            left: 33%;
+            width: 33%;
+        }
+    }
+    &_legend-icon {
+        background: #aaaab3;
+        display: inline-block;
+        height: 12px;
+        width: 20px;
+    }
+    &_legend-description {
+        color: #aaaab3;
+        font-size: $font-size__small;
+    }
+    &_output {
+        @include tablet {
+            display: flex;
+        }
+    }
+    &_amounts {
+        flex-grow: 1;
+        margin: 0 0 40px;
+        @include tablet {
+            margin: 0;
+        }
+        
+        table {
+            margin: auto;
+            @include tablet {
+                margin: 0;
+            }
+        }
+        td {
+            &:nth-child(1) {
+                font-weight: bold;
+                @include tablet {
+                    min-width: 100px;
+                    text-align: right;
+                }
+            }
+            &:nth-child(2) {
+                font-size: $font-size__small;
+                padding-left: 35px;
+            }
+        }
+        tr:last-child {
+            td {
+                color: #e66549;
+                font-weight: bold;
+            }
+        }
+    }
+    &_amounts-title {
+        font-weight: bold;
+    }
+    &_graph {
+        flex-grow: 2;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        height: 350px;
+        margin: 50px 0;
+
+        @include tablet {
+            margin: 0 0 70px;
+        }
+    }
+    &_graph-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+    }
+    &_graph-item-column {
+        background: #aaaab3;
+        height: 100px;
+        width: 20px;
+        display: flex;
+        align-items: flex-end;
+        transition: .3s ease-in-out height;
+    }
+    &_graph-item-subcolumn {
+        background: #e9e8ec;
+        height: 50%;
+        width: 100%;
+        transition: .3s ease-in-out height;
+    }
+    &_graph-item-title {
+        font-size: $font-size__small;
+    }
+    &_percent {
+        color: #e66549;
+    }
+}

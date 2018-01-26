@@ -3,29 +3,7 @@
     <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
     <title>Group</title>
     <desc>Created with Sketch.</desc>
-    <defs>
-        <style>
-            #Oval10 {
-                animation1: 1s ease scale infinite;
-                transform-origin: 50% 50%;
-            }
-            #Oval10:hover {
-                r: 20;
-            }
-            
-            @keyframes scale {
-                0% {
-                    transform: scale(1);
-                }
-                50% {
-                    transform: scale(2);
-                }
-                100% {
-                    transform: scale(1);
-                }
-            }
-        </style>
-    </defs>
+    <defs></defs>
     <g id="Index" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-158.000000, -523.000000)">
         <g id="Group" transform="translate(105.000000, 523.000000)">
             <g id="Group-7" opacity="0.270000011" transform="translate(463.468911, 368.250000) rotate(-330.000000) translate(-463.468911, -368.250000) translate(28.468911, 195.250000)">
@@ -50,7 +28,6 @@
             </g>
             <g id="Group-7" opacity="0.270000011" transform="translate(407.502741, 596.185857) scale(-1, 1) rotate(-361.000000) translate(-407.502741, -596.185857) translate(127.002741, 398.685857)">
                 <polygon id="Triangle-Copy-5" stroke="#D43864" points="136.205749 128.134899 70.1579637 214.671103 36.3474097 90.0790076"></polygon>
-                <polygon id="Triangle-Copy-6" stroke="#D43864" transform="translate(35.558606, 245.412536) scale(1, -1) translate(-35.558606, -245.412536) " points="0.959247888 195.02444 70.1579637 276.656319 15.3618408 295.800632"></polygon>
                 <polygon id="Triangle-Copy-5" stroke="#B235E9" transform="translate(452.982352, 304.260162) scale(-1, 1) translate(-452.982352, -304.260162) " points="489.769202 295.985278 429.817535 214.203542 416.195502 394.316782"></polygon>
                 <polygon id="Triangle-Copy-5" stroke="#D43864" transform="translate(506.147559, 304.260162) scale(-1, 1) translate(-506.147559, -304.260162) " points="476.147169 258.430306 536.147948 214.203542 522.525915 394.316782"></polygon>
                 <polygon id="Triangle-Copy-6" stroke="#D43864" transform="translate(488.954020, 107.172462) scale(-1, -1) translate(-488.954020, -107.172462) " points="560.496041 152.305477 502.760717 0.661184295 417.411999 213.683739"></polygon>
@@ -68,7 +45,7 @@
             <circle id="Oval" fill="#E6644A" cx="394" cy="386" r="6">
                  <animate attributeType="CSS"
                         attributeName="r"
-                        dur="3s"
+                        dur="5s"
                         values="6; 9; 6"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
@@ -78,14 +55,14 @@
                         attributeName="r"
                         dur="3s"
                         values="3.5; 6; 3.5"
-                        begin="1s"
+                        begin="1.3s"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
             <circle id="Oval" fill="#D04E78" cx="413.5" cy="493.5" r="3.5">
                 <animate attributeType="CSS"
                         attributeName="r"
-                        dur="3s"
+                        dur="4s"
                         values="3.5; 6; 3.5"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
@@ -93,9 +70,9 @@
             <circle id="Oval" fill="#D04E78" cx="553.5" cy="528.5" r="3.5">
                 <animate attributeType="CSS"
                         attributeName="r"
-                        dur="3s"
+                        dur="3.5s"
                         values="3.5; 6; 3.5"
-                        begin="1s"
+                        begin="2s"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
@@ -110,9 +87,9 @@
             <circle id="Oval" fill="#D04E78" cx="617.5" cy="615.5" r="3.5">
                 <animate attributeType="CSS"
                         attributeName="r"
-                        dur="3s"
+                        dur="4.5s"
                         values="3.5; 6; 3.5"
-                        begin="1s"
+                        begin="0.7s"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
@@ -127,7 +104,7 @@
             <circle id="Oval10" fill="#D04E78" cx="755" cy="595" r="7">
                 <animate attributeType="CSS"
                         attributeName="r"
-                        dur="3s"
+                        dur="3.5s"
                         begin="1s"
                         values="7; 11; 7"
                         keyTimes="0; 0.5; 1"
@@ -136,24 +113,16 @@
             <circle id="Oval" fill="#E6644A" cx="754.5" cy="458.5" r="3.5">
                 <animate attributeType="CSS"
                         attributeName="r"
-                        dur="3s"
+                        dur="4s"
                         values="3.5; 6; 3.5"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
-            <circle id="Oval" fill="#E6644A" cx="893" cy="493" r="2">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="3s"
-                        values="2; 4; 2"
-                        begin="1s"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
+            <circle id="Oval" fill="#E6644A" cx="893" cy="493" r="2"></circle>
             <circle id="Oval" fill="#D04E78" cx="273" cy="458" r="2">
                 <animate attributeType="CSS"
                         attributeName="r"
-                        dur="3s"
+                        dur="4s"
                         values="2; 4; 2"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
@@ -161,9 +130,9 @@
             <circle id="Oval" fill="#E8685E" cx="312" cy="390" r="2">
                 <animate attributeType="CSS"
                         attributeName="r"
-                        dur="3s"
+                        dur="4s"
                         values="2; 4; 2"
-                        begin="1s"
+                        begin="1.3s"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
@@ -178,16 +147,16 @@
             <circle id="Oval" fill="#E8685E" cx="193" cy="322" r="2">
                 <animate attributeType="CSS"
                         attributeName="r"
-                        dur="3s"
+                        dur="5s"
                         values="1.5; 3; 1.5"
-                        begin="1s"
+                        begin="0.6s"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
             <circle id="Oval" fill="#E8685E" cx="273.5" cy="179.5" r="1.5">
                 <animate attributeType="CSS"
                         attributeName="r"
-                        dur="3s"
+                        dur="4.5s"
                         values="1.5; 3; 1.5"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
@@ -195,9 +164,9 @@
             <circle id="Oval" fill="#F2DE73" cx="287" cy="94" r="4">
                 <animate attributeType="CSS"
                         attributeName="r"
-                        dur="3s"
+                        dur="3.5s"
                         values="4; 3; 4"
-                        begin="1s"
+                        begin="0.8s"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
@@ -212,7 +181,7 @@
             <circle id="Oval" fill="#9A59E0" cx="408" cy="733" r="3">
                 <animate attributeType="CSS"
                         attributeName="r"
-                        dur="3s"
+                        dur="4s"
                         values="3; 5; 3"
                         begin="1s"
                         keyTimes="0; 0.5; 1"
@@ -221,7 +190,7 @@
             <circle id="Oval" fill="#9A59E0" cx="195" cy="790" r="3">
                 <animate attributeType="CSS"
                         attributeName="r"
-                        dur="3s"
+                        dur="5s"
                         values="3; 5; 3"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
@@ -229,9 +198,9 @@
             <circle id="Oval" fill="#9A59E0" cx="270.5" cy="692.5" r="1.5">
                 <animate attributeType="CSS"
                         attributeName="r"
-                        dur="3s"
+                        dur="3.5s"
                         values="1.5; 3; 1.5"
-                        begin="1s"
+                        begin="1.1s"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
@@ -240,14 +209,14 @@
                         attributeName="r"
                         dur="3s"
                         values="2.5; 4; 2.5"
-                        begin="1s"
+                        begin="1.2s"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
             <circle id="Oval" fill="#E6CD49" cx="393" cy="249" r="3">
                 <animate attributeType="CSS"
                         attributeName="r"
-                        dur="3s"
+                        dur="3.5s"
                         values="3; 5; 3"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
@@ -257,14 +226,14 @@
                         attributeName="r"
                         dur="3s"
                         values="2; 3; 2"
-                        begin="1s"
+                        begin="1.2s"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
             <circle id="Oval" fill="#D550E5" cx="479.5" cy="651.5" r="1.5">
                 <animate attributeType="CSS"
                         attributeName="r"
-                        dur="3s"
+                        dur="4s"
                         values="1.5; 3; 1.5"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />

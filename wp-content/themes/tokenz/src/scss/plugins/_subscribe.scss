@@ -26,5 +26,9 @@
     }
     &_textbox_class {
         padding-right: 30px;
+        width: 145px;
+        @include tablet {
+            width: 350px;
+        }
     }
 }

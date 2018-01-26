@@ -1,0 +1,10 @@
+.intro {
+    margin-bottom: -45px;
+
+    h1 {
+        font-size: 15vmin;
+        @include tablet {
+            font-size: 120px;
+        }
+    }
+}

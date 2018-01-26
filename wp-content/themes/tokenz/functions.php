@@ -110,6 +110,15 @@ function tokenz_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer info', 'tokenz' ),
+		'id'            => 'sidebar-2',
+		'description'   => esc_html__( 'Add widgets here.', 'tokenz' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'tokenz_widgets_init' );
 
@@ -161,7 +170,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 function add_theme_menu_item()
 {
-	add_menu_page("Tokenz Panel", "Tokenz Panel", "manage_options", "tokenz-panel", "theme_settings_page", null, 99);
+	add_menu_page("Tokenz Panel", "Tokenz Panel", "manage_options", "tokenz-panel", "theme_settings_page", null, 60);
 }
 
 add_action("admin_menu", "add_theme_menu_item");
@@ -171,10 +180,12 @@ function theme_settings_page()
     ?>
 	    <div class="wrap">
 			<h1>Tokenz Panel</h1>
-			<form method="post" action="options.php">
+			<form method="post" action="options.php" enctype="multipart/form-data">
 				<?php
-					settings_fields("section");
-					do_settings_sections("theme-options");      
+					settings_fields("social");
+					settings_fields("currencies");
+					settings_fields("footer");
+					do_settings_sections("theme-options");
 					submit_button(); 
 				?>
 			</form>
@@ -245,62 +256,52 @@ function display_youtube_element()
     <?php
 }
 
-function logo_display()
+function currencies_display()
 {
 	?>
-        <input type="file" name="logo" /> 
-        <?php echo get_option('logo'); ?>
+        <input type="file" name="currencies_icon" /> 
+        <?php echo get_option('currencies_icon'); ?>
    <?php
 }
 
-function display_copyright()
+function handle_icons_upload()
 {
-	?>
-    	<input type="text" name="copyright" id="copyright" value="<?php echo get_option('copyright'); ?>" />
-    <?php
-}
-
-function handle_logo_upload()
-{
-	if(empty($_FILES["demo-file"]["tmp_name"]))
+	if (!empty($_FILES["currencies_icon"]["tmp_name"]))
 	{
-		$urls = wp_handle_upload($_FILES["logo"], array('test_form' => FALSE));
-	    $temp = $urls["url"];
-	    return $temp;   
+		$urls = wp_handle_upload($_FILES["currencies_icon"], array('test_form' => FALSE));
+		$temp = $urls["url"];
+		return $temp;  
 	}
-	  
+
 	return $option;
 }
 
 function display_theme_panel_fields()
 {
-	add_settings_section("section", "All Settings", null, "theme-options");
+	add_settings_section("social", "Social accounts", null, "theme-options");
 	
-    add_settings_field("instagram_url", "Instagram Profile Url", "display_instagram_element", "theme-options", "section");
-	add_settings_field("twitter_url", "Twitter Profile Url", "display_twitter_element", "theme-options", "section");
-    add_settings_field("facebook_url", "Facebook Profile Url", "display_facebook_element", "theme-options", "section");
-    add_settings_field("skype_url", "Skype Profile Url", "display_skype_element", "theme-options", "section");
-    add_settings_field("slack_url", "Slack Profile Url", "display_slack_element", "theme-options", "section");
-    add_settings_field("linkedin_url", "Linkedin Profile Url", "display_linkedin_element", "theme-options", "section");
-    add_settings_field("medium_url", "Medium Profile Url", "display_medium_element", "theme-options", "section");
-    add_settings_field("snapchat_url", "Snapchat Profile Url", "display_snapchat_element", "theme-options", "section");
-	add_settings_field("youtube_url", "Youtube Profile Url", "display_youtube_element", "theme-options", "section");
-	add_settings_field("copyright", "Copyright in footer", "display_copyright", "theme-options", "section");
-	
-	add_settings_field("logo", "Logo", "logo_display", "theme-options", "section");  
+    add_settings_field("instagram_url", "Instagram Profile Url", "display_instagram_element", "theme-options", "social");
+	add_settings_field("twitter_url", "Twitter Profile Url", "display_twitter_element", "theme-options", "social");
+    add_settings_field("facebook_url", "Facebook Profile Url", "display_facebook_element", "theme-options", "social");
+    add_settings_field("skype_url", "Skype Profile Url", "display_skype_element", "theme-options", "social");
+    add_settings_field("slack_url", "Slack Profile Url", "display_slack_element", "theme-options", "social");
+    add_settings_field("linkedin_url", "Linkedin Profile Url", "display_linkedin_element", "theme-options", "social");
+    add_settings_field("medium_url", "Medium Profile Url", "display_medium_element", "theme-options", "social");
+    add_settings_field("snapchat_url", "Snapchat Profile Url", "display_snapchat_element", "theme-options", "social");
+	add_settings_field("youtube_url", "Youtube Profile Url", "display_youtube_element", "theme-options", "social");
+    register_setting("social", "instagram_url");
+    register_setting("social", "facebook_url");
+    register_setting("social", "twitter_url");
+    register_setting("social", "skype_url");
+    register_setting("social", "slack_url");
+    register_setting("social", "linkedin_url");
+    register_setting("social", "medium_url");
+    register_setting("social", "snapchat_url");
+	register_setting("social", "youtube_url");
 
-    register_setting("section", "logo", "handle_logo_upload");
-
-    register_setting("section", "instagram_url");
-    register_setting("section", "facebook_url");
-    register_setting("section", "twitter_url");
-    register_setting("section", "skype_url");
-    register_setting("section", "slack_url");
-    register_setting("section", "linkedin_url");
-    register_setting("section", "medium_url");
-    register_setting("section", "snapchat_url");
-	register_setting("section", "youtube_url");
-	register_setting("section", "copyright");
+	add_settings_section("currencies", "Currencies icons", null, "theme-options");
+	add_settings_field("currencies_icon", "Icons", "currencies_display", "theme-options", "currencies");  
+	register_setting("currencies", "currencies_icon", "handle_icons_upload");
 }
 
 

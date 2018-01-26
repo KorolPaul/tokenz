@@ -9,6 +9,7 @@ $light_gradient: linear-gradient(to bottom, #FAF9F8, #DEDFE3);
 $color: #000;
 $light_color: #fff;
 $bright_color: #feffbf;
+$extra-bright_color: #f2cd3c;
 
 $font-family: 'Open Sans', sans-serif;
 $font-family__heading: 'Montserrat', sans-serif;
@@ -16,5 +17,6 @@ $font-family__heading: 'Montserrat', sans-serif;
 $font-size: 18px;
 $font-size__small: 14px;
 
-/*Indents*/
+/*Layout*/
+$max-width: 1240px;
 $layout_indent: 20px;
