@@ -26,30 +26,31 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tokenz' ); ?></a>
 
 	<header id="masthead" class="header">
-		<?php 
-			get_template_part( 'template-parts/content', 'social' );
-		?>
-
-		<nav id="site-navigation" class="menu-container">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tokenz' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-					'menu_class'     => 'menu',
-
-				) );
+		<div class="header_content">
+			<?php 
+				get_template_part( 'template-parts/content', 'social' );
 			?>
-		</nav><!-- #site-navigation -->
-		<div class="currencies">
-			<img src="<?php echo get_option('currencies_icons'); ?>" alt="" />
-		</div>
-		<div class="login">
-			<?php if (is_user_logged_in()) : ?>
-				<a class="login_button" href="<?php echo wp_logout_url(get_permalink()); ?>">Logout</a>
-			<?php else : ?>
-				<a class="login_button" href="<?php echo wp_login_url(get_permalink()); ?>">Investor Login</a>
-			<?php endif;?>
+
+			<nav id="site-navigation" class="menu-container">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tokenz' ); ?></button>
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'menu_class'     => 'menu',
+					) );
+				?>
+			</nav><!-- #site-navigation -->
+			<div class="currencies">
+				<img src="<?php echo get_option('currencies_icons'); ?>" alt="" />
+			</div>
+			<div class="login">
+				<?php if (is_user_logged_in()) : ?>
+					<a class="login_button" href="<?php echo wp_logout_url(get_permalink()); ?>">Logout</a>
+				<?php else : ?>
+					<a class="login_button" href="<?php echo wp_login_url(get_permalink()); ?>">Investor Login</a>
+				<?php endif;?>
+			</div>
 		</div>
 	</header><!-- #masthead -->
 	<div class="net"></div>

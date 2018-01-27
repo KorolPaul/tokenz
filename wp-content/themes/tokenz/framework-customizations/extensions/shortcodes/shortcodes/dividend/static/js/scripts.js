@@ -1,30 +1,35 @@
 (function($) {
 
 	"use strict";
+	var rangeElement,
+		percent;
+
 	var calculate = function() {
-		
-		var percent = parseInt($('#return-percent').text()) / 100,
-			maxValue = $(this).attr('max'),
-			rangeValue = $(this).val(),
+		var maxValue = rangeElement.attr('max'),
+			rangeValue = rangeElement.val(),
 			dividendValue = [],
-			dividendTotal = 0;
+			dividendTotal = 0,
+			yearsCount = 5;
 
 		$('#invest-sum').text(rangeValue);
 
-		for(var i = 1; i < 6; i++) {
-			dividendValue.push(parseInt(parseInt(rangeValue) * i * parseFloat(percent)));
-			dividendTotal += dividendValue[i-1];
+		for(var i = 0; i < yearsCount; i++) {
+			dividendValue.push(parseInt(parseInt(rangeValue) * (i+1) * parseFloat(percent)));
+			dividendTotal += dividendValue[i];
 
-			$('#divident-amount-' + i).text(dividendValue[i-1]);
-			$('#dividend-graph-' + i).css('height', (50 + (rangeValue * 100 / maxValue) / (6 - i) + '%' ));
+			$('#divident-amount-' + (i + 1)).text(dividendValue[i]);
+			$('#dividend-graph-' + (i + 1)).css('height', ((yearsCount - 1) / ( yearsCount - i + 1) * (rangeValue * 50 / maxValue) + '%' ));
 		}
 
-		$('#divident-amount-total').text(dividendTotal);
+		$('#divident-amount-total').text(dividendTotal); 
 	}
 
 	$(document).ready(function(){
-		$('#dividend_input').on('input change', calculate);
-		calculate();
+		rangeElement = $('#dividend_input');
+		percent = parseInt($('#return-percent').text()) / 100;
+
+		calculate();	
+		rangeElement.on('input change', calculate);
 
 		$('.dividend_graph-item-subcolumn').css('height', parseInt($('#return-percent').text()) - 100 + '%');
 	});

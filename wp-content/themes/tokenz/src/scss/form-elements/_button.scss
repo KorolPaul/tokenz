@@ -20,6 +20,7 @@
 
     &:hover {
         filter: contrast(1.4);
+        color: #fff;
     }
     &:active {
 
@@ -35,6 +36,10 @@ input[type="button"],  {
 .fw-btn-yellow {
     background: linear-gradient(to right, #e86c49, #ffe140);
     color: #221931;
+
+    &:hover {
+        color: #221931;
+    }
 }
 .fw-btn-white {
     background: #fff;

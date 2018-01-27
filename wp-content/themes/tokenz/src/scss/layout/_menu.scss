@@ -4,16 +4,36 @@
 }
 
 .menu {
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    justify-content: space-between;
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40px;
+    padding: 0;
+    z-index: 2;
+    display: none;
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        justify-content: space-between;
+        position: relative;
+        top: 0;
+    }
+
+    .toggled & {
+        display: block;
+    }
 
     &-item {
         list-style: none;
-
+        background: $bg_color;
+        padding: 15px 0;
+        border-top: 1px solid #fff;
+        @include tablet {
+            background: none;
+            padding: 0;
+            border-top: none;
+        }
         a {
             color: #fff;
             font-weight: 700;

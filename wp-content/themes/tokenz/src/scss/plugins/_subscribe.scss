@@ -23,6 +23,11 @@
         height: 42px;
         line-height: 42px;
         min-width: 135px;
+
+        &:hover {
+            background: #ccc;
+            color: $color;
+        }
     }
     &_textbox_class {
         padding-right: 30px;

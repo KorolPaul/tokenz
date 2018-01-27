@@ -1,3 +1,35 @@
 .menu-toggle {
-    display: none;
+    @include invisible-text;
+    box-sizing: border-box;
+    border-radius: 0;
+    background: #fff;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    min-width: inherit;
+    @include tablet {
+        display: none;
+    }
+
+    &:before {
+        content: '';
+        background: $bg_color;
+        position: absolute;
+        top: 15%;
+        left: 0;
+        right: 0;
+        height: 8px;
+    }
+    &:after {
+        content: '';
+        background: $bg_color;
+        position: absolute;
+        bottom: 15%;
+        left: 0;
+        right: 0;
+        height: 8px;
+    }
 }

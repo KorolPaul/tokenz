@@ -157,7 +157,6 @@
 }
 
 .page-content,
-.entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
 }
@@ -287,4 +286,9 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+.entry-header,
+.page-header {
+	padding: 45px 0 0;
 }

@@ -1,7 +1,11 @@
 .header {
-    @include layout;
-    display: flex;
-    height: 145px;
-    flex-direction: row;
-    justify-content: space-between;
+    background: $bg_color;
+
+    &_content {
+        @include layout;
+            height: 145px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+    }
 }
