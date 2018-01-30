@@ -5,7 +5,7 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, i, len;
+	var container, button, menu, links, i, len, header, social, loginButton;
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
@@ -51,6 +51,10 @@
 		links[i].addEventListener( 'blur', toggleFocus, true );
 	}
 
+	header = document.querySelector('.header_content');
+	social = document.querySelector('.social');
+	login = document.querySelector('.login');
+
 	/**
 	 * Sets or removes .focus class on an element.
 	 */
@@ -70,6 +74,41 @@
 			}
 
 			self = self.parentElement;
+		}
+	}
+
+	/**
+	 * Check is menu items fit to screen width.
+	 */
+	function checkWidth() {
+		if(screen.width >= 768) {
+			var headerWidth = header.offsetWidth - parseInt(window.getComputedStyle(header, null).getPropertyValue('padding-left')) * 2,
+				containerWidth = container.offsetWidth,
+				socialWidth = social.offsetWidth,
+				loginWidth = login.offsetWidth,
+				ellipsisWidth = 100;
+			
+			if((headerWidth - containerWidth - socialWidth - loginWidth) <= 0) {
+				var ellipsisItem = document.querySelector('.menu-item__other') || document.createElement('li'),
+					ellipsisLink = document.querySelector('.menu-item__other a') || document.createElement('a'),
+					submenuElement = document.querySelector('.submenu') || document.createElement('ul');
+	
+				submenuElement.classList.add('submenu');
+	
+				ellipsisLink.innerHTML = '...';
+	
+				ellipsisItem.classList.add('menu-item');
+				ellipsisItem.classList.add('menu-item__other');
+				ellipsisItem.appendChild(ellipsisLink);
+				ellipsisItem.appendChild(submenuElement);
+	
+				menu.appendChild(ellipsisItem);
+	
+				var lastMenuElement = menu.children[menu.children.length - 3];
+				submenuElement.appendChild(lastMenuElement);
+	
+				setTimeout(()=>{checkWidth()}, 0);
+			}
 		}
 	}
 
@@ -102,5 +141,9 @@
 				parentLink[i].addEventListener( 'touchstart', touchStartFn, false );
 			}
 		}
+
+		checkWidth();
+		window.addEventListener('resize', checkWidth);
+
 	}( container ) );
 } )();

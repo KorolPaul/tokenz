@@ -4,14 +4,17 @@
 }
 
 .menu {
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    box-shadow:0 40px 50px $bg_color;
     position: absolute;
     left: 0;
     right: 0;
-    top: 40px;
+    top: 50px;
     padding: 0;
     z-index: 2;
     display: none;
     @include tablet {
+        border: none;
         display: flex;
         flex-direction: row;
         margin: 0;
@@ -27,24 +30,68 @@
     &-item {
         list-style: none;
         background: $bg_color;
-        padding: 15px 0;
-        border-top: 1px solid #fff;
+        border-bottom: 1px solid rgba(255, 255, 255, .5);
+        position: relative;
         @include tablet {
             background: none;
             padding: 0;
-            border-top: none;
+            border-bottom: none;
+        }
+
+
+        &__other {
+            cursor: pointer;
         }
         a {
             color: #fff;
             font-weight: 700;
-            font-size: $font-size__small;
-            margin: 0 25px;
             text-decoration: none;
+            padding: 15px $layout_indent;
+            display: block;
             transition: .2s ease-in-out color;
+            @include tablet {
+                font-size: $font-size__small;
+                margin: 0 25px;
+                padding: 0;
+                white-space: nowrap;
+            }
 
             &:hover {
                 color: $bright_color;
             }
+            .submenu & {
+                padding: 10px 0;
+            }
         }
+    }
+}
+.submenu {
+    background: #2A2256;
+    border-radius: 10px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    padding: 10px 0;
+    transform: translate(-50%, 12px);
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s ease-in-out opacity,
+                .2s ease-in-out visibility .2s;
+
+    .menu-item__other:hover & {
+        opacity: 1;
+        visibility: visible;
+        transition: .2s ease-in-out opacity .2s,
+                    .2s ease-in-out visibility;
+    }
+    &:after {
+        content: '';
+        border-style: solid;
+        border-width: 10px;
+        border-color: transparent transparent #2A2256 transparent;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

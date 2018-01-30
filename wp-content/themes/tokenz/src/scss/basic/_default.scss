@@ -18,6 +18,10 @@ a {
     background: $dark_gradient;
     color: $light_color;
     text-align: center;
+
+    .alt-bg & {
+        background: $alt_gradient;
+    }
 }
 .bg-light {
     background: $light_gradient;
@@ -53,4 +57,9 @@ a {
 
 .noindent {
     margin-bottom: -145px;
+}
+.mobile-visible {
+    @include tablet {
+        display: none;
+    }
 }

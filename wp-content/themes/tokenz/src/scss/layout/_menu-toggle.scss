@@ -4,11 +4,11 @@
     border-radius: 0;
     background: #fff;
     padding: 0;
-    height: 30px;
-    width: 30px;
+    height: 26px;
+    width: 26px;
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 26px;
+    right: 26px;
     min-width: inherit;
     @include tablet {
         display: none;
@@ -18,18 +18,18 @@
         content: '';
         background: $bg_color;
         position: absolute;
-        top: 15%;
+        top: 4px;
         left: 0;
         right: 0;
-        height: 8px;
+        height: 7px;
     }
     &:after {
         content: '';
         background: $bg_color;
         position: absolute;
-        bottom: 15%;
+        bottom: 4px;
         left: 0;
         right: 0;
-        height: 8px;
+        height: 7px;
     }
 }

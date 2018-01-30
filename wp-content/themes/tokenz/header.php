@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 
-<div id="page" class="site">
+<div id="page" class="site <?php echo get_option('alt_bg') ?>">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tokenz' ); ?></a>
 
 	<header id="masthead" class="header">

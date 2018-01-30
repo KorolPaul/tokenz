@@ -1,11 +1,17 @@
 .header {
     background: $bg_color;
 
+    .alt-bg & {
+        background: $bg_color__alt;
+    }
     &_content {
         @include layout;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include tablet {
             height: 145px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+        }
     }
 }

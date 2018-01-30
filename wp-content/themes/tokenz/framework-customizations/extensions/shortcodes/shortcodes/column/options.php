@@ -12,5 +12,10 @@ $options = array(
 		'label' => __('Anchor', 'fw'),
 		'desc'  => __('Anchor for menu items', 'fw'),
 		'type'  => 'text',
+	),
+	'slide' => array(
+		'label' => __('Slider item', 'fw'),
+		'desc'  => __('Use element as slider item', 'fw'),
+		'type'  => 'checkbox',
 	)
 );

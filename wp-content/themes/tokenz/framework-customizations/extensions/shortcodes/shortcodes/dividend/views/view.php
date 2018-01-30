@@ -10,7 +10,9 @@
 		<div class="dividend_range">
 			<p class="heading-3">Invest</p>
 			<p class="dividend_invest-sum">$<span id="invest-sum"><?php echo $atts['max_invest']/2 ?></span></p>
-			<input class="dividend_input" type="range" id="dividend_input" min="<?php echo $atts['min_invest'] ?>" max="<?php echo $atts['max_invest'] ?>" value="<?php echo $atts['max_invest']/2 ?>" step="1000">
+			<div class="dividend_input-wrapper">
+				<input class="dividend_input" type="range" id="dividend_input" min="<?php echo $atts['min_invest'] ?>" max="<?php echo $atts['max_invest'] ?>" value="<?php echo $atts['max_invest']/2 ?>" step="1000">
+			</div>
 		</div>
 		<div class="dividend_output">
 			<div class="dividend_amounts">

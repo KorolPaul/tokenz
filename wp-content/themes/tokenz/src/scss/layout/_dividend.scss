@@ -126,4 +126,27 @@
     &_percent {
         color: #e66549;
     }
+    &_input-wrapper {
+        padding: 0 5px;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 9px;
+            left: 0;
+            border-style: solid;
+            border-width: 3px;
+            border-color: transparent $extra-bright_color $extra-bright_color transparent;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 9px;
+            right: 0;
+            border-style: solid;
+            border-width: 3px;
+            border-color: $extra-bright_color transparent transparent $extra-bright_color; 
+        }
+    }
 }

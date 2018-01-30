@@ -14,7 +14,7 @@ $press_indent: 50px;
         width: 100%;
     }
     img {
-        margin:  0 0 $press_indent;
+        margin:  0 $layout_indent $press_indent 0;
         transition: .2s ease-in-out filter;
 
         &:hover {

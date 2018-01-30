@@ -6,6 +6,10 @@ $column_extra_classes = '';
 if ( ! empty( $atts['custom_class'] ) ) {
 	$column_extra_classes .= ' ' . $atts['custom_class'];
 }
+
+if ( ! empty( $atts['slide'] ) ) {
+	$column_extra_classes .= ' slider_item';
+}
 ?>
 
 <?php if ( ! empty( $atts['anchor'] ) ) { ?>
