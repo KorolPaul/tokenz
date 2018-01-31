@@ -1,5 +1,21 @@
 @charset "UTF-8";
 
+/*
+Theme Name: Tokenz
+Theme URI: https://www.templatemonster.com/wordpress-themes/tokenz
+Author: Korol Paul
+Author URI: https://github.com/KorolPaul/
+Description: Cool theme for wordpress
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, custom-background, custom-colors
+Text Domain: twentyfifteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
 @import  "const";
 @import  "mixins";
 @import  "placeholders";
@@ -29,7 +45,10 @@
 /*Form elements*/
 @import  "form-elements/button";
 @import  "form-elements/input-text";
+@import  "form-elements/textarea";
 @import  "form-elements/range";
+@import  "form-elements/radio";
+@import  "form-elements/checkbox";
 
 /*Plugins*/
 @import  "plugins/underscores";

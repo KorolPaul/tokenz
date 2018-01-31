@@ -59,13 +59,13 @@
             &:hover {
                 color: $bright_color;
             }
-            .submenu & {
+            .sub-menu & {
                 padding: 10px 0;
             }
         }
     }
 }
-.submenu {
+.sub-menu {
     background: #2A2256;
     border-radius: 10px;
     position: absolute;
@@ -78,7 +78,7 @@
     transition: .2s ease-in-out opacity,
                 .2s ease-in-out visibility .2s;
 
-    .menu-item__other:hover & {
+    .menu-item:hover & {
         opacity: 1;
         visibility: visible;
         transition: .2s ease-in-out opacity .2s,

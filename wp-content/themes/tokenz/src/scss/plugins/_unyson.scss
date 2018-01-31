@@ -2,6 +2,9 @@
     .fw-container {
         @include layout;
     }
+}
+.bg-dark,
+.bg-light {
     .fw-row {
         margin-bottom: 145px;
     }

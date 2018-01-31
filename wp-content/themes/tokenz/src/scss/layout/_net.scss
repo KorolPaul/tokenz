@@ -9,7 +9,7 @@
             overflow: hidden;
             transform: translateZ(-5px) scale(6.05); //1 + (translateZ * -1) / perspective
             will-change: transform;
-    
+
             &:before {
                 content: '';
                 background: url(#{$img-path}/net-left.svg) no-repeat;

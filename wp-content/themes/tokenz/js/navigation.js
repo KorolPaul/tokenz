@@ -91,9 +91,9 @@
 			if((headerWidth - containerWidth - socialWidth - loginWidth) <= 0) {
 				var ellipsisItem = document.querySelector('.menu-item__other') || document.createElement('li'),
 					ellipsisLink = document.querySelector('.menu-item__other a') || document.createElement('a'),
-					submenuElement = document.querySelector('.submenu') || document.createElement('ul');
+					submenuElement = document.querySelector('.sub-menu') || document.createElement('ul');
 	
-				submenuElement.classList.add('submenu');
+				submenuElement.classList.add('sub-menu');
 	
 				ellipsisLink.innerHTML = '...';
 	
@@ -105,7 +105,7 @@
 				menu.appendChild(ellipsisItem);
 	
 				var lastMenuElement = menu.children[menu.children.length - 3];
-				submenuElement.appendChild(lastMenuElement);
+				submenuElement.insertBefore(lastMenuElement, submenuElement.children[0]);
 	
 				setTimeout(()=>{checkWidth()}, 0);
 			}

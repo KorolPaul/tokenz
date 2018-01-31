@@ -6,13 +6,17 @@
         border: 1px solid #3e3958;
         padding: 60px 13%;
     }
-    
+
     p {
         line-height: 2;
     }
+    .heading-3 {
+        margin-top: 0;
+    }
     &_invest-sum {
         @extend %heading-3;
-        color:$extra-bright_color; 
+        color:$extra-bright_color;
+        margin-top: 0;
     }
     &_data {
         position: relative;
@@ -58,7 +62,7 @@
         @include tablet {
             margin: 0;
         }
-        
+
         table {
             margin: auto;
             @include tablet {
@@ -146,7 +150,7 @@
             right: 0;
             border-style: solid;
             border-width: 3px;
-            border-color: $extra-bright_color transparent transparent $extra-bright_color; 
+            border-color: $extra-bright_color transparent transparent $extra-bright_color;
         }
     }
 }

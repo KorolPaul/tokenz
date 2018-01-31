@@ -14,7 +14,7 @@
     text-decoration: none;
     vertical-align: middle;
     position: relative;
-    padding: 0 $layout_indent;        
+    padding: 0 $layout_indent;
     overflow: hidden;
     transition: .2s ease-in-out filter;
 
@@ -28,12 +28,13 @@
 }
 
 .button,
-.fw-btn,
-button, 
-input[type="button"],  {
+a.fw-btn,
+button,
+input[type="button"],
+input[type="submit"],  {
     @extend %button;
 }
-.fw-btn-yellow {
+a.fw-btn-yellow {
     background: linear-gradient(to right, #e86c49, #ffe140);
     color: #221931;
 
@@ -41,7 +42,7 @@ input[type="button"],  {
         color: #221931;
     }
 }
-.fw-btn-white {
+a.fw-btn-white {
     background: #fff;
     color: #292154;
     transition: .2s ease-in-out background,

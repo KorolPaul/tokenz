@@ -135,7 +135,7 @@ function tokenz_scripts() {
 	wp_enqueue_script( 'tokenz-slick', get_template_directory_uri() . '/js/slick.js', array(), '20180115', true );
 
 	wp_enqueue_script( 'tokenz-slider', get_template_directory_uri() . '/js/slider.js', array(), '20180115', true );
-	
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -164,6 +164,11 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * TGM plugin.
+ */
+require_once get_template_directory() . '/class-tgm-plugin-activation.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
@@ -175,7 +180,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 function add_theme_menu_item()
 {
-	add_menu_page("Tokenz Panel", "Tokenz Panel", "manage_options", "tokenz-panel", "theme_settings_page", null, 60);
+	add_theme_page("Tokenz Panel", "Tokenz Panel", "manage_options", "tokenz-panel", "theme_settings_page", null, 60);
 }
 
 add_action("admin_menu", "add_theme_menu_item");
@@ -191,7 +196,7 @@ function theme_settings_page()
 					settings_fields("social");
 					//settings_fields("currencies");
 					do_settings_sections("theme-options");
-					submit_button(); 
+					submit_button();
 				?>
 			</form>
 		</div>
@@ -202,14 +207,14 @@ function display_bg_element()
 {
 	?>
 		<input name="use_alt_bg" id="use_alt_bg" type="checkbox" value="1" <?php checked( 1, get_option( 'use_alt_bg' ), false ) ?> />
-		<?php 
+		<?php
 			echo get_option( 'use_alt_bg' );
 			if(checked( 1, get_option( 'use_alt_bg' ), false )){
 				echo 'checked';
 			} else {
 				echo 'unchecked';
 			}
-		
+
 		?>
     <?php
 }
@@ -280,7 +285,7 @@ function display_youtube_element()
 function currencies_display()
 {
 	?>
-        <input type="file" name="currencies_icon" /> 
+        <input type="file" name="currencies_icon" />
         <?php echo get_option('currencies_icon'); ?>
    <?php
 }
@@ -291,7 +296,7 @@ function handle_icons_upload()
 	{
 		$urls = wp_handle_upload($_FILES["currencies_icon"], array('test_form' => FALSE));
 		$temp = $urls["url"];
-		return $temp;  
+		return $temp;
 	}
 
 	return $option;
@@ -300,7 +305,7 @@ function handle_icons_upload()
 function display_theme_panel_fields()
 {
 	add_settings_section("layout", "Layout options", null, "theme-options");
-	add_settings_field("use_alt_bg", "Alternate background", "display_bg_element", "theme-options", "layout");  
+	add_settings_field("use_alt_bg", "Alternate background", "display_bg_element", "theme-options", "layout");
 	register_setting("layout", "use_alt_bg");
 
 	add_settings_section("social", "Social accounts", null, "theme-options");
@@ -324,7 +329,7 @@ function display_theme_panel_fields()
 	register_setting("social", "youtube_url");
 
 	//add_settings_section("currencies", "Currencies icons", null, "theme-options");
-	//add_settings_field("currencies_icon", "Icons", "currencies_display", "theme-options", "currencies");  
+	//add_settings_field("currencies_icon", "Icons", "currencies_display", "theme-options", "currencies");
 	//register_setting("currencies", "currencies_icon", "handle_icons_upload");
 }
 

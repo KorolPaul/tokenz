@@ -29,7 +29,9 @@
             color: $color;
         }
     }
-    &_textbox_class {
+    &_textbox_class[type="text"] {
+        border-radius: 35px;
+        color: $light_color;
         padding-right: 30px;
         width: 145px;
         @include tablet {

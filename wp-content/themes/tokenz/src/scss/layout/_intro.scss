@@ -2,8 +2,9 @@
     margin-bottom: -45px;
 
     h1 {
-        color: $bright_color;        
+        color: $bright_color;
         font-size: 15vmin;
+        letter-spacing: .25em;
         @include tablet {
             font-size: 120px;
         }
