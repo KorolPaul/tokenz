@@ -931,15 +931,18 @@ h6,
 
 @media all and (min-width: 768px) {
   .home .net {
+    -webkit-animation: .5s linear net-init;
+    animation: .5s linear net-init;
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     height: 2000px;
     overflow: hidden;
-    -webkit-transform: translateZ(-5px) scale(6.05);
-    transform: translateZ(-5px) scale(6.05);
-    will-change: transform;
+    -webkit-transform: translateZ(-1px) scale(2.07);
+    transform: translateZ(-1px) scale(2.07);
+    -webkit-transition: .2s ease-out transform;
+    transition: .2s ease-out transform;
   }
   .home .net:before {
     content: '';
@@ -954,10 +957,38 @@ h6,
     content: '';
     background: url(src/img/net-right.svg) no-repeat;
     position: absolute;
-    height: 1736px;
-    width: 881px;
+    height: 1492px;
+    width: 737px;
     top: 145px;
-    right: -355px;
+    right: -250px;
+  }
+}
+
+@-webkit-keyframes net-init {
+  0% {
+    margin-top: 0;
+    opacity: 0;
+  }
+  10% {
+    margin-top: 1px;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes net-init {
+  0% {
+    margin-top: 0;
+    opacity: 0;
+  }
+  10% {
+    margin-top: 1px;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
   }
 }
 
@@ -1484,6 +1515,9 @@ h6,
     margin-top: 8px;
     padding: 6px 10px;
     text-decoration: none;
+  }
+  .login_button:hover {
+    color: #feffbf;
   }
 }
 
@@ -2279,24 +2313,23 @@ object {
   color: transparent;
   background-repeat: no-repeat;
   background-position: center center;
-  border-radius: 5px;
+  background-size: 28px 100px;
+  border-radius: 10px;
   position: absolute;
   top: 50%;
-  height: 90px;
-  width: 30px;
+  height: 180px;
+  width: 85px;
   min-width: inherit;
-  padding: 40px 20px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 1;
   -webkit-transition: .2s ease-in-out background-color;
   transition: .2s ease-in-out background-color;
-  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .slick-prev:hover,
 .slick-next:hover {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .slick-prev {

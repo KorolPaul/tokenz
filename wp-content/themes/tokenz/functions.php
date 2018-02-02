@@ -166,7 +166,7 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * TGM plugin.
  */
-require_once get_template_directory() . '/class-tgm-plugin-activation.php';
+require_once get_template_directory() . '/tgm/plugins.php';
 
 /**
  * Load Jetpack compatibility file.
@@ -180,7 +180,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 function add_theme_menu_item()
 {
-	add_theme_page("Tokenz Panel", "Tokenz Panel", "manage_options", "tokenz-panel", "theme_settings_page", null, 60);
+	add_theme_page("Tokenz Settings", "Tokenz Settings", "manage_options", "tokenz-panel", "theme_settings_page", null, 60);
 }
 
 add_action("admin_menu", "add_theme_menu_item");
@@ -189,7 +189,7 @@ function theme_settings_page()
 {
     ?>
 	    <div class="wrap">
-			<h1>Tokenz Panel</h1>
+			<h1>Tokenz Settings</h1>
 			<form method="post" action="options.php">
 				<?php
 					settings_fields("layout");

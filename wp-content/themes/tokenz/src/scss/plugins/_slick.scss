@@ -94,21 +94,19 @@
     @include invisible-text;
     background-repeat: no-repeat;
     background-position: center center;
-    border-radius: 5px;
+    background-size: 28px 100px;
+    border-radius: 10px;
     position: absolute;
     top: 50%;
-    height: 90px;
-    width: 30px;
+    height: 180px;
+    width: 85px;
     min-width: inherit;
-    padding: 40px 20px;
     transform: translateY(-50%);
     z-index: 1;
     transition: .2s ease-in-out background-color;
-    background-color: rgba(0, 0, 0, .2);
-
 
     &:hover {
-        background-color: rgba(0, 0, 0, .4);
+        background-color: rgba(0, 0, 0, .3);
     }
 }
 

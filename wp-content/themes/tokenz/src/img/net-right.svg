@@ -1,38 +1,35 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="881px" height="1736px" viewBox="0 0 881 1736" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="737px" height="1492px" viewBox="0 0 737 1492" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
     <title>Illustration_right</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Index" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-535.000000, -922.000000)">
-        <g id="Illustration_right" transform="translate(490.000000, 886.000000)">
-            <g id="Group-7" opacity="0.25" transform="translate(536.000000, 886.500000) rotate(-290.000000) translate(-536.000000, -886.500000) translate(-312.000000, 625.000000)">
-                <polygon id="Triangle" stroke="#FFFFFF" opacity="0.600000024" transform="translate(65.197606, 211.943588) scale(1, -1) translate(-65.197606, -211.943588) " points="54.3313379 109 130.395211 314.887175 0 314.887175"></polygon>
-                <polygon id="Triangle" stroke="#FEDA3D" opacity="0.600000024" points="131.234011 109 251.182354 249.870173 54.9032467 314.887175"></polygon>
-                <polygon id="Triangle-Copy-5" stroke="#E5614B" points="386.325342 127.899265 474.094412 385.458441 249.809773 251.009359"></polygon>
-                <polygon id="Triangle-Copy-5" stroke="#E5614B" points="386.325342 127.899265 474.094412 385.458441 588.226897 230.51912"></polygon>
-                <polygon id="Triangle-Copy-5" stroke="#B235E9" points="386.325342 127.899265 563.883328 109.52738 588.226897 230.51912"></polygon>
-                <polygon id="Triangle-Copy-5" stroke="#B235E9" points="386.325342 127.899265 273.604676 0.682057598 297.948245 121.673798"></polygon>
-                <polygon id="Triangle-Copy-4" stroke="#FEDA3D" opacity="0.600000024" points="249.809773 250.37586 369.224334 456.599146 130.395211 522.146932"></polygon>
-                <polygon id="Triangle-Copy-3" stroke="#291C42" transform="translate(258.360276, 179.687930) scale(1, -1) translate(-258.360276, -179.687930) " points="250.037075 109 386.325342 231.647054 130.395211 250.37586"></polygon>
-                <polygon id="Triangle-Copy" stroke="#FEDA3D" opacity="0.600000024" transform="translate(153.042800, 386.261396) scale(1, -1) translate(-153.042800, -386.261396) " points="131.234011 250.37586 251.182354 522.146932 54.9032467 456.921875"></polygon>
-                <polygon id="Triangle-Copy-6" stroke="#FEDA3D" opacity="0.800000012" transform="translate(361.952092, 353.319448) scale(1, -1) translate(-361.952092, -353.319448) " points="369.224334 250.37586 474.094412 322.047348 249.809773 456.263036"></polygon>
-                <polygon id="Triangle-Copy-2" stroke="#7C2B42" transform="translate(1631.942399, 417.830763) scale(-1, 1) translate(-1631.942399, -417.830763) " points="1623.07839 314.887175 1695.13774 512.868612 1568.74706 520.774351"></polygon>
-                <polygon id="Triangle-Copy-4" stroke="#D43864" transform="translate(1443.617870, 446.760538) scale(-1, 1) translate(-1443.617870, -446.760538) " points="1441.90777 380.771071 1568.16273 475.367534 1319.07301 512.750006"></polygon>
-                <polygon id="Triangle-Copy" stroke="#D438A9" transform="translate(1542.781234, 413.766413) scale(-1, -1) translate(-1542.781234, -413.766413) " points="1517.30617 314.887175 1640.2345 447.628648 1445.32797 512.64565"></polygon>
-                <polygon id="Triangle-Copy-6" stroke="#D43864" transform="translate(1325.913409, 394.972032) scale(-1, -1) translate(-1325.913409, -394.972032) " points="1332.75381 314.887175 1445.32797 475.056888 1206.49885 409.806491"></polygon>
-                <polygon id="Triangle" stroke="#FFFFFF" transform="translate(846.882581, 244.885536) scale(-1, 1) translate(-846.882581, -244.885536) " points="846.882581 109 966.297143 380.771071 727.468019 250.320957"></polygon>
-                <polygon id="Triangle-Copy-7" stroke="#D43864" transform="translate(1086.151950, 245.026798) scale(-1, 1) translate(-1086.151950, -245.026798) " points="1085.21961 174.883896 1206.54708 250.666043 965.756816 315.1697"></polygon>
-                <polygon id="Triangle-Copy-5" stroke="#E5614B" opacity="0.5" transform="translate(600.781216, 308.109103) scale(-1, 1) translate(-600.781216, -308.109103) " points="614.030182 231.265453 727.468019 384.952754 474.094412 380.771071"></polygon>
-                <polygon id="Triangle-Copy-2" stroke="#FE9A3D" transform="translate(966.297143, 386.261396) scale(-1, 1) translate(-966.297143, -386.261396) " points="966.297143 250.37586 1085.7117 522.146932 846.882581 456.921875"></polygon>
-                <polygon id="Triangle-Copy-4" stroke="#FFD729" transform="translate(721.905878, 451.459002) scale(-1, 1) translate(-721.905878, -451.459002) " points="716.343737 380.771071 846.882581 516.698293 596.929175 522.146932"></polygon>
-                <polygon id="Triangle" stroke="#B235E9" transform="translate(966.297143, 179.687930) scale(-1, -1) translate(-966.297143, -179.687930) " points="966.297143 109 1085.7117 250.37586 846.882581 185.125463"></polygon>
-                <polygon id="Triangle-Copy-3" stroke="#B235E9" transform="translate(717.207415, 244.885536) scale(-1, -1) translate(-717.207415, -244.885536) " points="706.946811 109 846.882581 259.164457 587.532249 380.771071"></polygon>
-                <polygon id="Triangle-Copy-8" stroke="#FE6B3D" transform="translate(1086.776600, 354.171192) scale(-1, -1) translate(-1086.776600, -354.171192) " points="1087.88133 251.353035 1206.49885 456.989348 967.054353 392.94952"></polygon>
-                <polygon id="Triangle-Copy" stroke="#E5614B" transform="translate(846.882581, 386.261396) scale(-1, -1) translate(-846.882581, -386.261396) " points="846.882581 250.37586 966.297143 391.696817 727.468019 522.146932"></polygon>
-                <polygon id="Triangle-Copy-6" stroke="#FEDA3D" transform="translate(600.781216, 448.101183) scale(-1, -1) translate(-600.781216, -448.101183) " points="604.633256 380.137572 727.468019 512.116507 474.094412 516.064794"></polygon>
+    <g id="Index" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-535.000000, -1044.000000)">
+        <g id="Illustration_right" transform="translate(508.000000, 936.000000)">
+            <g id="Group-7" opacity="0.25" transform="translate(517.828990, 836.030154) rotate(-290.000000) translate(-517.828990, -836.030154) translate(-275.671010, 574.530154)">
+                <polygon id="Triangle" stroke="#FEDA3D" opacity="0.600000024" points="77.2340106 109 197.182354 249.870173 0.903246746 314.887175"></polygon>
+                <polygon id="Triangle-Copy-5" stroke="#E5614B" points="332.325342 127.899265 420.094412 385.458441 195.809773 251.009359"></polygon>
+                <polygon id="Triangle-Copy-5" stroke="#E5614B" points="332.325342 127.899265 420.094412 385.458441 534.226897 230.51912"></polygon>
+                <polygon id="Triangle-Copy-5" stroke="#B235E9" points="332.325342 127.899265 509.883328 109.52738 534.226897 230.51912"></polygon>
+                <polygon id="Triangle-Copy-5" stroke="#B235E9" points="332.325342 127.899265 219.604676 0.682057598 243.948245 121.673798"></polygon>
+                <polygon id="Triangle-Copy-4" stroke="#FEDA3D" opacity="0.600000024" points="195.809773 250.37586 315.224334 456.599146 76.395211 522.146932"></polygon>
+                <polygon id="Triangle-Copy" stroke="#FEDA3D" opacity="0.600000024" transform="translate(99.042800, 386.261396) scale(1, -1) translate(-99.042800, -386.261396) " points="77.2340106 250.37586 197.182354 522.146932 0.903246746 456.921875"></polygon>
+                <polygon id="Triangle-Copy-6" stroke="#FEDA3D" opacity="0.800000012" transform="translate(307.952092, 353.319448) scale(1, -1) translate(-307.952092, -353.319448) " points="315.224334 250.37586 420.094412 322.047348 195.809773 456.263036"></polygon>
+                <polygon id="Triangle-Copy-5" stroke="#D43864" transform="translate(1271.913409, 277.827484) scale(-1, 1) translate(-1271.913409, -277.827484) " points="1271.91341 174.883896 1391.32797 315.754069 1152.49885 380.771071"></polygon>
+                <polygon id="Triangle-Copy-4" stroke="#D43864" transform="translate(1389.617870, 446.760538) scale(-1, 1) translate(-1389.617870, -446.760538) " points="1387.90777 380.771071 1514.16273 475.367534 1265.07301 512.750006"></polygon>
+                <polygon id="Triangle-Copy" stroke="#D438A9" transform="translate(1488.781234, 413.766413) scale(-1, -1) translate(-1488.781234, -413.766413) " points="1463.30617 314.887175 1586.2345 447.628648 1391.32797 512.64565"></polygon>
+                <polygon id="Triangle-Copy-6" stroke="#D43864" transform="translate(1271.913409, 394.972032) scale(-1, -1) translate(-1271.913409, -394.972032) " points="1278.75381 314.887175 1391.32797 475.056888 1152.49885 409.806491"></polygon>
+                <polygon id="Triangle" stroke="#B235E9" transform="translate(792.882581, 244.885536) scale(-1, 1) translate(-792.882581, -244.885536) " points="792.882581 109 912.297143 380.771071 673.468019 250.320957"></polygon>
+                <polygon id="Triangle-Copy-7" stroke="#D43864" transform="translate(1032.151950, 245.026798) scale(-1, 1) translate(-1032.151950, -245.026798) " points="1031.21961 174.883896 1152.54708 250.666043 911.756816 315.1697"></polygon>
+                <polygon id="Triangle-Copy-5" stroke="#E5614B" opacity="0.5" transform="translate(546.781216, 308.109103) scale(-1, 1) translate(-546.781216, -308.109103) " points="560.030182 231.265453 673.468019 384.952754 420.094412 380.771071"></polygon>
+                <polygon id="Triangle-Copy-2" stroke="#FE9A3D" transform="translate(912.297143, 386.261396) scale(-1, 1) translate(-912.297143, -386.261396) " points="912.297143 250.37586 1031.7117 522.146932 792.882581 456.921875"></polygon>
+                <polygon id="Triangle-Copy-4" stroke="#FFD729" transform="translate(667.905878, 451.459002) scale(-1, 1) translate(-667.905878, -451.459002) " points="662.343737 380.771071 792.882581 516.698293 542.929175 522.146932"></polygon>
+                <polygon id="Triangle-Copy-3" stroke="#B235E9" transform="translate(663.207415, 244.885536) scale(-1, -1) translate(-663.207415, -244.885536) " points="652.946811 109 792.882581 259.164457 533.532249 380.771071"></polygon>
+                <polygon id="Triangle-Copy-8" stroke="#FE6B3D" transform="translate(1032.776600, 354.171192) scale(-1, -1) translate(-1032.776600, -354.171192) " points="1033.88133 251.353035 1152.49885 456.989348 913.054353 392.94952"></polygon>
+                <polygon id="Triangle-Copy" stroke="#E5614B" transform="translate(792.882581, 386.261396) scale(-1, -1) translate(-792.882581, -386.261396) " points="792.882581 250.37586 912.297143 391.696817 673.468019 522.146932"></polygon>
+                <polygon id="Triangle-Copy-6" stroke="#FEDA3D" transform="translate(546.781216, 448.101183) scale(-1, -1) translate(-546.781216, -448.101183) " points="550.633256 380.137572 673.468019 512.116507 420.094412 516.064794"></polygon>
             </g>
-            <circle id="Oval" fill="#EBD667" cx="211" cy="738" r="3">
+            <circle id="Oval" fill="#EBD667" cx="193" cy="688" r="3">
                 <animate attributeType="CSS"
                         attributeName="r"
                         dur="3.5s"
@@ -41,7 +38,7 @@
                         begin="0.8s"
                         repeatCount="indefinite" />
             </circle>
-            <circle id="Oval" fill="#EBD667" cx="190" cy="503" r="3">
+            <circle id="Oval" fill="#EBD667" cx="172" cy="453" r="3">
                 <animate attributeType="CSS"
                         attributeName="r"
                         dur="4s"
@@ -49,7 +46,7 @@
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
-            <circle id="Oval" fill="#EBD667" cx="46.5" cy="301.5" r="1.5">
+            <circle id="Oval" fill="#EBD667" cx="28.5" cy="251.5" r="1.5">
                 <animate attributeType="CSS"
                         attributeName="r"
                         dur="3.8s"
@@ -57,7 +54,7 @@
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
-            <circle id="Oval" fill="#EBD667" cx="215.5" cy="159.5" r="1.5">
+            <circle id="Oval" fill="#EBD667" cx="197.5" cy="109.5" r="1.5">
                 <animate attributeType="CSS"
                         attributeName="r"
                         dur="4.2s"
@@ -66,7 +63,7 @@
                         begin="0.5s"
                         repeatCount="indefinite" />
             </circle>
-            <circle id="Oval" fill="#EBD667" cx="434.5" cy="161.5" r="3.5">
+            <circle id="Oval" fill="#EBD667" cx="416.5" cy="111.5" r="3.5">
                 <animate attributeType="CSS"
                         attributeName="r"
                         dur="3.2s"
@@ -74,41 +71,33 @@
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
-            <circle id="Oval" fill="#EBD667" cx="341" cy="319" r="7">
+            <circle id="Oval" fill="#EBD667" cx="323" cy="269" r="7">
                 <animate attributeType="CSS"
                         attributeName="r"
-                        dur="4.8s"
+                        dur="4s"
                         values="7; 5; 7"
                         begin="0.2s"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
-            <circle id="Oval" fill="#EBD667" cx="291" cy="974" r="6">
+            <circle id="Oval" fill="#EBD667" cx="273" cy="924" r="6">
                 <animate attributeType="CSS"
                         attributeName="r"
                         dur="4.5s"
-                        values="6; 7; 6"
+                        values="6; 9; 6"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
-            <circle id="Oval" fill="#E6644A" cx="383" cy="813" r="12">
+            <circle id="Oval" fill="#E6644A" cx="365" cy="763" r="12">
                 <animate attributeType="CSS"
                         attributeName="r"
-                        dur="4s"
+                        dur="3s"
                         begin="0.3s"
                         values="12; 15; 12"
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
-            <circle id="Oval-Copy-4" fill="#966AEC" cx="679" cy="833" r="3">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="3.1s"
-                        values="3; 3.6; 3"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#D04E78" cx="293" cy="576" r="6">
+            <circle id="Oval" fill="#D04E78" cx="275" cy="526" r="6">
                 <animate attributeType="CSS"
                         attributeName="r"
                         dur="4.3s"
@@ -117,7 +106,7 @@
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
-            <circle id="Oval" fill="#D04E78" cx="476.5" cy="630.5" r="2.5">
+            <circle id="Oval" fill="#D04E78" cx="458.5" cy="580.5" r="2.5">
                 <animate attributeType="CSS"
                         attributeName="r"
                         dur="4.9s"
@@ -125,7 +114,7 @@
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
-            <circle id="Oval" fill="#E6644A" cx="503.5" cy="406.5" r="2.5">
+            <circle id="Oval" fill="#E6644A" cx="485.5" cy="356.5" r="2.5">
                 <animate attributeType="CSS"
                         attributeName="r"
                         dur="5.1s"
@@ -134,7 +123,7 @@
                         begin="0.9s"
                         repeatCount="indefinite" />
             </circle>
-            <circle id="Oval" fill="#D04E78" cx="433.5" cy="1176.5" r="2.5">
+            <circle id="Oval" fill="#D04E78" cx="415.5" cy="1126.5" r="2.5">
                 <animate attributeType="CSS"
                         attributeName="r"
                         dur="3.1s"
@@ -142,7 +131,7 @@
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
-            <circle id="Oval" fill="#D0624E" cx="587" cy="994" r="5">
+            <circle id="Oval" fill="#D0624E" cx="569" cy="944" r="5">
                 <animate attributeType="CSS"
                         attributeName="r"
                         dur="3.8s"
@@ -150,7 +139,7 @@
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
-            <circle id="Oval" fill="#D04E78" cx="497" cy="1403" r="6">
+            <circle id="Oval" fill="#D04E78" cx="479" cy="1353" r="6">
                 <animate attributeType="CSS"
                         attributeName="r"
                         dur="3.2s"
@@ -159,7 +148,7 @@
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
-            <circle id="Oval-Copy-3" fill="#D04E78" cx="608" cy="1241" r="3">
+            <circle id="Oval-Copy-3" fill="#D04E78" cx="590" cy="1191" r="3">
                 <animate attributeType="CSS"
                         attributeName="r"
                         dur="3.8s"
@@ -167,7 +156,7 @@
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
-            <circle id="Oval-Copy" fill="#E06FC7" cx="629" cy="1488" r="3">
+            <circle id="Oval-Copy" fill="#E06FC7" cx="611" cy="1438" r="3">
                 <animate attributeType="CSS"
                         attributeName="r"
                         dur="4s"
@@ -175,7 +164,7 @@
                         keyTimes="0; 0.5; 1"
                         repeatCount="indefinite" />
             </circle>
-            <circle id="Oval" fill="#D04E78" cx="546.5" cy="1648.5" r="1.5">
+            <circle id="Oval" fill="#D04E78" cx="528.5" cy="1598.5" r="1.5">
                 <animate attributeType="CSS"
                         attributeName="r"
                         dur="3.8s"

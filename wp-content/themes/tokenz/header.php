@@ -27,7 +27,7 @@
 
 	<header id="masthead" class="header">
 		<div class="header_content">
-			<?php 
+			<?php
 				get_template_part( 'template-parts/content', 'social' );
 			?>
 

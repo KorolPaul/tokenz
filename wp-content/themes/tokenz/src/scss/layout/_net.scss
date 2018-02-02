@@ -1,14 +1,15 @@
 .net {
     @include tablet {
         .home & {
+            animation: .5s linear net-init;
             position: absolute;
             top: 0;
             right: 0;
             left: 0;
             height: 2000px;
             overflow: hidden;
-            transform: translateZ(-5px) scale(6.05); //1 + (translateZ * -1) / perspective
-            will-change: transform;
+            transform: translateZ(-1px) scale(2.07); //1 + (translateZ * -1) / perspective
+            transition: .2s ease-out transform;
 
             &:before {
                 content: '';
@@ -23,11 +24,24 @@
                 content: '';
                 background: url(#{$img-path}/net-right.svg) no-repeat;
                 position: absolute;
-                height: 1736px;
-                width: 881px;
+                height: 1492px;
+                width: 737px;
                 top: 145px;
-                right: -355px;
+                right: -250px;
             }
         }
+    }
+}
+@keyframes net-init {
+    0% {
+        margin-top: 0;
+        opacity: 0;
+    }
+    10% {
+        margin-top: 1px; //Firefox rendering bugfix
+    }
+    100% {
+        margin-top: 0;
+        opacity: 1;
     }
 }
