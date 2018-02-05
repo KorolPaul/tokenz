@@ -512,17 +512,6 @@ blockquote:before {
   padding-top: 145px;
 }
 
-.bg-light:before {
-  content: '';
-  background: url(src/img/roadmap.png) no-repeat bottom center;
-  background-size: 100% auto;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-}
-
 .anchor {
   position: relative;
   bottom: 20px;
@@ -1562,24 +1551,43 @@ h6,
   }
 }
 
+.bg-roadmap {
+  position: relative;
+}
+
+.bg-roadmap:before {
+  content: '';
+  background: url(src/img/roadmap.png) no-repeat bottom center;
+  background-size: 100% auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
+.roadmap {
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
 /*Form elements*/
 .button,
 a.fw-btn,
 button,
 input[type="button"],
 input[type="submit"], .es_submit_button[type="button"] {
-  background: -webkit-gradient(linear, left top, right top, from(#d23266), to(#e76748));
-  background: linear-gradient(to right, #d23266, #e76748);
   color: #fff;
+  background: #24186b;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: none;
-  border-radius: 35px;
+  border-radius: 15px;
   cursor: pointer;
   display: inline-block;
-  font: 800 18px "Open Sans", sans-serif;
-  line-height: 70px;
-  height: 70px;
+  font: 700 18px "Open Sans", sans-serif;
+  line-height: 60px;
+  height: 60px;
   min-width: 200px;
   text-align: center;
   text-decoration: none;
@@ -1601,24 +1609,53 @@ input[type="submit"]:hover, .es_submit_button[type="button"]:hover {
   color: #fff;
 }
 
+a.fw-btn-big, a.fw-btn-big-yellow, a.fw-btn-big-white {
+  border-radius: 35px;
+  line-height: 70px;
+  height: 70px;
+  font-weight: 800;
+}
+
 a.fw-btn-yellow {
+  background: #ffee4e;
+  color: #24186b;
+}
+
+a.fw-btn-white {
+  background: #fff;
+  color: #24186b;
+  -webkit-transition: .2s ease-in-out background, .2s ease-in-out color;
+  transition: .2s ease-in-out background, .2s ease-in-out color;
+}
+
+a.fw-btn-white:hover {
+  background: #292154;
+  color: #fff;
+}
+
+a.fw-btn-big {
+  background: -webkit-gradient(linear, left top, right top, from(#d23266), to(#e76748));
+  background: linear-gradient(to right, #d23266, #e76748);
+}
+
+a.fw-btn-big-yellow {
   background: -webkit-gradient(linear, left top, right top, from(#e86c49), to(#ffe140));
   background: linear-gradient(to right, #e86c49, #ffe140);
   color: #221931;
 }
 
-a.fw-btn-yellow:hover {
+a.fw-btn-big-yellow:hover {
   color: #221931;
 }
 
-a.fw-btn-white {
+a.fw-btn-big-white {
   background: #fff;
   color: #292154;
   -webkit-transition: .2s ease-in-out background, .2s ease-in-out color;
   transition: .2s ease-in-out background, .2s ease-in-out color;
 }
 
-a.fw-btn-white:hover {
+a.fw-btn-big-white:hover {
   background: #292154;
   color: #fff;
 }

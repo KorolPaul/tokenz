@@ -1,14 +1,14 @@
 %button {
-    background: linear-gradient(to right, #d23266, #e76748);
     color: #fff;
+    background: #24186b;
     box-sizing: border-box;
     border: none;
-    border-radius: 35px;
+    border-radius: 15px;
     cursor: pointer;
     display: inline-block;
-    font: 800 18px $font-family;
-    line-height: 70px;
-    height: 70px;
+    font: 700 18px $font-family;
+    line-height: 60px;
+    height: 60px;
     min-width: 200px;
     text-align: center;
     text-decoration: none;
@@ -22,9 +22,12 @@
         filter: contrast(1.4);
         color: #fff;
     }
-    &:active {
-
-    }
+}
+%big-button {
+    border-radius: 35px;
+    line-height: 70px;
+    height: 70px;
+    font-weight: 800;
 }
 
 .button,
@@ -34,7 +37,28 @@ input[type="button"],
 input[type="submit"],  {
     @extend %button;
 }
+
 a.fw-btn-yellow {
+    background: #ffee4e;
+    color: #24186b;
+}
+a.fw-btn-white {
+    background: #fff;
+    color: #24186b;
+    transition: .2s ease-in-out background,
+                .2s ease-in-out color;
+
+    &:hover {
+        background: #292154;
+        color: #fff;
+    }
+}
+a.fw-btn-big {
+    @extend %big-button;
+    background: linear-gradient(to right, #d23266, #e76748);
+}
+a.fw-btn-big-yellow {
+    @extend %big-button;
     background: linear-gradient(to right, #e86c49, #ffe140);
     color: #221931;
 
@@ -42,7 +66,8 @@ a.fw-btn-yellow {
         color: #221931;
     }
 }
-a.fw-btn-white {
+a.fw-btn-big-white {
+    @extend %big-button;
     background: #fff;
     color: #292154;
     transition: .2s ease-in-out background,

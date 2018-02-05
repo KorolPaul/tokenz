@@ -36,6 +36,10 @@ $options = array(
 			''      => __('Default', 'fw'),
 			'white' => __( 'White', 'fw' ),
 			'yellow'  => __( 'Yellow', 'fw' ),
+			'blue'  => __( 'Blue', 'fw' ),
+			'big'  => __( 'Big button', 'fw' ),
+			'big-yellow'  => __( 'Big yellow', 'fw' ),
+			'big-white'  => __( 'Big white', 'fw' ),
 		)
 	),
 );

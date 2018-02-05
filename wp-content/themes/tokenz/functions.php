@@ -206,7 +206,7 @@ function theme_settings_page()
 function display_bg_element()
 {
 	?>
-		<input name="use_alt_bg" id="use_alt_bg" type="checkbox" value="1" <?php checked( 1, get_option( 'use_alt_bg' ), false ) ?> />
+		<input name="use_alt_bg" id="use_alt_bg" type="checkbox" class="code" value="1" <?php checked( '1', get_option( 'use_alt_bg' ), false ) ?> />
 		<?php
 			echo get_option( 'use_alt_bg' );
 			if(checked( 1, get_option( 'use_alt_bg' ), false )){
