@@ -15,7 +15,6 @@
 .cloud-city-dash {
     width: 17%;
     min-width: 23px;
-    height: 6em;
     display: inline-block;
     vertical-align: top;
     margin-left: 1%;
@@ -26,10 +25,8 @@
     white-space: nowrap;
 }
 .cloud-city-tripdash {
-    width: 18%;
+    width: 25%%;
     min-width: 40px;
-    max-width: 90px;
-    height: 48px;
     display: inline-block;
     vertical-align: top;
     margin-left: 1%;
@@ -62,8 +59,8 @@
     border-bottom: 1px solid #c6c6c6;
 }
 
-.cloud-city-dash {
-    height: 5em;
+.cloud-city-dash, .cloud-city-tripdash  {
+    height: 5.5em;
 }
 
 .cloud-city-tripdash .cloud-city-digit {
@@ -86,6 +83,9 @@
     .cloud-city-digit {
         font-size: 2em;
     }
+    .cloud-city-dash, .cloud-city-tripdash  {
+        height: 4.5em;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -94,7 +94,9 @@
         font-size: 1.5em;
     }
     .cloud-city-dash {
+        margin-left: 6px;
+    }
+    .cloud-city-dash, .cloud-city-tripdash  {
         height: 4em;
-        margin-left: 6px; 
     }
  }
