@@ -14,14 +14,15 @@
     }
     &_button {
         padding: 0;
-        margin: 0 0 0 -30px;
+        margin: 0 0 0 -35px;
     }
     &_submit_button[type="button"] {
         @extend %button;
         background: $light_color;
+        border-radius: 35px;
         color: $color;
-        height: 42px;
-        line-height: 42px;
+        height: 40px;
+        line-height: 40px;
         min-width: 135px;
 
         &:hover {

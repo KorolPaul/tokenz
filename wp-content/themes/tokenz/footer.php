@@ -22,7 +22,7 @@
 			</div>
 			<div class="footer_section">
 				<p class="footer_title">Find us on:</p>
-				<?php get_template_part( 'template-parts/content', 'social' ) ?>
+				<?php get_template_part( 'template-parts/social', 'index' ) ?>
 			</div>
 		</div>
 	</footer>

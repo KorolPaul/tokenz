@@ -28,7 +28,7 @@
 	<header id="masthead" class="header">
 		<div class="header_content">
 			<?php
-				get_template_part( 'template-parts/content', 'social' );
+				get_template_part( 'template-parts/social', 'index' );
 			?>
 
 			<nav id="site-navigation" class="menu-container">

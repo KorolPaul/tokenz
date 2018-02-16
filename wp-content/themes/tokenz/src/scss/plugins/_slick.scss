@@ -93,6 +93,7 @@
 .slick-next {
     @include invisible-text;
     background-repeat: no-repeat;
+    background-color: transparent;
     background-position: center center;
     background-size: 28px 100px;
     border-radius: 10px;

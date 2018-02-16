@@ -1,5 +1,5 @@
 body {
-    background: $light_gradient;
+    background: #fff;
     color: $color;
     font: $font-size $font-family;
     overflow: hidden;
@@ -16,6 +16,11 @@ a {
 
 p {
     line-height: 1.5;
+
+    article & {
+        line-height: 2;
+        margin: 0 0 40px;
+    }
 }
 
 blockquote {

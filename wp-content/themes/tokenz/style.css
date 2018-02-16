@@ -457,8 +457,7 @@ template {
 }
 
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FAF9F8), to(#DEDFE3));
-  background: linear-gradient(to bottom, #FAF9F8, #DEDFE3);
+  background: #fff;
   color: #000;
   font: 18px "Open Sans", sans-serif;
   overflow: hidden;
@@ -476,6 +475,11 @@ a:hover {
 
 p {
   line-height: 1.5;
+}
+
+article p {
+  line-height: 2;
+  margin: 0 0 40px;
 }
 
 blockquote {
@@ -1095,6 +1099,12 @@ h6,
   }
 }
 
+.countdown .jedi-tripdash {
+  background: transparent;
+  width: 235px;
+  height: auto;
+}
+
 .countdown .jedi-digit {
   font: bold 40px "Montserrat", sans-serif;
   width: 28px;
@@ -1569,6 +1579,32 @@ h6,
 .roadmap {
   padding-top: 60px;
   padding-bottom: 120px;
+}
+
+.text-content h1,
+.text-content h2,
+.text-content h3,
+.text-content h4,
+.text-content h5,
+.text-content h6,
+.text-content p {
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-content img.aligncenter {
+  margin-left: -70px;
+  margin-right: -70px;
+  max-width: 100vw;
+}
+
+.text-content img.alignleft {
+  margin-left: -70px;
+}
+
+.text-content img.alignright {
+  margin-right: -70px;
 }
 
 /*Form elements*/
@@ -2203,14 +2239,15 @@ object {
 
 .es_button {
   padding: 0;
-  margin: 0 0 0 -30px;
+  margin: 0 0 0 -35px;
 }
 
 .es_submit_button[type="button"] {
   background: #fff;
+  border-radius: 35px;
   color: #000;
-  height: 42px;
-  line-height: 42px;
+  height: 40px;
+  line-height: 40px;
   min-width: 135px;
 }
 
@@ -2349,6 +2386,7 @@ object {
   text-shadow: none;
   color: transparent;
   background-repeat: no-repeat;
+  background-color: transparent;
   background-position: center center;
   background-size: 28px 100px;
   border-radius: 10px;
@@ -2377,4 +2415,9 @@ object {
 .slick-next {
   background-image: url(src/img/slider-next.svg);
   right: 0;
+}
+
+div#bwg_container1_0 #bwg_container2_0 .bwg_standart_thumb_spun1_0:hover {
+  -webkit-transform: none;
+  transform: none;
 }

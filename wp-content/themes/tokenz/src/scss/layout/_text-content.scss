@@ -1,0 +1,27 @@
+.text-content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        max-width: $max-width__article;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    img {
+        &.aligncenter {
+            margin-left: -70px;
+            margin-right: -70px;
+            max-width: 100vw;
+        }
+        &.alignleft {
+            margin-left: -70px;
+        }
+        &.alignright {
+            margin-right: -70px;
+        }
+    }
+}
