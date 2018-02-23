@@ -1,0 +1,17 @@
+.error-404 {
+    text-align: center;
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: calc(100vh - 145px - 330px);
+    }
+
+    &_header,
+    &_content {
+        @include tablet {
+            margin: 0 auto 50px;
+            width: 60%;
+        }
+    }
+}

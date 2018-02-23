@@ -23,7 +23,7 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		<footer class="entry-footer fw-container">
 			<?php
 				edit_post_link(
 					sprintf(

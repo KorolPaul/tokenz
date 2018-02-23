@@ -1,28 +1,32 @@
 .social {
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 1;
+    display: none;
 
-    &_link {
-        @include invisible-text;
-        background-position: center center;
-        display: inline-block;
-        height: 20px;
-        width: 20px;
-        margin: 0 $layout_indent/2 0 0;
-        vertical-align: middle;
-        opacity: 1;
-        transition: .2s ease-in-out opacity;
+    @include tablet {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
 
-        &:hover {
-            opacity: .6;
-        }
+        &_link {
+            @include invisible-text;
+            background-position: center center;
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            margin: 0 $layout_indent/2 0 0;
+            vertical-align: middle;
+            opacity: 1;
+            transition: .2s ease-in-out opacity;
 
-        $social_networks: instagram, twitter, facebook, skype, slack, linkedin, medium, snapchat, youtube;
-        @each $s in $social_networks {
-            &__#{$s} {
-                background-image: url(#{$img-path}/icons/#{$s}.svg);
+            &:hover {
+                opacity: .6;
+            }
+
+            $social_networks: instagram, twitter, facebook, skype, slack, linkedin, medium, snapchat, youtube;
+            @each $s in $social_networks {
+                &__#{$s} {
+                    background-image: url(#{$img-path}/icons/#{$s}.svg);
+                }
             }
         }
     }

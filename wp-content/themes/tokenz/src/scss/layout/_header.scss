@@ -5,13 +5,13 @@
         background: $bg_color__alt;
     }
     &_content {
-        @include layout;
-        height: 80px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        min-height: 80px;
         @include tablet {
+            @include layout;
             height: 145px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
     }
 }

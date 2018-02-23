@@ -5,7 +5,7 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, i, len, header, social, loginButton;
+	var container, button, menu, links, i, len, header, social, loginButton, currencies;
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
@@ -54,6 +54,7 @@
 	header = document.querySelector('.header_content');
 	social = document.querySelector('.social');
 	login = document.querySelector('.login');
+	currencies = document.querySelector('.currencies');
 
 	/**
 	 * Sets or removes .focus class on an element.
@@ -86,9 +87,10 @@
 				containerWidth = container.offsetWidth,
 				socialWidth = social.offsetWidth,
 				loginWidth = login.offsetWidth,
+				currenciesWidth = currencies.offsetWidth,
 				ellipsisWidth = 100;
 
-			if((headerWidth - containerWidth - socialWidth - loginWidth) <= 0) {
+			if((headerWidth - containerWidth - socialWidth - loginWidth - currenciesWidth) <= 0) {
 				var ellipsisItem = document.querySelector('.menu-item__other') || document.createElement('li'),
 					ellipsisLink = document.querySelector('.menu-item__other a') || document.createElement('a'),
 					submenuElement = document.querySelector('.sub-menu') || document.createElement('ul');
@@ -150,7 +152,7 @@
     var netElement = document.querySelector('.net'),
         netElementStyles = window.getComputedStyle(netElement, null).getPropertyValue('transform');
 
-    document.querySelector('.site').addEventListener('mousemove', (e) => {
+    document.querySelector('.parallax').addEventListener('mousemove', (e) => {
         var multiplier = 40,
             delta = (window.innerWidth / 2 - e.clientX),
             translate = Math.floor(delta / multiplier);

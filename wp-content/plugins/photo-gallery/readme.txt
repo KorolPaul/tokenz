@@ -10,22 +10,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Photo Gallery is a powerful gallery plugin with a list of advanced options for creating stunning image galleries. Add the responsive plugin with cool gallery views.
 
 == Description ==
-Special offer:   
-   
-[Try Try Photo Gallery  premium and 60+ other plugins for free at 10Web](https://10web.io/plugins/wordpress-photo-gallery/)     
-  
-10Web is a new platform from WebDorado  
-  
-https://www.youtube.com/watch?v=3u0O9ZdVsGc
-  
-[WordPress Photo Gallery](https://web-dorado.com/products/wordpress-photo-gallery-plugin.html)  
-[Photo Gallery Demo](http://wpdemo.web-dorado.com/gallery/)  
-[Photo Gallery User Manual](https://web-dorado.com/wordpress-gallery-guide-step-1.html)  
-[Photo Gallery Support Forum](https://wordpress.org/support/plugin/photo-gallery)  
 
+https://www.youtube.com/watch?v=3u0O9ZdVsGc
+
+= Useful Links: =  
+[Special Offer for all Premium Plugins](https://web-dorado.com/wordpress-plugins-bundle.html) 
+[WordPress Photo Gallery](https://web-dorado.com/products/wordpress-photo-gallery-plugin.html)  
+[Demo](http://wpdemo.web-dorado.com/gallery/)  
+[User Manual](https://web-dorado.com/wordpress-gallery-guide-step-1.html)  
+[Support Forum](https://wordpress.org/support/plugin/photo-gallery)  
  
 
-If you’re looking for a user friendly and feature rich plugin to add responsive galleries and albums to your website, Photo Gallery WD plugin can be the best option for you. It’s simple in use yet packed with powerful functionality, allowing you to create anything from simple photo galleries to selling digital content right from your website (Premium version). Photo Gallery  comes packed with stunning layout options, gallery and album views, multiple widgets and a number of extensions that take its functionality even further.  WordPress Photo Gallery WD is a great choice for photography websites and blogs,  as well as sites that want to have robust image galleries with easy navigation.
+If you’re looking for a user friendly and feature rich plugin to add responsive galleries and albums to your website, Photo Gallery plugin can be the best option for you. It’s simple in use yet packed with powerful functionality, allowing you to create anything from simple photo galleries to selling digital content right from your website (Premium version). Photo Gallery  comes packed with stunning layout options, gallery and album views, multiple widgets and a number of extensions that take its functionality even further.  WordPress Photo Gallery is a great choice for photography websites and blogs,  as well as sites that want to have robust image galleries with easy navigation.
 Check the extensive feature list of the plugin bellow, have a look at the plugin demo and give it a try. 
 
 
@@ -34,8 +30,8 @@ Check the extensive feature list of the plugin bellow, have a look at the plugin
 *   **Enhanced SEO** - Adding relevant tags and metadata to the images can enhance your SEO and provide more visibility in relevant search results in Google.
 *   **Better page navigation** - Organized galleries and albums will make your website look more professional, easy to navigate and result in a better user experience. 
 *   **Modern web design** - Relevant  high-resolution photos displayed in beautiful layouts are an integral part of a well-designed website that gets results.
-*   **Full Control** - Photo Gallery gives you flexibility in terms of the design and customization of your galleries. You’ll get full control over the style, optimization and display of visual content on your website. 
-*   **Support** - The team behind Photo Gallery plugin provides timely and effective support to all its users. We keep standards high and response time low.  
+*   **Full Control** - Plugin gives you flexibility in terms of the design and customization of your galleries. You’ll get full control over the style, optimization and display of visual content on your website. 
+*   **Support** - Get timely and effective support to all its users. We keep standards high and response time low.  
 
 == What’s in it ==
 
@@ -45,7 +41,7 @@ Photo Gallery provides a number of view options to organize your galleries and a
 
 = UNLIMITED PHOTOS, GALLERIES AND ALBUMS =
 
-Sounds great, right? With Photo Gallery plugin you can have as many galleries and albums as you want, and stuff them with unlimited number of photos and videos. Kinda unlimited everything.
+Sounds great, right? With plugin you can have as many galleries and albums as you want, and stuff them with unlimited number of photos and videos. Kinda unlimited everything.
 
 = POWERFUL LIGHTBOX =
 
@@ -57,7 +53,7 @@ The Photo Gallery plugin allows you to include both videos and images within a s
 
 = MULTIPLE WIDGETS =
 
-There are four widgets in the gallery plugin: WordPress Standard Tag Cloud, Dynamic Photo Gallery Tags Cloud (Premium version), Photo Gallery Slideshow and Photo Gallery widget. Use one of these widgets to display your albums on the sidebar areas of your website. 
+There are four widgets in the gallery plugin: WordPress Standard Tag Cloud, Dynamic Tags Cloud (Premium version), Slideshow and Gallery widget. Use one of these widgets to display your albums on the sidebar areas of your website. 
 
 = IMAGE WATERMARKING AND RIGHT CLICK PROTECTION =
 
@@ -82,40 +78,10 @@ Photo Gallery comes with a number of add-ons that can help you sell digital imag
 *Some customizations described here are available in Premium version. Please refer to feature summary for additional info.
 
 Photo Gallery allows you to create unlimited galleries and organize them into different photo albums providing detailed gallery descriptions and tags.The plugin supports both image and video content (Premium feature). 
-Adding photos and videos to the galleries from the WordPress dashboard is simple and easy with its user-friendly admin panel. You’ll get all the tools you need to add and edit photos in the galleries.The file manager will help to rename, upload, remove, copy images and/or image directories with a few simple steps.  Under the options (settings) tab in admin panel you’ll find an extensive list of settings for galleries, thumbnails,watermarking,social accounts and slideshow that you can configure based on your needs.Photo Gallery WD features a powerful lightbox that supports filmstrip and image carousel display. Also, you can enable image comments options and show the comments of the images right in the lightbox (Premium feature). There is a dedicated section for lightbox settings where you can choose to enable/disable AddThis display, image download option, image count,and other lightbox features. 
+Adding photos and videos to the galleries from the WordPress dashboard is simple and easy with its user-friendly admin panel. You’ll get all the tools you need to add and edit photos in the galleries.The file manager will help to rename, upload, remove, copy images and/or image directories with a few simple steps.  Under the options (settings) tab in admin panel you’ll find an extensive list of settings for galleries, thumbnails,watermarking,social accounts and slideshow that you can configure based on your needs. Plugin features a powerful lightbox that supports filmstrip and image carousel display. Also, you can enable image comments options and show the comments of the images right in the lightbox (Premium feature). There is a dedicated section for lightbox settings where you can choose to enable/disable AddThis display, image download option, image count,and other lightbox features. 
 Under the social options tab you’ll find settings for the Instagram and Facebook galleries, where you can specify Instagram feed auto update interval (Premium feature). With the available user roles you can choose who can add/edit galleries, images, albums and tags (Premium feature). 
 
 
-== Feature Summary ==
-
-= Photo Gallery main features include: =
-
-*   Responsive galleries and albums   
-*   Multiple gallery views to choose from: Thumbnails, Image Browser, Slideshow for galleries and Compact Album, Extended Album views for albums   
-*   Unlimited number of galleries/albums   
-*   Unlimited quantity of photos in galleries   
-*   Shortcode editor for publishing created gallery/ies and album /s into the posts and pages   
-*   Image details (tags, captions)  
-*   Thumbnail editing tools (Crop, rotate and flip)  
-*   Autoplay and shuffle features for Slideshow view and Lightbox   
-*   Audio track playback possibility with the image slideshow  
-*   Image Watermarks/Advertisements   
-*   Direct Image download and original image display capabilities   
-*   WordPress Tag cloud hosted widget   
-*   Photo Gallery Slideshow widget   
-*   Photo Gallery Widget for displaying albums and galleries as widgets   
-*   Possibility to enable and disable pagination for albums, Thumbnails view, blog Style View   
-*   Possibility to add videos via YouTube, Vimeo, Instagram, Facebook, Flickr or Dailymotion URL   
-*   Image import from the Media Library   
-*   Right-click protection   
-*   Resizing possibility after adding the pictures 
-*   Possibility to display Search Box on the gallery page   
-*   Enable full width feature for the lightbox  
-*   Possibility to enable/disable autoplay for gallery lightbox  
-*   Redirection option upon clicking on the picture thumbnail  
-*   Front-end image sorting possibility (dropdown) for the users  
-
-  
 [Premium version adds](https://web-dorado.com/products/wordpress-photo-gallery-plugin.html)  
 
 *   Masonry gallery View.
@@ -127,7 +93,7 @@ Under the social options tab you’ll find settings for the Instagram and Facebo
 *   Instagram Integration
 *   Commenting possibility with Captcha protection
 *   Social sharing (Facebook, Google+, Twitter, Pinterest and Tumblr)
-*   Dynamic Photo Gallery Tag Cloud widget with image tag cloud and text tag cloud options
+*   Dynamic Tag Cloud widget with image tag cloud and text tag cloud options
 *   Possibility to include both videos and images within a single gallery
 *   Add ons support.
 *   Possibility of changing the roles of who can edit the galleries/albums/images (Author/All Users)
@@ -138,7 +104,7 @@ Under the social options tab you’ll find settings for the Instagram and Facebo
 [Export/Import Add-on](https://web-dorado.com/products/wordpress-photo-gallery-plugin/add-ons/export-import.html)  Export/import galleries, albums and all related data from one WordPress site to another. 
 
 ###IMPORTANT:    
-If you think you found a bug in Photo Gallery or have any problem/question concerning the plugin, please check out [Photo Gallery Support Forum](https://wordpress.org/support/plugin/photo-gallery) in our website. If you do not find a solution here, do not hesitate to [click here to contact us](https://web-dorado.com/support/contact-us.html).
+If you think you found a bug in Photo Gallery or have any problem/question concerning the plugin, please check out [Support Forum](https://wordpress.org/support/plugin/photo-gallery) in our website. If you do not find a solution here, do not hesitate to [click here to contact us](https://web-dorado.com/support/contact-us.html).
 
 
 == Installation ==

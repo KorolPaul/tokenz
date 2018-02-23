@@ -22,7 +22,23 @@
 
 <body <?php body_class(); ?>>
 
-<div id="page" class="site <?php echo get_option('alt_bg') ?>">
+<?php
+    $page_class = 'site';
+
+    if ( get_option( 'use_alt_bg' ) == 1 ) {
+        $page_class .= ' alt-bg';
+    }
+
+    if ( get_option( 'use_parallax' ) == 1 ) {
+        $page_class .= ' parallax';
+    }
+
+    if ( get_option( 'use_animation' ) == 1 ) {
+        $page_class .= ' animated-bg';
+    }
+?>
+
+<div id="page" class="<?php echo $page_class ?>">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tokenz' ); ?></a>
 
 	<header id="masthead" class="header">
@@ -42,7 +58,7 @@
 				?>
 			</nav><!-- #site-navigation -->
 			<div class="currencies">
-				<img src="<?php echo get_option('currencies_icons'); ?>" alt="" />
+				<img src="<?php echo get_option('currencies_icon'); ?>" alt="" width="100" />
 			</div>
 			<div class="login">
 				<?php if (is_user_logged_in()) : ?>
@@ -52,6 +68,6 @@
 				<?php endif;?>
 			</div>
 		</div>
-	</header><!-- #masthead -->
+    </header><!-- #masthead -->
 	<div class="net"></div>
 	<div id="content" class="site-content">

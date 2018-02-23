@@ -110,15 +110,6 @@ function tokenz_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer info', 'tokenz' ),
-		'id'            => 'sidebar-2',
-		'description'   => esc_html__( 'Add widgets here.', 'tokenz' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
 }
 add_action( 'widgets_init', 'tokenz_widgets_init' );
 
@@ -190,12 +181,12 @@ function theme_settings_page()
     ?>
 	    <div class="wrap">
 			<h1>Tokenz Settings</h1>
-			<form method="post" action="options.php">
+			<form method="post" action="options.php" enctype="multipart/form-data">
 				<?php
-					settings_fields("layout");
 					settings_fields("social");
-					//settings_fields("currencies");
-					do_settings_sections("theme-options");
+					settings_fields("layout");
+					do_settings_sections("layout-options");
+					do_settings_sections("social-options");
 					submit_button();
 				?>
 			</form>
@@ -206,16 +197,21 @@ function theme_settings_page()
 function display_bg_element()
 {
 	?>
-		<input name="use_alt_bg" id="use_alt_bg" type="checkbox" class="code" value="1" <?php checked( '1', get_option( 'use_alt_bg' ), false ) ?> />
-		<?php
-			echo get_option( 'use_alt_bg' );
-			if(checked( 1, get_option( 'use_alt_bg' ), false )){
-				echo 'checked';
-			} else {
-				echo 'unchecked';
-			}
+		<input name="use_alt_bg" id="use_alt_bg" type="checkbox" class="code" value="1" <?php checked( "1", get_option( 'use_alt_bg' ) ) ?> />
+    <?php
+}
 
-		?>
+function display_animation_element()
+{
+	?>
+		<input name="use_animation" id="use_animation" type="checkbox" class="code" value="1" <?php checked( "1", get_option( 'use_animation' ) ) ?> />
+    <?php
+}
+
+function display_parallax_element()
+{
+	?>
+		<input name="use_parallax" id="use_parallax" type="checkbox" class="code" value="1" <?php checked( "1", get_option( 'use_parallax' ) ) ?> />
     <?php
 }
 
@@ -286,7 +282,7 @@ function currencies_display()
 {
 	?>
         <input type="file" name="currencies_icon" />
-        <?php echo get_option('currencies_icon'); ?>
+        <img alt="" src="<?php echo get_option('currencies_icon') ?>" style="max-width: 100px; display: block"/>
    <?php
 }
 
@@ -298,26 +294,30 @@ function handle_icons_upload()
 		$temp = $urls["url"];
 		return $temp;
 	}
-
-	return $option;
 }
 
 function display_theme_panel_fields()
 {
-	add_settings_section("layout", "Layout options", null, "theme-options");
-	add_settings_field("use_alt_bg", "Alternate background", "display_bg_element", "theme-options", "layout");
+	add_settings_section("layout", "Layout options", null, "layout-options");
+	add_settings_field("use_alt_bg", "Alternate background", "display_bg_element", "layout-options", "layout");
+	add_settings_field("use_animation", "Enable background animation", "display_animation_element", "layout-options", "layout");
+	add_settings_field("use_parallax", "Enable parallax effect", "display_parallax_element", "layout-options", "layout");
+	add_settings_field("currencies_icon", "Currencies icon", "currencies_display", "layout-options", "layout");
 	register_setting("layout", "use_alt_bg");
+	register_setting("layout", "use_animation");
+	register_setting("layout", "use_parallax");
+	register_setting("layout", "currencies_icon", "handle_icons_upload");
 
-	add_settings_section("social", "Social accounts", null, "theme-options");
-    add_settings_field("instagram_url", "Instagram Profile Url", "display_instagram_element", "theme-options", "social");
-	add_settings_field("twitter_url", "Twitter Profile Url", "display_twitter_element", "theme-options", "social");
-    add_settings_field("facebook_url", "Facebook Profile Url", "display_facebook_element", "theme-options", "social");
-    add_settings_field("skype_url", "Skype Profile Url", "display_skype_element", "theme-options", "social");
-    add_settings_field("slack_url", "Slack Profile Url", "display_slack_element", "theme-options", "social");
-    add_settings_field("linkedin_url", "Linkedin Profile Url", "display_linkedin_element", "theme-options", "social");
-    add_settings_field("medium_url", "Medium Profile Url", "display_medium_element", "theme-options", "social");
-    add_settings_field("snapchat_url", "Snapchat Profile Url", "display_snapchat_element", "theme-options", "social");
-	add_settings_field("youtube_url", "Youtube Profile Url", "display_youtube_element", "theme-options", "social");
+	add_settings_section("social", "Social accounts", null, "social-options");
+    add_settings_field("instagram_url", "Instagram Profile Url", "display_instagram_element", "social-options", "social");
+	add_settings_field("twitter_url", "Twitter Profile Url", "display_twitter_element", "social-options", "social");
+    add_settings_field("facebook_url", "Facebook Profile Url", "display_facebook_element", "social-options", "social");
+    add_settings_field("skype_url", "Skype Profile Url", "display_skype_element", "social-options", "social");
+    add_settings_field("slack_url", "Slack Profile Url", "display_slack_element", "social-options", "social");
+    add_settings_field("linkedin_url", "Linkedin Profile Url", "display_linkedin_element", "social-options", "social");
+    add_settings_field("medium_url", "Medium Profile Url", "display_medium_element", "social-options", "social");
+    add_settings_field("snapchat_url", "Snapchat Profile Url", "display_snapchat_element", "social-options", "social");
+	add_settings_field("youtube_url", "Youtube Profile Url", "display_youtube_element", "social-options", "social");
     register_setting("social", "instagram_url");
     register_setting("social", "facebook_url");
     register_setting("social", "twitter_url");
@@ -328,9 +328,6 @@ function display_theme_panel_fields()
     register_setting("social", "snapchat_url");
 	register_setting("social", "youtube_url");
 
-	//add_settings_section("currencies", "Currencies icons", null, "theme-options");
-	//add_settings_field("currencies_icon", "Icons", "currencies_display", "theme-options", "currencies");
-	//register_setting("currencies", "currencies_icon", "handle_icons_upload");
 }
 
 

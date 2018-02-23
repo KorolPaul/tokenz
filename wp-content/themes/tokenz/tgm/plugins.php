@@ -106,7 +106,17 @@ function tknz_register_required_plugins() {
 			'name'      => 'T(-) Countdown',
 			'slug'      => 'jquery-t-countdown-widget',
 			'required'  => true,
-		),
+        ),
+        array(
+			'name'      => 'SVG Support',
+			'slug'      => 'svg-support',
+			'required'  => true,
+        ),
+        array(
+			'name'      => 'Photo Gallery',
+			'slug'      => 'photo-gallery',
+			'required'  => true,
+		)
 	);
 
 	/*

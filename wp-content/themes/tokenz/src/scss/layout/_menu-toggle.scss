@@ -5,10 +5,12 @@
     background: #fff;
     padding: 0;
     height: 26px;
-    width: 26px;
+    width: 40px;
     position: absolute;
-    top: 26px;
-    right: 26px;
+    top: 15px;
+    left: 50%;
+    margin: 0 0 0 -20px;
+    overflow: visible;
     min-width: inherit;
     @include tablet {
         display: none;
@@ -22,6 +24,8 @@
         left: 0;
         right: 0;
         height: 7px;
+        transition: .2s ease-in-out height,
+                    .2s ease-in-out transform;
     }
     &:after {
         content: '';
@@ -31,5 +35,18 @@
         left: 0;
         right: 0;
         height: 7px;
+        transition: .2s ease-in-out height,
+                    .2s ease-in-out transform;
+    }
+
+    .toggled & {
+        &:before {
+            transform: rotateZ(45deg) translate(5px, 5px);
+            height: 4px;
+        }
+        &:after {
+            transform: rotateZ(-45deg) translate(5px, -4px);
+            height: 4px;
+        }
     }
 }

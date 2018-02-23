@@ -25,6 +25,21 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import  "basic/fonts";
 @import  "basic/default";
 
+/*Form elements*/
+@import  "form-elements/button";
+@import  "form-elements/input-text";
+@import  "form-elements/textarea";
+@import  "form-elements/range";
+@import  "form-elements/radio";
+@import  "form-elements/checkbox";
+
+/*Plugins*/
+@import  "plugins/underscores";
+@import  "plugins/subscribe";
+@import  "plugins/unyson";
+@import  "plugins/slick";
+@import  "plugins/gallery";
+
 /*layout*/
 @import  "layout/layout";
 @import  "layout/headings";
@@ -43,18 +58,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import  "layout/intro";
 @import  "layout/roadmap";
 @import  "layout/text-content";
-
-/*Form elements*/
-@import  "form-elements/button";
-@import  "form-elements/input-text";
-@import  "form-elements/textarea";
-@import  "form-elements/range";
-@import  "form-elements/radio";
-@import  "form-elements/checkbox";
-
-/*Plugins*/
-@import  "plugins/underscores";
-@import  "plugins/subscribe";
-@import  "plugins/unyson";
-@import  "plugins/slick";
-@import  "plugins/gallery";
+@import  "layout/full-width";
+@import  "layout/currencies";
+@import  "layout/error-404";

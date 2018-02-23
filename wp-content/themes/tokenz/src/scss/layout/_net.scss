@@ -1,35 +1,45 @@
 .net {
+    display: none;
     @include tablet {
-        .home & {
-            animation: .5s linear net-init;
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            height: 2000px;
-            overflow: hidden;
-            transform: translateZ(-1px) scale(2.07); //1 + (translateZ * -1) / perspective
-            transition: .2s ease-out transform;
+        animation: .5s linear net-init;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 2000px;
+        overflow: hidden;
+        transform: translateZ(-1px) scale(2.07); //1 + (translateZ * -1) / perspective
+        transition: .2s ease-out transform;
 
-            &:before {
-                content: '';
-                background: url(#{$img-path}/net-left.svg) no-repeat;
-                position: absolute;
-                height: 793px;
-                width: 845px;
-                top: 605px;
-                left: -170px;
-            }
-            &:after {
-                content: '';
-                background: url(#{$img-path}/net-right.svg) no-repeat;
-                position: absolute;
-                height: 1492px;
-                width: 737px;
-                top: 145px;
-                right: -250px;
+        &:before {
+            content: '';
+            background: url(#{$img-path}/net-left.svg) no-repeat;
+            position: absolute;
+            height: 793px;
+            width: 845px;
+            top: 605px;
+            left: -170px;
+
+            .animated-bg & {
+                background: url(#{$img-path}/net-left-animated.svg) no-repeat;
             }
         }
+        &:after {
+            content: '';
+            background: url(#{$img-path}/net-right.svg) no-repeat;
+            position: absolute;
+            height: 1492px;
+            width: 737px;
+            top: 145px;
+            right: -250px;
+
+            .animated-bg & {
+                background: url(#{$img-path}/net-right-animated.svg) no-repeat;
+            }
+        }
+    }
+    .home & {
+        display: block;
     }
 }
 @keyframes net-init {

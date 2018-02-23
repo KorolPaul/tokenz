@@ -1,4 +1,6 @@
-input[type="text"] {
+input[type="text"],
+input[type="search"],
+input[type="email"] {
     @include placeholder-color(#444);
     border-radius: 15px;
     background: transparent;

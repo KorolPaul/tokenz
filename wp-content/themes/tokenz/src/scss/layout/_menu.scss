@@ -1,55 +1,63 @@
 .menu-container {
-    display: flex;
-    align-items: center;
+    padding: 0 0 5px;
+    @include tablet {
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
 }
 
 .menu {
-    border-top: 1px solid rgba(255, 255, 255, .5);
-    box-shadow:0 40px 50px $bg_color;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50px;
-    padding: 0;
+    background: #fff;
+    padding: 42px 0;
+    width: 100%;
     z-index: 2;
     display: none;
     @include tablet {
-        border: none;
+        background: transparent;
         display: flex;
         flex-direction: row;
         margin: 0;
+        padding: 0;
         justify-content: space-between;
         position: relative;
         top: 0;
+        width: auto;
     }
 
     .toggled & {
         display: block;
     }
+    .widget-area & {
+        display: block;
+        padding: 0;
+    }
 
     &-item {
         list-style: none;
-        background: $bg_color;
-        border-bottom: 1px solid rgba(255, 255, 255, .5);
         position: relative;
+        text-align: center;
         @include tablet {
-            background: none;
             padding: 0;
-            border-bottom: none;
         }
-
 
         &__other {
             cursor: pointer;
         }
+        .widget-area & {
+            text-align: left;
+        }
+
         a {
-            color: #fff;
-            font-weight: 700;
+            color: $color;
+            font-size: 15px;
+            font-weight: 600;
             text-decoration: none;
-            padding: 15px $layout_indent;
+            padding: 9px $layout_indent;
             display: block;
             transition: .2s ease-in-out color;
             @include tablet {
+                color: $light_color;
                 font-size: $font-size__small;
                 margin: 0 25px;
                 padding: 0;
@@ -57,10 +65,18 @@
             }
 
             &:hover {
-                color: $bright_color;
+                @include tablet {
+                    color: $bright_color;
+                }
             }
             .sub-menu & {
                 padding: 10px 0;
+            }
+            .widget-area & {
+                color: $color;
+                font-size: inherit;
+                margin: 0 0 20px;
+                padding: 0;
             }
         }
     }

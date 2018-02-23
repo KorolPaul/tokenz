@@ -42,202 +42,30 @@
                 <polygon id="Triangle-Copy-8" stroke="#D43864" transform="translate(411.447768, 236.380416) scale(-1, -1) translate(-411.447768, -236.380416) " points="406.938577 176.475049 476.147169 296.285782 346.748367 258.766602"></polygon>
                 <polygon id="Triangle-Copy-6" stroke="#D43864" transform="translate(139.356680, 254.838174) scale(-1, -1) translate(-139.356680, -254.838174) " points="139.35668 213.875716 208.555395 295.800632 70.1579637 257.989132"></polygon>
             </g>
-            <circle id="Oval" fill="#E6644A" cx="394" cy="386" r="6">
-                 <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="5s"
-                        values="6; 9; 6"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#E6644A" cx="552.5" cy="392.5" r="3.5">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="3s"
-                        values="3.5; 6; 3.5"
-                        begin="1.3s"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#D04E78" cx="413.5" cy="493.5" r="3.5">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="4s"
-                        values="3.5; 6; 3.5"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#D04E78" cx="553.5" cy="528.5" r="3.5">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="3.5s"
-                        values="3.5; 6; 3.5"
-                        begin="2s"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#D04E78" cx="653.5" cy="492.5" r="3.5">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="3s"
-                        values="3.5; 6; 3.5"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#D04E78" cx="617.5" cy="615.5" r="3.5">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="4.5s"
-                        values="3.5; 6; 3.5"
-                        begin="0.7s"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#D04E78" cx="672.5" cy="598.5" r="1.5">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="3s"
-                        values="7; 11; 7"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval10" fill="#D04E78" cx="755" cy="595" r="7">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="3.5s"
-                        begin="1s"
-                        values="7; 11; 7"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#E6644A" cx="754.5" cy="458.5" r="3.5">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="4s"
-                        values="3.5; 6; 3.5"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
+            <circle id="Oval" fill="#E6644A" cx="394" cy="386" r="6"></circle>
+            <circle id="Oval" fill="#E6644A" cx="552.5" cy="392.5" r="3.5"></circle>
+            <circle id="Oval" fill="#D04E78" cx="413.5" cy="493.5" r="3.5"></circle>
+            <circle id="Oval" fill="#D04E78" cx="553.5" cy="528.5" r="3.5"></circle>
+            <circle id="Oval" fill="#D04E78" cx="653.5" cy="492.5" r="3.5"></circle>
+            <circle id="Oval" fill="#D04E78" cx="617.5" cy="615.5" r="3.5"></circle>
+            <circle id="Oval" fill="#D04E78" cx="672.5" cy="598.5" r="1.5"></circle>
+            <circle id="Oval10" fill="#D04E78" cx="755" cy="595" r="7"></circle>
+            <circle id="Oval" fill="#E6644A" cx="754.5" cy="458.5" r="3.5"> </circle>
             <circle id="Oval" fill="#E6644A" cx="893" cy="493" r="2"></circle>
-            <circle id="Oval" fill="#D04E78" cx="273" cy="458" r="2">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="4s"
-                        values="2; 4; 2"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#E8685E" cx="312" cy="390" r="2">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="4s"
-                        values="2; 4; 2"
-                        begin="1.3s"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#E8685E" cx="293" cy="285" r="2">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="3s"
-                        values="2; 4; 2"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#E8685E" cx="193" cy="322" r="2">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="5s"
-                        values="1.5; 3; 1.5"
-                        begin="0.6s"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#E8685E" cx="273.5" cy="179.5" r="1.5">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="4.5s"
-                        values="1.5; 3; 1.5"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#F2DE73" cx="287" cy="94" r="4">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="3.5s"
-                        values="4; 3; 4"
-                        begin="0.8s"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#D04E78" cx="341.5" cy="574.5" r="1.5">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="3s"
-                        values="1.5; 3; 1.5"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#9A59E0" cx="408" cy="733" r="3">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="4s"
-                        values="3; 5; 3"
-                        begin="1s"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#9A59E0" cx="195" cy="790" r="3">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="5s"
-                        values="3; 5; 3"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#9A59E0" cx="270.5" cy="692.5" r="1.5">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="3.5s"
-                        values="1.5; 3; 1.5"
-                        begin="1.1s"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#D550E5" cx="212.5" cy="608.5" r="2.5">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="3s"
-                        values="2.5; 4; 2.5"
-                        begin="1.2s"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#E6CD49" cx="393" cy="249" r="3">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="3.5s"
-                        values="3; 5; 3"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#EEE2A2" cx="533" cy="285" r="2">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="3s"
-                        values="2; 3; 2"
-                        begin="1.2s"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
-            <circle id="Oval" fill="#D550E5" cx="479.5" cy="651.5" r="1.5">
-                <animate attributeType="CSS"
-                        attributeName="r"
-                        dur="4s"
-                        values="1.5; 3; 1.5"
-                        keyTimes="0; 0.5; 1"
-                        repeatCount="indefinite" />
-            </circle>
+            <circle id="Oval" fill="#D04E78" cx="273" cy="458" r="2"></circle>
+            <circle id="Oval" fill="#E8685E" cx="312" cy="390" r="2"></circle>
+            <circle id="Oval" fill="#E8685E" cx="293" cy="285" r="2"></circle>
+            <circle id="Oval" fill="#E8685E" cx="193" cy="322" r="2"></circle>
+            <circle id="Oval" fill="#E8685E" cx="273.5" cy="179.5" r="1.5"></circle>
+            <circle id="Oval" fill="#F2DE73" cx="287" cy="94" r="4"></circle>
+            <circle id="Oval" fill="#D04E78" cx="341.5" cy="574.5" r="1.5"></circle>
+            <circle id="Oval" fill="#9A59E0" cx="408" cy="733" r="3"></circle>
+            <circle id="Oval" fill="#9A59E0" cx="195" cy="790" r="3"></circle>
+            <circle id="Oval" fill="#9A59E0" cx="270.5" cy="692.5" r="1.5"></circle>
+            <circle id="Oval" fill="#D550E5" cx="212.5" cy="608.5" r="2.5"></circle>
+            <circle id="Oval" fill="#E6CD49" cx="393" cy="249" r="3"></circle>
+            <circle id="Oval" fill="#EEE2A2" cx="533" cy="285" r="2"></circle>
+            <circle id="Oval" fill="#D550E5" cx="479.5" cy="651.5" r="1.5"></circle>
         </g>
     </g>
 </svg>
