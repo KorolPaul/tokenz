@@ -8,18 +8,60 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, custom-background, custom-colors
-Text Domain: twentyfifteen
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+Text Domain: tokenz
 */
-/*Colors*/
-/*Typography*/
-/*Layout*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+/*
+Base
+1.0 Normalize
+1.1 Google fonts connection
+1.2 Default tags styling
+
+Form elements
+2.0 Buttons
+2.1 Text input
+2.3 Textarea
+2.4 Range
+2.5 Radio
+2.6 Checkbox
+
+Plugins styling
+3.0 Underscores plugin
+3.1 Subscribe plugin
+3.2 Underscores plugin
+3.3 Slick slider
+3.4 Gallery plugin
+
+layout
+4.0 Headings
+4.1 Header
+4.2 Footer
+4.3 Main menu
+4.4 Social
+4.5 Toggle menu button
+4.6 404 page
+
+Other
+5.0 Net background
+5.1 Press block
+5.2 Countdown block
+5.3 Team block
+5.4 Dividend block
+5.5 Login block
+5.6 How-It-Works block
+5.7 Intro block
+5.8 Roadmap block
+5.9 Text content
+5.10 Full-Width
+5.11 Currencies block
+--------------------------------------------------------------*/
 /*Basic*/
-/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
+/*
+1.0 Normalize
+Styles based on Normalize @link https://github.com/necolas/normalize.css
+*/
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in
@@ -456,6 +498,8 @@ template {
   display: none;
 }
 
+/* 1.1 Google fonts connection */
+/* 1.2 Default tags styling */
 body {
   background: #fff;
   color: #000;
@@ -543,6 +587,7 @@ blockquote:before {
 }
 
 /*Form elements*/
+/* 2.0 Buttons*/
 .button,
 a.fw-btn,
 button,
@@ -631,6 +676,7 @@ a.fw-btn-big-white:hover {
   color: #fff;
 }
 
+/* 2.1 Text input */
 input[type="text"],
 input[type="search"],
 input[type="email"] {
@@ -668,6 +714,7 @@ input[type="email"]:focus {
   border-color: rgba(120, 120, 92, 0.8);
 }
 
+/* 2.3 Textarea */
 textarea {
   border-radius: 15px;
   background: transparent;
@@ -696,6 +743,7 @@ textarea:focus {
   border-color: rgba(120, 120, 92, 0.8);
 }
 
+/* 2.4 Range */
 input[type=range] {
   -webkit-appearance: none;
   width: 100%;
@@ -779,6 +827,7 @@ input[type=range]::-ms-track {
   margin: 4px 0 0;
 }
 
+/* 2.5 Radio */
 input[type="radio"] {
   position: absolute;
   visibility: hidden;
@@ -829,6 +878,7 @@ input[type="radio"]:disabled + label:after {
   opacity: .5;
 }
 
+/* 2.6 Checkbox */
 input[type="checkbox"] {
   position: absolute;
   visibility: hidden;
@@ -866,7 +916,8 @@ input[type="checkbox"]:disabled + label:before {
   opacity: .5;
 }
 
-/*Plugins*/
+/*Plugins styling*/
+/*3.0 Underscores plugin */
 /* Small menu. */
 .menu_toggle,
 .main-navigation.toggled ul {
@@ -1164,6 +1215,7 @@ object {
   padding: 45px 0 0;
 }
 
+/*3.1 Subscribe plugin */
 .es_lablebox {
   display: none;
 }
@@ -1214,6 +1266,7 @@ object {
   }
 }
 
+/*3.2 Underscores plugin */
 .site .fw-container {
   margin-left: auto;
   margin-right: auto;
@@ -1232,6 +1285,7 @@ object {
   margin-bottom: 145px;
 }
 
+/*3.3 Slick slider */
 /* Slider */
 .slick-slider {
   position: relative;
@@ -1362,6 +1416,7 @@ object {
   right: 0;
 }
 
+/*3.4 Gallery plugin */
 div#bwg_container1_0 #bwg_container2_0 .bwg_standart_thumb_spun1_0:hover {
   -webkit-transform: none;
   transform: none;
@@ -1370,6 +1425,7 @@ div#bwg_container1_0 #bwg_container2_0 .bwg_standart_thumb_spun1_0:hover {
 }
 
 /*layout*/
+/* 4.0 Headings */
 h1,
 .heading-1 {
   font: bold 50px "Montserrat", sans-serif;
@@ -1434,6 +1490,7 @@ h6,
   }
 }
 
+/* 4.1 Header */
 .header {
   background: #1C1A28;
 }
@@ -1472,6 +1529,7 @@ h6,
   }
 }
 
+/* 4.2 Footer */
 .footer {
   background: #1C1A28;
   color: #fff;
@@ -1515,6 +1573,7 @@ h6,
   margin: 0 0 15px;
 }
 
+/* 4.3 Main menu */
 .menu-container {
   padding: 0 0 5px;
 }
@@ -1661,6 +1720,7 @@ h6,
   transform: translateX(-50%);
 }
 
+/* 4.4 Social */
 .social {
   display: none;
 }
@@ -1722,6 +1782,7 @@ h6,
   }
 }
 
+/* 4.5 Toggle menu button */
 .menu-toggle {
   font: 0/0 a;
   text-shadow: none;
@@ -1783,6 +1844,36 @@ h6,
   height: 4px;
 }
 
+/* 4.6 404 page */
+.error-404 {
+  text-align: center;
+}
+
+@media all and (min-width: 768px) {
+  .error-404 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: calc(100vh - 145px - 330px);
+  }
+}
+
+@media all and (min-width: 768px) {
+  .error-404_header, .error-404_content {
+    margin: 0 auto 50px;
+    width: 60%;
+  }
+}
+
+/*Other*/
+/* 5.0 Net background */
 .net {
   display: none;
 }
@@ -1860,6 +1951,7 @@ h6,
   }
 }
 
+/* 5.1 Press block */
 .press {
   text-align: center;
 }
@@ -1894,6 +1986,7 @@ h6,
   filter: brightness(2);
 }
 
+/* 5.2 Countdown block */
 .countdown {
   background: #fff;
   border-radius: 10px;
@@ -1992,6 +2085,7 @@ h6,
   }
 }
 
+/* 5.3 Team block */
 .team-wrapper {
   max-width: 940px;
   margin: 0 auto -25px;
@@ -2152,6 +2246,7 @@ h6,
   line-height: 1.7;
 }
 
+/* 5.4 Dividend block */
 .dividend {
   border-radius: 20px;
   padding: 60px 0;
@@ -2365,6 +2460,7 @@ h6,
   border-color: #f2cd3c transparent transparent #f2cd3c;
 }
 
+/* 5.5 Login block */
 .login {
   display: none;
 }
@@ -2395,6 +2491,7 @@ h6,
   }
 }
 
+/* 5.6 How-It-Works block */
 .how-it-works p {
   line-height: 2;
 }
@@ -2420,6 +2517,7 @@ h6,
   margin-bottom: 35px;
 }
 
+/* 5.7 Intro block */
 .intro {
   margin-bottom: -45px;
 }
@@ -2436,6 +2534,7 @@ h6,
   }
 }
 
+/* 5.8 Roadmap block */
 .bg-roadmap {
   position: relative;
 }
@@ -2456,6 +2555,7 @@ h6,
   padding-bottom: 120px;
 }
 
+/* 5.9 Text content */
 .text-content h1,
 .text-content h2,
 .text-content h3,
@@ -2482,10 +2582,12 @@ h6,
   margin-right: -70px;
 }
 
+/* 5.10 Full-Width */
 .full-width {
   width: 100%;
 }
 
+/* 5.11 Currencies block*/
 .currencies {
   display: none;
 }
@@ -2501,32 +2603,5 @@ h6,
     -ms-flex-negative: 0;
     flex-shrink: 0;
     margin: 0 20px;
-  }
-}
-
-.error-404 {
-  text-align: center;
-}
-
-@media all and (min-width: 768px) {
-  .error-404 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    min-height: calc(100vh - 145px - 330px);
-  }
-}
-
-@media all and (min-width: 768px) {
-  .error-404_header, .error-404_content {
-    margin: 0 auto 50px;
-    width: 60%;
   }
 }

@@ -10,54 +10,139 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, custom-background, custom-colors
-Text Domain: twentyfifteen
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+Text Domain: tokenz
 */
+
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+/*
+Base
+1.0 Normalize
+1.1 Google fonts connection
+1.2 Default tags styling
+
+Form elements
+2.0 Buttons
+2.1 Text input
+2.3 Textarea
+2.4 Range
+2.5 Radio
+2.6 Checkbox
+
+Plugins styling
+3.0 Underscores plugin
+3.1 Subscribe plugin
+3.2 Underscores plugin
+3.3 Slick slider
+3.4 Gallery plugin
+
+layout
+4.0 Headings
+4.1 Header
+4.2 Footer
+4.3 Main menu
+4.4 Social
+4.5 Toggle menu button
+4.6 404 page
+
+Other
+5.0 Net background
+5.1 Press block
+5.2 Countdown block
+5.3 Team block
+5.4 Dividend block
+5.5 Login block
+5.6 How-It-Works block
+5.7 Intro block
+5.8 Roadmap block
+5.9 Text content
+5.10 Full-Width
+5.11 Currencies block
+--------------------------------------------------------------*/
 
 @import  "const";
 @import  "mixins";
 @import  "placeholders";
 
 /*Basic*/
+/*
+1.0 Normalize
+Styles based on Normalize @link https://github.com/necolas/normalize.css
+*/
 @import  "basic/normalize";
+/* 1.1 Google fonts connection */
 @import  "basic/fonts";
+/* 1.2 Default tags styling */
 @import  "basic/default";
 
 /*Form elements*/
+/* 2.0 Buttons*/
 @import  "form-elements/button";
+/* 2.1 Text input */
 @import  "form-elements/input-text";
+/* 2.3 Textarea */
 @import  "form-elements/textarea";
+/* 2.4 Range */
 @import  "form-elements/range";
+/* 2.5 Radio */
 @import  "form-elements/radio";
+/* 2.6 Checkbox */
 @import  "form-elements/checkbox";
 
-/*Plugins*/
+
+/*Plugins styling*/
+/*3.0 Underscores plugin */
 @import  "plugins/underscores";
+/*3.1 Subscribe plugin */
 @import  "plugins/subscribe";
+/*3.2 Underscores plugin */
 @import  "plugins/unyson";
+/*3.3 Slick slider */
 @import  "plugins/slick";
+/*3.4 Gallery plugin */
 @import  "plugins/gallery";
 
 /*layout*/
-@import  "layout/layout";
+/* 4.0 Headings */
 @import  "layout/headings";
+/* 4.1 Header */
 @import  "layout/header";
+/* 4.2 Footer */
 @import  "layout/footer";
+/* 4.3 Main menu */
 @import  "layout/menu";
+/* 4.4 Social */
 @import  "layout/social";
+/* 4.5 Toggle menu button */
 @import  "layout/menu-toggle";
-@import  "layout/net";
-@import  "layout/press";
-@import  "layout/countdown";
-@import  "layout/team";
-@import  "layout/dividend";
-@import  "layout/login";
-@import  "layout/how-it-works";
-@import  "layout/intro";
-@import  "layout/roadmap";
-@import  "layout/text-content";
-@import  "layout/full-width";
-@import  "layout/currencies";
+/* 4.6 404 page */
 @import  "layout/error-404";
+
+/*Other*/
+/* 5.0 Net background */
+@import  "other/net";
+/* 5.1 Press block */
+@import  "other/press";
+/* 5.2 Countdown block */
+@import  "other/countdown";
+/* 5.3 Team block */
+@import  "other/team";
+/* 5.4 Dividend block */
+@import  "other/dividend";
+/* 5.5 Login block */
+@import  "other/login";
+/* 5.6 How-It-Works block */
+@import  "other/how-it-works";
+/* 5.7 Intro block */
+@import  "other/intro";
+/* 5.8 Roadmap block */
+@import  "other/roadmap";
+/* 5.9 Text content */
+@import  "other/text-content";
+/* 5.10 Full-Width */
+@import  "other/full-width";
+/* 5.11 Currencies block*/
+@import  "other/currencies";
+
