@@ -67,7 +67,7 @@ Styles based on Normalize @link https://github.com/necolas/normalize.css
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,400i,600,700,800&subset=cyrillic,cyrillic-ext,latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:300,400,400i,600,700,800&subset=cyrillic,cyrillic-ext,latin-ext");
 html {
   line-height: 1.15;
   /* 1 */
@@ -524,6 +524,10 @@ p {
 article p {
   line-height: 2;
   margin: 0 0 40px;
+}
+
+ul {
+  padding: 0 0 0 20px;
 }
 
 blockquote {
@@ -1215,6 +1219,77 @@ object {
   padding: 45px 0 0;
 }
 
+.search-field {
+  border-radius: 35px;
+}
+
+@media all and (min-width: 768px) {
+  .search-field {
+    width: 300px;
+  }
+}
+
+input.search-submit {
+  border-radius: 35px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: top;
+  margin: 0 0 0 -35px;
+}
+
+.widget-area {
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0 0 40px;
+}
+
+.widget-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.comment-list {
+  padding: 0;
+}
+
+.comment-form-comment label {
+  display: block;
+  margin: 0 0 10px;
+}
+
+.comment-author {
+  margin: 0 0 10px;
+}
+
+.comment-author .avatar {
+  margin: 0 10px 0 0;
+}
+
+.comment-metadata {
+  margin: 0 0 10px;
+}
+
+.comment-metadata a {
+  margin: 0 10px 0 0;
+}
+
+.comment-body {
+  margin: 0 0 40px;
+}
+
+.comment-content p {
+  margin: 0 0 20px;
+}
+
+.reply {
+  margin: -10px 0 0;
+}
+
+.entry-meta {
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+
 /*3.1 Subscribe plugin */
 .es_lablebox {
   display: none;
@@ -1278,6 +1353,11 @@ object {
   .site .fw-container {
     width: 1240px;
   }
+}
+
+.site .fw-container.entry-footer {
+  padding: 0;
+  width: auto;
 }
 
 .bg-dark .fw-col-xs-12,
@@ -1428,13 +1508,13 @@ div#bwg_container1_0 #bwg_container2_0 .bwg_standart_thumb_spun1_0:hover {
 /* 4.0 Headings */
 h1,
 .heading-1 {
-  font: bold 50px "Montserrat", sans-serif;
+  font: bold 60px "Montserrat", sans-serif;
   margin: 0 0 25px;
 }
 
 h2,
 .heading-2 {
-  font: bold 46px "Montserrat", sans-serif;
+  font: 600 36px "Montserrat", sans-serif;
   margin: 40px 0 20px;
 }
 
@@ -1462,18 +1542,15 @@ h6,
   margin: 30px 0 20px;
 }
 
-@media all and (min-width: 768px) {
-  h1,
-  .heading-1 {
-    font-size: 70px;
-  }
+.home h1, .home
+.heading-1 {
+  font-size: 70px;
 }
 
-@media all and (min-width: 768px) {
-  h2,
-  .heading-2 {
-    font-size: 60px;
-  }
+.home h2, .home
+.heading-2 {
+  font-size: 60px;
+  font-weight: bold;
 }
 
 @media all and (min-width: 768px) {
@@ -1686,6 +1763,10 @@ h6,
   padding: 0;
 }
 
+.widget-area .menu-item a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
 .sub-menu {
   background: #2A2256;
   border-radius: 10px;
@@ -1845,12 +1926,18 @@ h6,
 }
 
 /* 4.6 404 page */
-.error-404 {
+.error404 {
+  background: #1C1A28 url(src/img/404.svg) no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.error404_wrapper {
   text-align: center;
 }
 
 @media all and (min-width: 768px) {
-  .error-404 {
+  .error404_wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1866,9 +1953,32 @@ h6,
 }
 
 @media all and (min-width: 768px) {
-  .error-404_header, .error-404_content {
+  .error404_header, .error404_content {
     margin: 0 auto 50px;
     width: 60%;
+  }
+}
+
+.error404_header p, .error404_content p {
+  font-size: 18px;
+  margin: 0 0 20px;
+}
+
+@media all and (min-width: 768px) {
+  .error404_header p, .error404_content p {
+    font-size: 36px;
+  }
+}
+
+.error404_title {
+  font-size: 30vmin;
+  line-height: .8;
+  margin: 0;
+}
+
+@media all and (min-width: 768px) {
+  .error404_title {
+    font-size: 220px;
   }
 }
 

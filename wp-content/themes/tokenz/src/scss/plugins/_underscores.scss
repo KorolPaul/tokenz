@@ -292,3 +292,67 @@ object {
 .page-header {
 	padding: 45px 0 0;
 }
+
+.search-field {
+    border-radius: 35px;
+    @include tablet {
+        width: 300px;
+    }
+}
+input.search-submit {
+    border-radius: 35px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: top;
+    margin: 0 0 0 -35px;
+}
+
+.widget-area {
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    margin: 0 0 40px;
+}
+.widget-title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.comment-list {
+    padding: 0;
+}
+.comment-form-comment {
+    label {
+        display: block;
+        margin: 0 0 10px;
+    }
+}
+.comment-author {
+    margin: 0 0 10px;
+
+    .avatar {
+        margin: 0 10px 0 0;
+    }
+}
+.comment-metadata {
+    margin: 0 0 10px;
+
+    a {
+        margin: 0 10px 0 0;
+    }
+}
+.comment-body {
+    margin: 0 0 40px;
+}
+.comment-content {
+    p {
+        margin: 0 0 20px;
+    }
+}
+.reply {
+    margin: -10px 0 0;
+}
+
+.entry-meta {
+    font-weight: 600;
+    margin: 0 0 20px;
+}

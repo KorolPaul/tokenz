@@ -38,7 +38,7 @@
     }
 ?>
 
-<div id="page" class="<?php echo esc_attr($page_class) ?>">
+<div id="page" class="<?php esc_attr_e($page_class, 'tokenz') ?>">
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'tokenz' ); ?></a>
 
     <header id="masthead" class="header">
@@ -62,9 +62,9 @@
             </div>
             <div class="login">
                 <?php if (is_user_logged_in()) : ?>
-                    <a class="login_button" href="<?php echo wp_logout_url(get_permalink()); ?>">Logout</a>
+                    <a class="login_button" href="<?php echo wp_logout_url(get_permalink()); ?>"><?php _e('Logout') ?></a>
                 <?php else : ?>
-                    <a class="login_button" href="<?php echo wp_login_url(get_permalink()); ?>">Investor Login</a>
+                    <a class="login_button" href="<?php echo wp_login_url(get_permalink()); ?>"><?php _e('Investor Login') ?></a>
                 <?php endif;?>
             </div>
         </div>

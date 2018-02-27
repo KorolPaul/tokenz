@@ -77,6 +77,10 @@
                 font-size: inherit;
                 margin: 0 0 20px;
                 padding: 0;
+
+                &:hover {
+                    color: rgba(0, 0, 0, .5);
+                }
             }
         }
     }

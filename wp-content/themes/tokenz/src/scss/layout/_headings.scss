@@ -1,9 +1,9 @@
 %heading-1 {
-    font: bold 50px $font-family__heading;
+    font: bold 60px $font-family__heading;
     margin: 0 0 25px;
 }
 %heading-2 {
-    font: bold 46px $font-family__heading;
+    font: 600 36px $font-family__heading;
     margin: $layout_indent * 2 0 $layout_indent;
 }
 %heading-3 {
@@ -26,15 +26,16 @@
 h1,
 .heading-1 {
     @extend %heading-1;
-    @include tablet {
+    .home & {
         font-size: 70px;
     }
 }
 h2,
 .heading-2 {
     @extend %heading-2;
-    @include tablet {
+    .home & {
         font-size: 60px;
+        font-weight: bold;
     }
 }
 h3,

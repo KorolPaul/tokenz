@@ -4,54 +4,56 @@
 
 
 <div class="dividend">
-    <h2 class="heading-2"><?php echo $atts['title'] ?></h2>
-    <?php echo esc_html__($atts['description'], 'tokenz' ) ?>
+    <h2 class="heading-2"><?php esc_html_e($atts['title'], 'tokenz') ?></h2>
+    <?php echo(wp_kses($atts['description'], 'tokenz' )) ?>
     <div class="dividend_data">
         <div class="dividend_range">
-            <p class="heading-3">Invest</p>
-            <p class="dividend_invest-sum">$<span id="invest-sum"><?php echo esc_attr($atts['max_invest']/2) ?></span></p>
+            <p class="heading-3"><?php _e('Invest', 'tokenz') ?></p>
+            <p class="dividend_invest-sum">
+                $<span id="invest-sum"><?php esc_html_e($atts['max_invest']/2, 'tokenz') ?></span>
+            </p>
             <div class="dividend_input-wrapper">
-                <input class="dividend_input" type="range" id="dividend_input" min="<?php echo esc_attr($atts['min_invest']) ?>" max="<?php echo esc_attr($atts['max_invest']) ?>" value="<?php echo esc_attr($atts['max_invest']/2) ?>" step="1000">
+                <input class="dividend_input" type="range" id="dividend_input" min="<?php esc_attr_e($atts['min_invest'], 'tokenz') ?>" max="<?php esc_attr_e($atts['max_invest'], 'tokenz') ?>" value="<?php esc_attr_e($atts['max_invest']/2, 'tokenz') ?>" step="1000">
             </div>
         </div>
         <div class="dividend_output">
             <div class="dividend_amounts">
-                <p class="dividend_amounts-title">Projected token profit:</p>
+                <p class="dividend_amounts-title"><?php _e('Projected token profit', 'tokenz') ?>:</p>
                 <table>
                     <tr>
                         <td>$<span id="divident-amount-1"></span></td>
-                        <td>Year 1</td>
+                        <td><?php _e('Year 1', 'tokenz') ?></td>
                     </tr>
                     <tr>
                         <td>$<span id="divident-amount-2"></span></td>
-                        <td>Year 2</td>
+                        <td><?php _e('Year 2', 'tokenz') ?></td>
                     </tr>
                     <tr>
                         <td>$<span id="divident-amount-3"></span></td>
-                        <td>Year 3</td>
+                        <td><?php _e('Year 3', 'tokenz') ?></td>
                     </tr>
                     <tr>
                         <td>$<span id="divident-amount-4"></span></td>
-                        <td>Year 4</td>
+                        <td><?php _e('Year 4', 'tokenz') ?></td>
                     </tr>
                     <tr>
                         <td>$<span id="divident-amount-5"></span></td>
-                        <td>Year 5</td>
+                        <td><?php _e('Year 5', 'tokenz') ?></td>
                     </tr>
                     <tr>
                         <td>$<span id="divident-amount-total"></span></td>
-                        <td>Total</td>
+                        <td><?php _e('Total', 'tokenz') ?></td>
                     </tr>
                 </table>
             </div>
             <div class="dividend_legend">
                 <p>
-                    <span class="heading-3">Get </span>
-                    (Projected profit)
+                    <span class="heading-3"><?php _e('Get', 'tokenz') ?></span>
+                    <?php _e('(Projected profit)', 'tokenz') ?>
                 </p>
                 <p class="dividend_legend-description">
                     <span class="dividend_legend-icon"></span>
-                    Reinvestment
+                    <?php _e('Reinvestment', 'tokenz') ?>
                 </p>
             </div>
             <div class="dividend_graph">
@@ -59,36 +61,39 @@
                     <div class="dividend_graph-item-column" id="dividend-graph-1">
                         <div class="dividend_graph-item-subcolumn"></div>
                     </div>
-                    <span class="dividend_graph-item-title">Y1</span>
+                    <span class="dividend_graph-item-title"><?php _e('Y1', 'tokenz') ?></span>
                 </div>
                 <div class="dividend_graph-item">
                     <div class="dividend_graph-item-column" id="dividend-graph-2">
                         <div class="dividend_graph-item-subcolumn"></div>
                     </div>
-                    <span class="dividend_graph-item-title">Y2</span>
+                    <span class="dividend_graph-item-title"><?php _e('Y2', 'tokenz') ?></span>
                 </div>
                 <div class="dividend_graph-item">
                     <div class="dividend_graph-item-column" id="dividend-graph-3">
                         <div class="dividend_graph-item-subcolumn"></div>
                     </div>
-                    <span class="dividend_graph-item-title">Y3</span>
+                    <span class="dividend_graph-item-title"><?php _e('Y3', 'tokenz') ?></span>
                 </div>
                 <div class="dividend_graph-item">
                     <div class="dividend_graph-item-column" id="dividend-graph-4">
                         <div class="dividend_graph-item-subcolumn"></div>
                     </div>
-                    <span class="dividend_graph-item-title">Y4</span>
+                    <span class="dividend_graph-item-title"><?php _e('Y4', 'tokenz') ?></span>
                 </div>
                 <div class="dividend_graph-item">
                     <div class="dividend_graph-item-column" id="dividend-graph-5">
                         <div class="dividend_graph-item-subcolumn"></div>
                     </div>
-                    <span class="dividend_graph-item-title">Y5</span>
+                    <span class="dividend_graph-item-title"><?php _e('Y5', 'tokenz') ?></span>
                 </div>
             </div>
         </div>
     </div>
-    <h3 class="heading-3">Return on Investment: <span class="dividend_percent" id="return-percent"><?php echo esc_html($atts['return_percent']) ?>%</span> per year</h3>
-    <p>Annual token profit projection based on investment.</p>
-    <a href="#" class="button">Invest</a>
+    <h3 class="heading-3">
+        <?php _e('Return on Investment', 'tokenz') ?>:
+        <span class="dividend_percent" id="return-percent"><?php esc_html_e($atts['return_percent'], 'tokenz') ?>%</span> <?php _e('per year', 'tokenz') ?>
+    </h3>
+    <p><?php _e('Annual token profit projection based on investment', 'tokenz') ?>.</p>
+    <a href="#" class="button"><?php _e('Invest', 'tokenz') ?></a>
 </div>

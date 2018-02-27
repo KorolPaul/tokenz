@@ -1,6 +1,11 @@
 .site {
     .fw-container {
         @include layout;
+
+        &.entry-footer {
+            padding: 0;
+            width: auto;
+        }
     }
 }
 .bg-dark,

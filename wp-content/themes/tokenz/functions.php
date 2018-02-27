@@ -110,6 +110,16 @@ function tokenz_widgets_init() {
         'before_title'  => '<h2 class="widget-title">',
         'after_title'   => '</h2>',
     ) );
+
+    register_sidebar( array(
+        'name'          => esc_html__( 'Footer sidebar', 'tokenz' ),
+        'id'            => 'sidebar-2',
+        'description'   => esc_html__( 'Add widgets here.', 'tokenz' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
 }
 add_action( 'widgets_init', 'tokenz_widgets_init' );
 
@@ -169,18 +179,18 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Create custom theme fields
  */
-function add_theme_menu_item()
+function tokenz_add_theme_menu_item()
 {
-    add_theme_page("Tokenz Settings", "Tokenz Settings", "manage_options", "tokenz-panel", "theme_settings_page", null, 60);
+    add_theme_page("Tokenz Settings", "Tokenz Settings", "manage_options", "tokenz-panel", "tokenz_theme_settings_page", null, 60);
 }
 
-add_action("admin_menu", "add_theme_menu_item");
+add_action("admin_menu", "tokenz_add_theme_menu_item");
 
-function theme_settings_page()
+function tokenz_theme_settings_page()
 {
     ?>
         <div class="wrap">
-            <h1>Tokenz Settings</h1>
+            <h1><?php _e('Tokenz Settings') ?></h1>
             <form method="post" action="options.php" enctype="multipart/form-data">
                 <?php
                     settings_fields("social");
@@ -194,84 +204,84 @@ function theme_settings_page()
     <?php
 }
 
-function display_bg_element()
+function tokenz_display_bg_element()
 {
     ?>
         <input name="use_alt_bg" id="use_alt_bg" type="checkbox" class="code" value="1" <?php checked( "1", get_option( 'use_alt_bg' ) ) ?> />
     <?php
 }
 
-function display_animation_element()
+function tokenz_display_animation_element()
 {
     ?>
         <input name="use_animation" id="use_animation" type="checkbox" class="code" value="1" <?php checked( "1", get_option( 'use_animation' ) ) ?> />
     <?php
 }
 
-function display_parallax_element()
+function tokenz_display_parallax_elementt()
 {
     ?>
         <input name="use_parallax" id="use_parallax" type="checkbox" class="code" value="1" <?php checked( "1", get_option( 'use_parallax' ) ) ?> />
     <?php
 }
 
-function display_instagram_element()
+function tokenz_display_instagram_element()
 {
     ?>
         <input type="text" name="instagram_url" id="instagram_url" value="<?php echo get_option('instagram_url'); ?>" />
     <?php
 }
 
-function display_twitter_element()
+function tokenz_display_twitter_element()
 {
     ?>
         <input type="text" name="twitter_url" id="twitter_url" value="<?php echo get_option('twitter_url'); ?>" />
     <?php
 }
 
-function display_facebook_element()
+function tokenz_display_facebook_element()
 {
     ?>
         <input type="text" name="facebook_url" id="facebook_url" value="<?php echo get_option('facebook_url'); ?>" />
     <?php
 }
 
-function display_skype_element()
+function tokenz_display_skype_element()
 {
     ?>
         <input type="text" name="skype_url" id="skype_url" value="<?php echo get_option('skype_url'); ?>" />
     <?php
 }
 
-function display_slack_element()
+function tokenz_display_slack_element()
 {
     ?>
         <input type="text" name="slack_url" id="slack_url" value="<?php echo get_option('slack_url'); ?>" />
     <?php
 }
 
-function display_linkedin_element()
+function tokenz_display_linkedin_element()
 {
     ?>
         <input type="text" name="linkedin_url" id="linkedin_url" value="<?php echo get_option('linkedin_url'); ?>" />
     <?php
 }
 
-function display_medium_element()
+function tokenz_display_medium_element()
 {
     ?>
         <input type="text" name="medium_url" id="medium_url" value="<?php echo get_option('medium_url'); ?>" />
     <?php
 }
 
-function display_snapchat_element()
+function tokenz_display_snapchat_element()
 {
     ?>
         <input type="text" name="snapchat_url" id="snapchat_url" value="<?php echo get_option('snapchat_url'); ?>" />
     <?php
 }
 
-function display_youtube_element()
+function tokenz_display_youtube_element()
 {
     ?>
         <input type="text" name="youtube_url" id="youtube_url" value="<?php echo get_option('youtube_url'); ?>" />
@@ -296,12 +306,12 @@ function handle_icons_upload()
     }
 }
 
-function display_theme_panel_fields()
+function tokenz_display_theme_panel_fields()
 {
     add_settings_section("layout", "Layout options", null, "layout-options");
-    add_settings_field("use_alt_bg", "Alternate background", "display_bg_element", "layout-options", "layout");
-    add_settings_field("use_animation", "Enable background animation", "display_animation_element", "layout-options", "layout");
-    add_settings_field("use_parallax", "Enable parallax effect", "display_parallax_element", "layout-options", "layout");
+    add_settings_field("use_alt_bg", "Alternate background", "tokenz_display_bg_element", "layout-options", "layout");
+    add_settings_field("use_animation", "Enable background animation", "tokenz_display_animation_element", "layout-options", "layout");
+    add_settings_field("use_parallax", "Enable parallax effect", "tokenz_display_parallax_elementt", "layout-options", "layout");
     add_settings_field("currencies_icon", "Currencies icon", "currencies_display", "layout-options", "layout");
     register_setting("layout", "use_alt_bg");
     register_setting("layout", "use_animation");
@@ -309,15 +319,15 @@ function display_theme_panel_fields()
     register_setting("layout", "currencies_icon", "handle_icons_upload");
 
     add_settings_section("social", "Social accounts", null, "social-options");
-    add_settings_field("instagram_url", "Instagram Profile Url", "display_instagram_element", "social-options", "social");
-    add_settings_field("twitter_url", "Twitter Profile Url", "display_twitter_element", "social-options", "social");
-    add_settings_field("facebook_url", "Facebook Profile Url", "display_facebook_element", "social-options", "social");
-    add_settings_field("skype_url", "Skype Profile Url", "display_skype_element", "social-options", "social");
-    add_settings_field("slack_url", "Slack Profile Url", "display_slack_element", "social-options", "social");
-    add_settings_field("linkedin_url", "Linkedin Profile Url", "display_linkedin_element", "social-options", "social");
-    add_settings_field("medium_url", "Medium Profile Url", "display_medium_element", "social-options", "social");
-    add_settings_field("snapchat_url", "Snapchat Profile Url", "display_snapchat_element", "social-options", "social");
-    add_settings_field("youtube_url", "Youtube Profile Url", "display_youtube_element", "social-options", "social");
+    add_settings_field("instagram_url", "Instagram Profile Url", "tokenz_display_instagram_element", "social-options", "social");
+    add_settings_field("twitter_url", "Twitter Profile Url", "tokenz_display_twitter_element", "social-options", "social");
+    add_settings_field("facebook_url", "Facebook Profile Url", "tokenz_display_facebook_element", "social-options", "social");
+    add_settings_field("skype_url", "Skype Profile Url", "tokenz_display_skype_element", "social-options", "social");
+    add_settings_field("slack_url", "Slack Profile Url", "tokenz_display_slack_element", "social-options", "social");
+    add_settings_field("linkedin_url", "Linkedin Profile Url", "tokenz_display_linkedin_element", "social-options", "social");
+    add_settings_field("medium_url", "Medium Profile Url", "tokenz_display_medium_element", "social-options", "social");
+    add_settings_field("snapchat_url", "Snapchat Profile Url", "tokenz_display_snapchat_element", "social-options", "social");
+    add_settings_field("youtube_url", "Youtube Profile Url", "tokenz_display_youtube_element", "social-options", "social");
     register_setting("social", "instagram_url");
     register_setting("social", "facebook_url");
     register_setting("social", "twitter_url");
@@ -331,4 +341,4 @@ function display_theme_panel_fields()
 }
 
 
-add_action("admin_init", "display_theme_panel_fields");
+add_action("admin_init", "tokenz_display_theme_panel_fields");

@@ -30,8 +30,8 @@ if ( ! empty( $atts['custom_class'] ) ) {
 $section_style   = ( $bg_color || $bg_image ) ? 'style="' . esc_attr($bg_color . $bg_image) . '"' : '';
 $container_class = ( isset( $atts['is_fullwidth'] ) && $atts['is_fullwidth'] ) ? 'fw-container-fluid' : 'fw-container';
 ?>
-<section class="fw-main-row <?php echo esc_attr($section_extra_classes) ?>" <?php echo $section_style; ?> <?php echo $bg_video_data_attr; ?>>
-    <div class="<?php echo esc_attr($container_class); ?>">
+<section class="fw-main-row <?php esc_attr_e($section_extra_classes, 'tokenz') ?>" <?php echo $section_style; ?> <?php echo $bg_video_data_attr; ?>>
+    <div class="<?php esc_attr_e($container_class, 'tokenz'); ?>">
         <?php echo do_shortcode( $content ); ?>
     </div>
 </section>
