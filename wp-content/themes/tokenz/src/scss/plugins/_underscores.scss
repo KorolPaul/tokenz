@@ -320,7 +320,11 @@ input.search-submit {
 .comment-list {
     padding: 0;
 }
-.comment-form-comment {
+.comments-area {
+    max-width: $max-width;
+    margin: auto;
+}
+.comment-respond {
     label {
         display: block;
         margin: 0 0 10px;

@@ -5,7 +5,7 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-    var container, button, menu, links, i, len, header, social, loginButton, currencies;
+    var container, button, menu, items, links, i, len, header, social, loginButton, currencies;
 
     container = document.getElementById( 'site-navigation' );
     if ( ! container ) {
@@ -17,7 +17,7 @@
         return;
     }
 
-    menu = container.getElementsByTagName( 'ul' )[0];
+    menu = container.getElementsByClassName( 'menu' )[0];
 
     // Hide menu toggle button if menu is empty and return early.
     if ( 'undefined' === typeof menu ) {
@@ -42,13 +42,23 @@
         }
     };
 
-    // Get all the link elements within the menu.
+    // Get all the link elements within the menu.menu-item-has-children
     links    = menu.getElementsByTagName( 'a' );
 
     // Each time a menu link is focused or blurred, toggle focus.
     for ( i = 0, len = links.length; i < len; i++ ) {
         links[i].addEventListener( 'focus', toggleFocus, true );
         links[i].addEventListener( 'blur', toggleFocus, true );
+    }
+
+    // Get all the menu item elements
+    items    = menu.querySelectorAll( '.menu-item-has-children' );
+
+    // Enable submenu show/hide
+    for ( i = 0; i < items.length; i++ ) {
+        items[i].addEventListener('click', function(e){
+            e.target.classList.toggle('menu-item-opened');
+        });
     }
 
     header = document.querySelector('.header_content');
@@ -93,12 +103,11 @@
             if((headerWidth - containerWidth - socialWidth - loginWidth - currenciesWidth) <= 0) {
                 var ellipsisItem = document.querySelector('.menu-item__other') || document.createElement('li'),
                     ellipsisLink = document.querySelector('.menu-item__other a') || document.createElement('a'),
-                    submenuElement = document.querySelector('.sub-menu') || document.createElement('ul');
+                    submenuElement = document.querySelector('.menu-item__other .sub-menu') || document.createElement('ul');
 
                 submenuElement.classList.add('sub-menu');
 
                 ellipsisLink.innerHTML = '...';
-
                 ellipsisItem.classList.add('menu-item');
                 ellipsisItem.classList.add('menu-item__other');
                 ellipsisItem.appendChild(ellipsisLink);
@@ -107,9 +116,10 @@
                 menu.appendChild(ellipsisItem);
 
                 var lastMenuElement = menu.children[menu.children.length - 3];
+                console.log(lastMenuElement)
                 submenuElement.insertBefore(lastMenuElement, submenuElement.children[0]);
 
-                setTimeout(()=>{checkWidth()}, 0);
+                setTimeout( function(){ checkWidth(); }, 0);
             }
         }
     }

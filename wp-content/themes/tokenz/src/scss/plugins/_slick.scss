@@ -104,18 +104,32 @@
     min-width: inherit;
     transform: translateY(-50%);
     z-index: 1;
-    transition: .2s ease-in-out background-color;
+    transition: .2s ease-in-out background-color, .2s ease-in-out opacity;
+    @include tablet {
+        background-size: 9px 33px;
+        height: 60px;
+        width: 28px;
 
-    &:hover {
-        background-color: rgba(0, 0, 0, .3);
+        &:hover {
+            background-color: rgba(0, 0, 0, .3);
+        }
     }
 }
 
 .slick-prev {
     background-image: url(#{$img-path}/slider-prev.svg);
-    left: 0;
+    left: -35px;
+    @include tablet {
+        left: 0;
+    }
 }
 .slick-next {
     background-image: url(#{$img-path}/slider-next.svg);
-    right: 0;
+    right: -35px;
+    @include tablet {
+        right: 0;
+    }
+}
+.slick-disabled {
+    opacity: .2;
 }

@@ -9,9 +9,9 @@
 
 .menu {
     background: #fff;
+    margin: 25px 0 0;
     padding: 42px 0;
     width: 100%;
-    z-index: 2;
     display: none;
     @include tablet {
         background: transparent;
@@ -20,9 +20,11 @@
         margin: 0;
         padding: 0;
         justify-content: space-between;
-        position: relative;
         top: 0;
         width: auto;
+    }
+    @include desktop {
+        margin: 0;
     }
 
     .toggled & {
@@ -36,13 +38,18 @@
     &-item {
         list-style: none;
         position: relative;
-        text-align: center;
+        z-index: 2;
+        padding: 15px 0;
         @include tablet {
             padding: 0;
+        }
+        @include desktop {
+            display: inline-block;
         }
 
         &__other {
             cursor: pointer;
+            position: static;
         }
         .widget-area & {
             text-align: left;
@@ -50,27 +57,25 @@
 
         a {
             color: $color;
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 600;
             text-decoration: none;
-            padding: 9px $layout_indent;
-            display: block;
+            padding: 0 $layout_indent;
+            position: relative;
             transition: .2s ease-in-out color;
-            @include tablet {
+            @include desktop {
                 color: $light_color;
                 font-size: $font-size__small;
+                line-height: 44px;
                 margin: 0 25px;
                 padding: 0;
                 white-space: nowrap;
             }
 
             &:hover {
-                @include tablet {
-                    color: $bright_color;
+                @include desktop {
+                    color: $extra-bright_color;
                 }
-            }
-            .sub-menu & {
-                padding: 10px 0;
             }
             .widget-area & {
                 color: $color;
@@ -82,36 +87,77 @@
                     color: rgba(0, 0, 0, .5);
                 }
             }
+
+        }
+    }
+    &-item-has-children {
+        position: static;
+
+        & > a:after {
+            content: '';
+            background: url(#{$img-path}/arrow-down.svg) no-repeat;
+            display: inline-block;
+            height: 7px;
+            width: 10px;
+            margin: 0 0 0 12px;
+            vertical-align: middle;
+            transition: .2s ease-in-out transform;
+            @include desktop {
+                content: none;
+            }
+        }
+        &:hover > a:after {
+            @include desktop {
+                content: '';
+                display: block;
+                background: url(#{$img-path}/arrow-down-yellow.svg) no-repeat;
+                height: 7px;
+                width: 10px;
+                margin: 0;
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, 5px);
+            }
+        }
+    }
+    &-item-opened {
+        padding-bottom: 0;
+
+        & > a:after{
+            transform: rotateZ(180deg);
         }
     }
 }
 .sub-menu {
-    background: #2A2256;
-    border-radius: 10px;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    padding: 10px 0;
-    transform: translate(-50%, 12px);
-    opacity: 0;
-    visibility: hidden;
-    transition: .2s ease-in-out opacity,
-                .2s ease-in-out visibility .2s;
+    background: #f0efdd;
+    display: none;
+    padding: 0;
+    margin: 13px 0 0;
+    @include desktop {
+        background: #2e2929;
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 105px;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+        transition: .2s ease-in-out opacity,
+                    .2s ease-in-out visibility .2s;
+    }
 
+    .menu-item-opened & {
+        display: block;
+    }
     .menu-item:hover & {
         opacity: 1;
         visibility: visible;
         transition: .2s ease-in-out opacity .2s,
                     .2s ease-in-out visibility;
-    }
-    &:after {
-        content: '';
-        border-style: solid;
-        border-width: 10px;
-        border-color: transparent transparent #2A2256 transparent;
-        position: absolute;
-        top: -20px;
-        left: 50%;
-        transform: translateX(-50%);
     }
 }

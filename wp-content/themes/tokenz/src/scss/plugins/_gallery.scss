@@ -1,4 +1,16 @@
-div#bwg_container1_0 #bwg_container2_0 .bwg_standart_thumb_spun1_0:hover {
-    transform: none;
-    filter: saturate(2);
+div#bwg_container1_0 {
+    @include desktop {
+        margin-left: -90px;
+        margin-right: -90px;
+    }
+
+    #bwg_container2_0 {
+        .bwg_standart_thumb_spun2_0 {
+            border-radius: 10px;
+        }
+        .bwg_standart_thumb_spun1_0:hover {
+            transform: none;
+            filter: saturate(2);
+        }
+    }
 }

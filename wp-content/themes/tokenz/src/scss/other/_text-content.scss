@@ -1,27 +1,33 @@
 .text-content {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
+
+    .fw-container > .fw-col-xs-12 {
         max-width: $max-width__article;
         margin-left: auto;
         margin-right: auto;
-    }
+        padding: 0;
 
-    img {
-        &.aligncenter {
-            margin-left: -70px;
-            margin-right: -70px;
-            max-width: 100vw;
+        & > {
+            @include tablet {
+                img,
+                p > img {
+                    &.aligncenter {
+                        margin-left: -70px;
+                        margin-right: -70px;
+                        max-width: 100vw;
+                    }
+                    &.alignleft {
+                        margin-left: -70px;
+                    }
+                    &.alignright {
+                        margin-right: -70px;
+                    }
+                }
+            }
         }
-        &.alignleft {
-            margin-left: -70px;
-        }
-        &.alignright {
-            margin-right: -70px;
-        }
+    }
+    .entry-title {
+        max-width: $max-width__article;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

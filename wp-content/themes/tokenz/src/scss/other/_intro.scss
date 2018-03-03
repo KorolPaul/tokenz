@@ -5,8 +5,15 @@
         color: $bright_color;
         font-size: 15vmin;
         letter-spacing: .25em;
+        margin-bottom: 0;
         @include tablet {
             font-size: 120px;
         }
+    }
+    h3 {
+        margin: 10px 0 5px;
+    }
+    h4 {
+        margin: 0 0 40px;
     }
 }

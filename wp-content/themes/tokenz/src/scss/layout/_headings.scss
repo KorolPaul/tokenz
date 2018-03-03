@@ -7,12 +7,18 @@
     margin: $layout_indent * 2 0 $layout_indent;
 }
 %heading-3 {
-    font: bold 28px $font-family__heading;
+    font: bold 20px $font-family__heading;
     margin: ($layout_indent * 1.5) 0 $layout_indent;
+    @include tablet {
+        font-size: 28px;
+    }
 }
 %heading-4 {
-    font: 20px $font-family__heading;
+    font: 14px $font-family__heading;
     margin: 35px 0 $layout_indent;
+    @include tablet {
+        font-size: 20px;
+    }
 }
 %heading-5 {
     font: bold 16px $font-family__heading;
@@ -41,9 +47,6 @@ h2,
 h3,
 .heading-3 {
     @extend %heading-3;
-    @include tablet {
-        font-size: 36px;
-    }
 }
 h4,
 .heading-4 {

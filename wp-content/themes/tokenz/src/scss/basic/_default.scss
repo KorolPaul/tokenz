@@ -1,8 +1,11 @@
 body {
     background: #fff;
     color: $color;
-    font: $font-size $font-family;
+    font: 16px $font-family;
     overflow: hidden;
+    @include tablet {
+        font-size: $font-size;
+    }
 }
 
 a {
@@ -19,7 +22,10 @@ p {
 
     article & {
         line-height: 2;
-        margin: 0 0 40px;
+        margin: 0 0 20px;
+        @include tablet {
+            margin-bottom: 40px;
+        }
     }
 }
 
@@ -54,7 +60,10 @@ blockquote {
     background: $light_gradient;
     color: $color;
     position: relative;
-    padding-top: 145px;
+    padding-top: 75px;
+    @include tablet {
+        padding-top: 145px;
+    }
 }
 
 .anchor {

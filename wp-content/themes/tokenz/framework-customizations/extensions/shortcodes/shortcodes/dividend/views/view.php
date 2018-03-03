@@ -5,7 +5,7 @@
 
 <div class="dividend">
     <h2 class="heading-2"><?php esc_html_e($atts['title'], 'tokenz') ?></h2>
-    <?php echo(wp_kses($atts['description'], 'tokenz' )) ?>
+    <p><?php echo(wp_kses($atts['description'], 'tokenz' )) ?></p>
     <div class="dividend_data">
         <div class="dividend_range">
             <p class="heading-3"><?php _e('Invest', 'tokenz') ?></p>

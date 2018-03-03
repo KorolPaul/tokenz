@@ -7,11 +7,12 @@
     height: 26px;
     width: 40px;
     position: absolute;
-    top: 15px;
+    top: 35px;
     left: 50%;
     margin: 0 0 0 -20px;
     overflow: visible;
     min-width: inherit;
+    z-index: 2;
     @include tablet {
         display: none;
     }
@@ -40,6 +41,9 @@
     }
 
     .toggled & {
+        left: 35px;
+        top: 8px;
+
         &:before {
             transform: rotateZ(45deg) translate(5px, 5px);
             height: 4px;

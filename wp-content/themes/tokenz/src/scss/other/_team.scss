@@ -26,8 +26,10 @@
     }
 
     &_header {
+        margin: 0 0 20px;
         @include tablet {
             display: flex;
+            margin: 0;
         }
 
         .team__compact & {

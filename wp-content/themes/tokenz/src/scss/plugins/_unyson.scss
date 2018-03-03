@@ -11,6 +11,9 @@
 .bg-dark,
 .bg-light {
     .fw-col-xs-12 {
-        margin-bottom: 145px;
+        margin-bottom: 75px;
+        @include tablet {
+            margin-bottom: 145px;
+        }
     }
 }
