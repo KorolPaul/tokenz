@@ -1,6 +1,7 @@
 .site {
     .fw-container {
         @include layout;
+        padding: 0;
 
         &.entry-footer {
             padding: 0;

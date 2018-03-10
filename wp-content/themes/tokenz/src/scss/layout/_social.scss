@@ -6,8 +6,21 @@
 
     .header & {
         display: none;
-        @include desktop {
+        @include media(480px) {
             display: flex;
+            position: absolute;
+            right: 15px;
+            top: 30px;
+        }
+        @include tablet {
+            right: 50%;
+            margin: 0 (-$max-width__article/2 + 15px) 0 0;
+        }
+        @include tablet-wide {
+            position: relative;
+            right: 0;
+            top: 0;
+            margin: 0;
         }
     }
 
@@ -24,6 +37,11 @@
 
         &:hover {
             opacity: .6;
+        }
+
+        .footer & {
+            height: 25px;
+            width: 25px;
         }
 
         $social_networks: instagram, twitter, facebook, skype, slack, linkedin, medium, snapchat, youtube;

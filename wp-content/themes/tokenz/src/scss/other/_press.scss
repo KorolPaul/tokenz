@@ -6,7 +6,6 @@ $press_indent: 50px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-bottom: -$press_indent;
     }
 
     h3 {
@@ -14,8 +13,11 @@ $press_indent: 50px;
         width: 100%;
     }
     img {
-        margin:  0 $layout_indent $press_indent 0;
+        margin:  0 $layout_indent $press_indent/1.5 0;
         transition: .2s ease-in-out filter;
+        @include tablet {
+            margin-bottom: $press_indent + 10px;
+        }
 
         &:hover {
             filter: brightness(2);

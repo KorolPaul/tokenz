@@ -1,6 +1,6 @@
 .menu-container {
     padding: 0 0 5px;
-    @include tablet {
+    @include tablet-wide {
         display: flex;
         align-items: center;
         padding: 0;
@@ -10,25 +10,28 @@
 .menu {
     background: #fff;
     margin: 25px 0 0;
-    padding: 42px 0;
+    padding: 42px 0 20px;
     width: 100%;
+    position: relative;
+    z-index: 1;
     display: none;
-    @include tablet {
+    @include tablet-wide {
         background: transparent;
         display: flex;
         flex-direction: row;
+        height: 100px;
+        align-items: center;        
         margin: 0;
         padding: 0;
         justify-content: space-between;
         top: 0;
         width: auto;
-    }
-    @include desktop {
-        margin: 0;
+        position: static;
     }
 
     .toggled & {
         display: block;
+        margin-bottom: 30px;
     }
     .widget-area & {
         display: block;
@@ -40,11 +43,11 @@
         position: relative;
         z-index: 2;
         padding: 15px 0;
-        @include tablet {
+        @include tablet-wide {
             padding: 0;
-        }
-        @include desktop {
-            display: inline-block;
+            display: flex;
+            height: 100%;
+            align-items: center;
         }
 
         &__other {
@@ -63,7 +66,7 @@
             padding: 0 $layout_indent;
             position: relative;
             transition: .2s ease-in-out color;
-            @include desktop {
+            @include tablet-wide {
                 color: $light_color;
                 font-size: $font-size__small;
                 line-height: 44px;
@@ -73,7 +76,7 @@
             }
 
             &:hover {
-                @include desktop {
+                @include tablet-wide {
                     color: $extra-bright_color;
                 }
             }
@@ -107,7 +110,7 @@
             }
         }
         &:hover > a:after {
-            @include desktop {
+            @include tablet-wide {
                 content: '';
                 display: block;
                 background: url(#{$img-path}/arrow-down-yellow.svg) no-repeat;
@@ -134,7 +137,7 @@
     display: none;
     padding: 0;
     margin: 13px 0 0;
-    @include desktop {
+    @include tablet-wide {
         background: #2e2929;
         display: flex;
         height: 50px;

@@ -2,7 +2,6 @@
     position: relative;
     background: #dedfe3;
     @include desktop {
-        background: transparent;
 
         &:before {
             content: '';

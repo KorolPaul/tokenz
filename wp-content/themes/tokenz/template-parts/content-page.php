@@ -9,16 +9,16 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('text-content'); ?>>
     <?php if ( ! is_front_page() ) : ?>
-        <header class="entry-header fw-container text-content">
+        <header class="entry-header text-content">
             <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
         </header><!-- .entry-header -->
     <?php endif; ?>
 
     <?php tokenz_post_thumbnail(); ?>
 
-    <div class="entry-content text-content">
+    <div class="entry-content">
         <?php
             the_content();
 
@@ -30,7 +30,7 @@
     </div><!-- .entry-content -->
 
     <?php if ( get_edit_post_link() ) : ?>
-        <footer class="entry-footer fw-container">
+        <footer class="entry-footer fw-col-xs-12">
             <?php
                 edit_post_link(
                     sprintf(

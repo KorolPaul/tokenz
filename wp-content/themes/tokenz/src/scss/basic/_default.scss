@@ -20,7 +20,7 @@ a {
 p {
     line-height: 1.5;
 
-    article & {
+    article:not(.blog-entry) & {
         line-height: 2;
         margin: 0 0 20px;
         @include tablet {
@@ -29,7 +29,8 @@ p {
     }
 }
 
-ul {
+ul,
+ol {
     padding: 0 0 0 20px;
 }
 
@@ -60,10 +61,7 @@ blockquote {
     background: $light_gradient;
     color: $color;
     position: relative;
-    padding-top: 75px;
-    @include tablet {
-        padding-top: 145px;
-    }
+    padding-top: 85px;
 }
 
 .anchor {

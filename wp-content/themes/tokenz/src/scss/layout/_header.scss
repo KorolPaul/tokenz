@@ -6,7 +6,7 @@
     }
     &_content {
         min-height: 80px;
-        @include tablet {
+        @include tablet-wide {
             @include layout;
             height: 145px;
             display: flex;

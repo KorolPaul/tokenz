@@ -14,8 +14,7 @@
 }
 
 .site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
+.posts-navigation {
 	margin: 0 0 1.5em;
 	overflow: hidden;
 }
@@ -148,6 +147,16 @@
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.page {
+	padding-bottom: 40px;
+    @include tablet {
+		padding-bottom: 70px;
+	}
+	
+	.home & {
+		padding-bottom: 0;
+	}
+}
 .sticky {
 	display: block;
 }
@@ -166,11 +175,61 @@
 	margin: 0 0 1.5em;
 }
 
+.entry-footer__main {
+	@include layout;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-.comment-content a {
-	word-wrap: break-word;
+.comment-content {
+
+	a {
+		word-wrap: break-word;
+	}
+
+	p {
+		font-size: 14px;
+		margin: 0 0 20px;
+		@include tablet {
+			font-size: 16px;
+		}
+    }
+}
+
+.comments-title {
+	font-size: 24px;
+	margin-top: 80px;
+}
+.comment-list {
+    padding: 0;
+}
+.comments-area {
+    max-width: $max-width;
+    margin: auto;
+}
+.comment-respond {
+    label {
+        display: block;
+        margin: 0 0 10px;
+    }
+}
+.comment-author {
+    margin: 0 0 10px;
+
+    .avatar {
+        margin: 0 10px 0 0;
+    }
+}
+.comment-metadata {
+    margin: 0 0 10px;
+
+    a {
+        margin: 0 10px 0 0;
+    }
+}
+.comment-body {
+    margin: 0 0 40px;
 }
 
 .bypostauthor {
@@ -293,6 +352,47 @@ object {
 	padding: 45px 0 0;
 }
 
+.entry-title,
+.page-title {
+	margin-top: 10px;
+    @include tablet {
+		margin-top: 40px;
+	}
+}
+
+.blog-header {
+	padding: 20px 0 0;
+}
+
+.blog-title {
+	margin: 0 0 30px;
+}
+
+.blog-entry {
+	margin: 0 0 30px;
+
+	&:last-child {
+		margin-bottom: 100px; 
+	}
+
+	p {
+		margin: 0 0 20px;
+	}
+}
+
+.cat-links {
+	margin: 0 20px 0 0;
+}
+
+.post-navigation {
+	max-width: $max-width__article;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+}
+
 .search-field {
     border-radius: 35px;
     @include tablet {
@@ -317,46 +417,12 @@ input.search-submit {
     margin-bottom: 10px;
 }
 
-.comment-list {
-    padding: 0;
-}
-.comments-area {
-    max-width: $max-width;
-    margin: auto;
-}
-.comment-respond {
-    label {
-        display: block;
-        margin: 0 0 10px;
-    }
-}
-.comment-author {
-    margin: 0 0 10px;
-
-    .avatar {
-        margin: 0 10px 0 0;
-    }
-}
-.comment-metadata {
-    margin: 0 0 10px;
-
-    a {
-        margin: 0 10px 0 0;
-    }
-}
-.comment-body {
-    margin: 0 0 40px;
-}
-.comment-content {
-    p {
-        margin: 0 0 20px;
-    }
-}
 .reply {
     margin: -10px 0 0;
 }
 
-.entry-meta {
+.entry-meta,
+.blog-meta {
     font-weight: 600;
     margin: 0 0 20px;
 }

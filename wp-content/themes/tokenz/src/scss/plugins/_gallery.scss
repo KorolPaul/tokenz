@@ -1,7 +1,7 @@
 div#bwg_container1_0 {
     @include desktop {
-        margin-left: -90px;
-        margin-right: -90px;
+        margin-left: -110px;
+        margin-right: -110px;
     }
 
     #bwg_container2_0 {
@@ -13,4 +13,7 @@ div#bwg_container1_0 {
             filter: saturate(2);
         }
     }
+}
+.bwg_nav_cont_0 {
+    display: none;
 }

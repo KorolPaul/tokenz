@@ -95,20 +95,20 @@
     background-repeat: no-repeat;
     background-color: transparent;
     background-position: center center;
-    background-size: 28px 100px;
+    background-size: 14px 50px;
+    height: 90px;
+    width: 42px;
     border-radius: 10px;
     position: absolute;
     top: 50%;
-    height: 180px;
-    width: 85px;
     min-width: inherit;
     transform: translateY(-50%);
     z-index: 1;
     transition: .2s ease-in-out background-color, .2s ease-in-out opacity;
     @include tablet {
-        background-size: 9px 33px;
-        height: 60px;
-        width: 28px;
+        background-size: 28px 100px;
+        height: 180px;
+        width: 85px;
 
         &:hover {
             background-color: rgba(0, 0, 0, .3);
@@ -118,14 +118,14 @@
 
 .slick-prev {
     background-image: url(#{$img-path}/slider-prev.svg);
-    left: -35px;
+    left: -5px;
     @include tablet {
         left: 0;
     }
 }
 .slick-next {
     background-image: url(#{$img-path}/slider-next.svg);
-    right: -35px;
+    right: -5px;
     @include tablet {
         right: 0;
     }

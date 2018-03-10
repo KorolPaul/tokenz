@@ -64,10 +64,12 @@
                 <?php if (is_user_logged_in()) : ?>
                     <a class="login_button" href="<?php echo wp_logout_url(get_permalink()); ?>"><?php _e('Logout') ?></a>
                 <?php else : ?>
-                    <a class="login_button" href="<?php echo wp_login_url(get_permalink()); ?>"><?php _e('Investor Login') ?></a>
+                    <a class="login_button" href="<?php echo wp_login_url(get_permalink()); ?>"><?php _e('Login') ?></a>
                 <?php endif;?>
             </div>
         </div>
     </header><!-- #masthead -->
-    <div class="net"></div>
+    <?php if ( ! is_home() && is_front_page() ) : ?>
+        <div class="net"></div>
+    <?php endif;?>
     <div id="content" class="site-content">

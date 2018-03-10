@@ -26,7 +26,7 @@
         <?php the_excerpt(); ?>
     </div><!-- .entry-summary -->
 
-    <footer class="entry-footer fw-container">
+    <footer class="entry-footer fw-col-xs-12">
         <?php tokenz_entry_footer(); ?>
     </footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

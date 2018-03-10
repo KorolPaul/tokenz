@@ -1,7 +1,6 @@
 .currencies {
     display: none;
-
-    @include tablet {
+    @include tablet-wide {
         display: flex;
         align-items: center;
         flex-shrink: 0;

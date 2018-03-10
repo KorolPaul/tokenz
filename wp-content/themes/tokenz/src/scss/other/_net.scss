@@ -1,5 +1,4 @@
 .net {
-    display: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -12,9 +11,6 @@
         transition: .2s ease-out transform;
     }
 
-    .home & {
-        display: block;
-    }
 
     &:before {
         content: '';

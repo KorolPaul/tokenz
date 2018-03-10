@@ -92,7 +92,7 @@
      * Check is menu items fit to screen width.
      */
     function checkWidth() {
-        if(screen.width >= 768) {
+        if(screen.width >= 992 && window.innerWidth >= 992) {
             var headerWidth = header.offsetWidth - parseInt(window.getComputedStyle(header, null).getPropertyValue('padding-left')) * 2,
                 containerWidth = container.offsetWidth,
                 socialWidth = social.offsetWidth,
@@ -115,7 +115,7 @@
 
                 menu.appendChild(ellipsisItem);
 
-                var lastMenuElement = menu.children[menu.children.length - 3];
+                var lastMenuElement = menu.children[menu.children.length - 2];
                 console.log(lastMenuElement)
                 submenuElement.insertBefore(lastMenuElement, submenuElement.children[0]);
 

@@ -22,18 +22,24 @@
     h3 {
         margin: 0 0 10px;
         @include tablet {
-            margin: ($layout_indent * 1.5) auto $layout_indent;
+            margin: 0 auto $layout_indent;
+        }
+    }
+    P {
+        @include tablet {
+            margin-bottom: $layout_indent;
         }
     }
 
     .jedi-dashboard {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;        
         margin: 0 auto 45px;
         height: auto;
         width: 100%;
         @include tablet {
-            margin-bottom: 90px;
+            justify-content: space-between;
+            margin-bottom: 80px;
             height: 100px;
             width: 90%;
         }
@@ -55,7 +61,7 @@
             left: 50%;
             width: auto;
             @include tablet {
-                top: 100%;
+                top: 90%;
             }
 
             code {

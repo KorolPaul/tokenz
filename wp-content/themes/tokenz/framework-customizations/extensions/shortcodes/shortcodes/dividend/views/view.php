@@ -8,7 +8,7 @@
     <p><?php echo(wp_kses($atts['description'], 'tokenz' )) ?></p>
     <div class="dividend_data">
         <div class="dividend_range">
-            <p class="heading-3"><?php _e('Invest', 'tokenz') ?></p>
+            <p class="dividend_range-title"><?php _e('Invest', 'tokenz') ?></p>
             <p class="dividend_invest-sum">
                 $<span id="invest-sum"><?php esc_html_e($atts['max_invest']/2, 'tokenz') ?></span>
             </p>
@@ -48,7 +48,7 @@
             </div>
             <div class="dividend_legend">
                 <p>
-                    <span class="heading-3"><?php _e('Get', 'tokenz') ?></span>
+                    <span class="dividend_legend-title"><?php _e('Get', 'tokenz') ?></span>
                     <?php _e('(Projected profit)', 'tokenz') ?>
                 </p>
                 <p class="dividend_legend-description">
@@ -90,10 +90,10 @@
             </div>
         </div>
     </div>
-    <h3 class="heading-3">
+    <h3 class="dividend_sum">
         <?php _e('Return on Investment', 'tokenz') ?>:
         <span class="dividend_percent" id="return-percent"><?php esc_html_e($atts['return_percent'], 'tokenz') ?>%</span> <?php _e('per year', 'tokenz') ?>
     </h3>
     <p><?php _e('Annual token profit projection based on investment', 'tokenz') ?>.</p>
-    <a href="#" class="button"><?php _e('Invest', 'tokenz') ?></a>
+    <a href="#" class="button fw-btn-big"><?php _e('Invest', 'tokenz') ?></a>
 </div>
