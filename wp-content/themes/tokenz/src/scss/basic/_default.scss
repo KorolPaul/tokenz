@@ -20,9 +20,9 @@ a {
 p {
     line-height: 1.5;
 
-    article:not(.blog-entry) & {
+    article:not(.blog-entry) &:not([class]) {
         line-height: 2;
-        margin: 0 0 20px;
+        margin-bottom: 20px;
         @include tablet {
             margin-bottom: 40px;
         }

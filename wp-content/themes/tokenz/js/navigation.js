@@ -100,7 +100,7 @@
                 currenciesWidth = currencies.offsetWidth,
                 ellipsisWidth = 100;
 
-            if((headerWidth - containerWidth - socialWidth - loginWidth - currenciesWidth) <= 0) {
+            if((headerWidth - containerWidth - socialWidth - loginWidth - currenciesWidth - ellipsisWidth) <= 0) {
                 var ellipsisItem = document.querySelector('.menu-item__other') || document.createElement('li'),
                     ellipsisLink = document.querySelector('.menu-item__other a') || document.createElement('a'),
                     submenuElement = document.querySelector('.menu-item__other .sub-menu') || document.createElement('ul');
@@ -116,7 +116,6 @@
                 menu.appendChild(ellipsisItem);
 
                 var lastMenuElement = menu.children[menu.children.length - 2];
-                console.log(lastMenuElement)
                 submenuElement.insertBefore(lastMenuElement, submenuElement.children[0]);
 
                 setTimeout( function(){ checkWidth(); }, 0);
