@@ -4,18 +4,18 @@
 
 $options = array(
     'custom_class' => array(
-        'label' => __('Custom class', 'fw'),
-        'desc'  => __('Cusom CSS class fot column', 'fw'),
+        'label' => __('Custom class', 'tokenz'),
+        'desc'  => __('Cusom CSS class fot column', 'tokenz'),
         'type'  => 'text',
     ),
     'anchor' => array(
-        'label' => __('Anchor', 'fw'),
-        'desc'  => __('Anchor for menu items', 'fw'),
+        'label' => __('Anchor', 'tokenz'),
+        'desc'  => __('Anchor for menu items', 'tokenz'),
         'type'  => 'text',
     ),
     'slide' => array(
-        'label' => __('Slider item', 'fw'),
-        'desc'  => __('Use element as slider item', 'fw'),
+        'label' => __('Slider item', 'tokenz'),
+        'desc'  => __('Use element as slider item', 'tokenz'),
         'type'  => 'checkbox',
     )
 );

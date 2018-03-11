@@ -117,6 +117,12 @@ function tknz_register_required_plugins() {
             'slug'      => 'photo-gallery',
             'required'  => true,
         )
+        ,
+        array(
+            'name'      => 'One Click Demo Import',
+            'slug'      => 'one-click-demo-import',
+            'required'  => true,
+        )
     );
 
     /*

@@ -404,13 +404,21 @@ input.search-submit {
     height: 40px;
     line-height: 40px;
     vertical-align: top;
-    margin: 0 0 0 -35px;
+	margin: 0 0 0 -35px;
+	min-width: 100px;
+	@include tablet {
+		min-width: 200px;
+	}
 }
 
 .widget-area {
     border-radius: 20px;
-    border: 1px solid rgba(0, 0, 0, .2);
-    margin: 0 0 40px;
+	border: 1px solid rgba(0, 0, 0, .2);
+	padding: 0 20px;
+	margin: 0 0 40px;
+	max-width: $max-width__article;
+	margin-left: auto;
+	margin-right: auto;
 }
 .widget-title {
     margin-top: 20px;

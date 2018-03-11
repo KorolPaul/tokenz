@@ -159,13 +159,17 @@
     }( container ) );
 
     var netElement = document.querySelector('.net'),
-        netElementStyles = window.getComputedStyle(netElement, null).getPropertyValue('transform');
+        netElementStyles = window.getComputedStyle(netElement, null).getPropertyValue('transform'),
+        parallaxElement = document.querySelector('.parallax');
 
-    document.querySelector('.parallax').addEventListener('mousemove', (e) => {
-        var multiplier = 40,
-            delta = (window.innerWidth / 2 - e.clientX),
-            translate = Math.floor(delta / multiplier);
+    if(parallaxElement) {
+        parallaxElement.addEventListener('mousemove', (e) => {
+            var multiplier = 40,
+                delta = (window.innerWidth / 2 - e.clientX),
+                translate = Math.floor(delta / multiplier);
+    
+            netElement.style.transform = netElementStyles + ' translateX(' + translate + 'px)';
+        });
+    }
 
-        netElement.style.transform = netElementStyles + ' translateX(' + translate + 'px)';
-    });
 } )();

@@ -15,7 +15,7 @@
     @media all and (min-width: 992px) { @content; }
 }
 @mixin desktop() {
-    @media all and (min-width: 1200px) { @content; }
+    @media all and (min-width: 1240px) { @content; }
 }
 @mixin media($resolution) {
     @media all and (min-width: $resolution) { @content; }
@@ -38,6 +38,7 @@
     margin-right: auto;
     padding-left: $layout_indent;
     padding-right: $layout_indent;
+    box-sizing: border-box;
 
     @include desktop {
         width: $max-width;

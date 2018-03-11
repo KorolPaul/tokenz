@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( is_singular() ? 'text-content' : 'blog-entry') ?>>
-    <header class="<?php esc_attr_e( is_singular() ? 'entry-header' : 'blog-header fw-col-xs-12') ?>">
+    <header class="<?php echo esc_attr( is_singular() ? 'entry-header' : 'blog-header fw-col-xs-12' ) ?>">
         <?php
         if ( is_singular() ) :
             the_title( '<h1 class="entry-title">', '</h1>' );
@@ -19,7 +19,7 @@
         endif;
 
         if ( 'post' === get_post_type() ) : ?>
-        <div class="<?php esc_attr_e( is_singular() ? 'entry-meta' : 'blog-meta') ?>">
+        <div class="<?php echo esc_attr( is_singular() ? 'entry-meta' : 'blog-meta') ?>">
             <?php tokenz_posted_on(); ?>
         </div><!-- .entry-meta -->
         <?php

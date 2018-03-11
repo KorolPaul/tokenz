@@ -13,8 +13,8 @@ if ( ! empty( $atts['slide'] ) ) {
 ?>
 
 <?php if ( ! empty( $atts['anchor'] ) ) { ?>
-    <a name="<?php esc_attr_e($atts['anchor'], 'tokenz') ?>" class="anchor"></a>
+    <a name="<?php echo esc_attr($atts['anchor']) ?>" class="anchor"></a>
 <?php } ?>
-<div class="<?php esc_attr_e($class. $column_extra_classes, 'tokenz'); ?>">
+<div class="<?php echo esc_attr($class. $column_extra_classes); ?>">
     <?php echo do_shortcode($content); ?>
 </div>

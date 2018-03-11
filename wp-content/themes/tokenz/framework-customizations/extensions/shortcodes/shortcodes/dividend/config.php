@@ -5,7 +5,7 @@
 $cfg = array();
 
 $cfg['page_builder'] = array(
-    'title'       => __( 'Token Dividend', 'fw' ),
-    'description' => __( 'Add a Token Dividend block', 'fw' ),
-    'tab'         => __( 'Content Elements', 'fw' ),
+    'title'       => __( 'Token Dividend', 'tokenz' ),
+    'description' => __( 'Add a Token Dividend block', 'tokenz' ),
+    'tab'         => __( 'Content Elements', 'tokenz' ),
 );
