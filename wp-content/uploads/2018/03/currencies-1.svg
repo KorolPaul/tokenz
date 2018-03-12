@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 88.81 39">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        clip-path: url(#clip-path-3);
+      }
+
+      .cls-6 {
+        clip-path: url(#clip-path-5);
+      }
+    </style>
+    <clipPath id="clip-path" transform="translate(-1081 -52)">
+      <polyline class="cls-1" points="1153.3 78.56 1154.76 73.3 1158.2 72.09 1159.06 69.01 1159.03 68.93 1155.64 70.12 1158.08 61.3 1151.15 61.3 1147.96 72.81 1145.29 73.74 1144.41 76.93 1147.07 75.99 1145.19 82.78 1163.63 82.78 1164.82 78.56 1153.3 78.56"/>
+    </clipPath>
+    <clipPath id="clip-path-2" transform="translate(-1081 -52)">
+      <rect class="cls-1" width="1440" height="7850"/>
+    </clipPath>
+    <clipPath id="clip-path-3" transform="translate(-1081 -52)">
+      <path class="cls-1" d="M1124.94,57l-9.06,14.22,9.06,5.07,9.06-5.06Zm-.14,20.91-9.06-5.06,9.06,12.08,9.07-12.08-9.07,5.06Z"/>
+    </clipPath>
+    <clipPath id="clip-path-5" transform="translate(-1081 -52)">
+      <path class="cls-1" d="M1101.75,69.27c-.66,2.74-4.72,1.35-6,1l1.16-4.85c1.32.33,5.56,1,4.87,3.83h0Zm-.73,7.79c-.72,3-5.6,1.38-7.18,1l1.28-5.33C1096.7,73.13,1101.78,73.94,1101,77.06Zm5.33-7.75c.43-2.92-1.73-4.5-4.68-5.57l1-4-2.33-.61-.93,3.87-1.89-.46.93-3.91-2.34-.61-1,4-1.49-.37-3.22-.83-.62,2.58s1.73.41,1.69.43a1.29,1.29,0,0,1,1.09,1.41L1090,76.16a.87.87,0,0,1-1.09.58s-1.7-.44-1.7-.44L1086,79.07l3,.78,1.65.44-1,4,2.34.6,1-4c.64.18,1.25.35,1.86.5l-.9,4,2.34.61,1-4c4,.79,7,.47,8.22-3.26,1-3-.05-4.74-2.16-5.87a3.81,3.81,0,0,0,3-3.55h0Z"/>
+    </clipPath>
+  </defs>
+  <title>Asset 5</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g class="cls-2">
+        <g class="cls-3">
+          <rect class="cls-4" x="58.41" y="4.3" width="30.41" height="31.48"/>
+        </g>
+      </g>
+      <g class="cls-5">
+        <g class="cls-3">
+          <rect class="cls-4" x="29.74" width="28.26" height="37.93"/>
+        </g>
+      </g>
+      <g class="cls-6">
+        <g class="cls-3">
+          <rect class="cls-4" y="1.07" width="30.41" height="37.93"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

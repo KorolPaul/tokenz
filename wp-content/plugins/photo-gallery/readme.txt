@@ -3,7 +3,7 @@ Contributors: webdorado,wdsupport,photogallerysupport
 Tags: gallery, photo gallery, image gallery, responsive gallery, wordpress gallery plugin, photo albums, gallery slider, gallery lightbox, wordpress photo gallery plugin, fullscreen gallery, watermarking, video gallery
 Requires at least: 3.4
 Tested up to: 4.9 
-Stable tag: 1.3.68    
+Stable tag: 1.3.69    
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=3u0O9ZdVsGc
 = Useful Links: =  
 [Special Offer for all Premium Plugins](https://web-dorado.com/wordpress-plugins-bundle.html) 
 [WordPress Photo Gallery](https://web-dorado.com/products/wordpress-photo-gallery-plugin.html)  
-[Demo](http://wpdemo.web-dorado.com/gallery/)  
+[Demo](http://wpdemo.web-dorado.com/photo-gallery/)  
 [User Manual](https://web-dorado.com/wordpress-gallery-guide-step-1.html)  
 [Support Forum](https://wordpress.org/support/plugin/photo-gallery)  
  
@@ -278,6 +278,9 @@ Choose whether to display random or the first/last specific number of images.
 
 
 == Changelog ==
+
+= 1.3.69 =
+* Changed: Default options and theme.   
 
 = 1.3.68 =
 * Fixed: Import from media library for large amount images.   

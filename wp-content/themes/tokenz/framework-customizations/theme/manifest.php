@@ -14,10 +14,16 @@ $manifest['id'] = get_option( 'stylesheet' );
  */
 $manifest['supported_extensions'] = array(
     'page-builder' => array(),
+    'backups' => array(),
 );
 
 $manifest['requirements'] = array(
     'page-builder' => array(
+        'extension_name' => array(
+            'min_version' => '1.0.0',
+        ),
+    ),
+    'backups' => array(
         'extension_name' => array(
             'min_version' => '1.0.0',
         ),
