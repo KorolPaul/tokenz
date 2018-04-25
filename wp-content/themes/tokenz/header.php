@@ -43,9 +43,11 @@
 
     <header id="masthead" class="header">
         <div class="header_content">
-            <?php
-                get_template_part( 'template-parts/social', 'index' );
-            ?>
+            <?php if ( ! is_home() && is_front_page() ) : ?>
+                <?php get_template_part( 'template-parts/social', 'index' ); ?>
+            <?php else: ?>
+                <a class="logo" href="/"><?php echo get_bloginfo( 'name' ); ?></a>
+            <?php endif;?>
 
             <nav id="site-navigation" class="menu-container">
                 <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'tokenz' ); ?></button>

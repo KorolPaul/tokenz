@@ -22,37 +22,38 @@ if ( post_password_required() ) {
 
 <div id="comments" class="comments-area text-content">
     <div class="fw-col-xs-12">
+        <h2 class="comments-title">
+            <?php
+                esc_html_e( 'Comments', 'tokenz' )
+                ?>
+        </h2><!-- .comments-title -->
 
         <?php
+
+        $comment_args = array(
+            'title_reply'=>'',
+            'fields' => apply_filters( 'comment_form_default_fields', array(
+
+                        'author' => '<p class="comment-form-author"><input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" placeholder="' . esc_attr( 'Your name', 'tokenz' ) . '" /></p>',
+                        'email' => '<p class="comment-form-email"><input id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" placeholder="' . esc_attr( 'Your email', 'tokenz' ) . '" /></p>',
+                        'url' => "" ) ),
+
+            'comment_field' => '<p><textarea id="comment" name="comment" aria-required="true" placeholder="' . esc_attr( 'Type comment here', 'tokenz' ) . '"></textarea></p>',
+            'comment_notes_after' => "",
+            'comment_notes_before' => "",
+
+        );
+        comment_form($comment_args);
+
         // You can start editing here -- including this comment!
         if ( have_comments() ) : ?>
-            <h2 class="comments-title">
-                <?php
-                $comment_count = get_comments_number();
-                if ( 1 === $comment_count ) {
-                    printf(
-                        /* translators: 1: title. */
-                        esc_html_e( 'One thought on &ldquo;%1$s&rdquo;', 'tokenz' ),
-                        '<span>' . get_the_title() . '</span>'
-                    );
-                } else {
-                    printf( // WPCS: XSS OK.
-                        /* translators: 1: comment count number, 2: title. */
-                        esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $comment_count, 'comments title', 'tokenz' ) ),
-                        number_format_i18n( $comment_count ),
-                        '<span>' . get_the_title() . '</span>'
-                    );
-                }
-                ?>
-            </h2><!-- .comments-title -->
-
-            <?php the_comments_navigation(); ?>
 
             <ol class="comment-list">
                 <?php
                     wp_list_comments( array(
-                        'style'      => 'ol',
-                        'short_ping' => true,
+                        'style'       => 'ol',
+                        'short_ping'  => true,
+                        'avatar_size' => 40
                     ) );
                 ?>
             </ol><!-- .comment-list -->
@@ -67,7 +68,6 @@ if ( post_password_required() ) {
 
         endif; // Check for have_comments().
 
-        comment_form();
         ?>
     </div>
 

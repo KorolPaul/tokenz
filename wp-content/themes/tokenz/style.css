@@ -42,6 +42,7 @@ layout
 4.4 Social
 4.5 Toggle menu button
 4.6 404 page
+4.7 Logo
 
 Other
 5.0 Net background
@@ -527,13 +528,13 @@ p {
   line-height: 1.5;
 }
 
-article:not(.blog-entry) p:not([class]) {
+article p:not([class]) {
   line-height: 2;
   margin-bottom: 20px;
 }
 
 @media all and (min-width: 768px) {
-  article:not(.blog-entry) p:not([class]) {
+  article p:not([class]) {
     margin-bottom: 40px;
   }
 }
@@ -657,8 +658,8 @@ a.fw-btn-yellow {
 a.fw-btn-white {
   background: #fff;
   color: #24186b;
-  -webkit-transition: .2s ease-in-out background, .2s ease-in-out color;
-  transition: .2s ease-in-out background, .2s ease-in-out color;
+  -webkit-transition: .2s ease-in-out background, .2s ease-in-out color;
+  transition: .2s ease-in-out background, .2s ease-in-out color;
 }
 
 a.fw-btn-white:hover {
@@ -684,8 +685,8 @@ a.fw-btn-big-yellow:hover {
 a.fw-btn-big-white {
   background: #fff;
   color: #292154;
-  -webkit-transition: .2s ease-in-out background, .2s ease-in-out color;
-  transition: .2s ease-in-out background, .2s ease-in-out color;
+  -webkit-transition: .2s ease-in-out background, .2s ease-in-out color;
+  transition: .2s ease-in-out background, .2s ease-in-out color;
 }
 
 a.fw-btn-big-white:hover {
@@ -702,11 +703,11 @@ input[type="tel"] {
   border-radius: 15px;
   background: transparent;
   color: #000;
-  border: 1px solid currentColor;
+  border: 1px solid #e3e3e6;
   font-size: 16px;
   padding: 10px 15px;
-  -webkit-transition: .2s ease-in border-color;
-  transition: .2s ease-in border-color;
+  -webkit-transition: .2s ease-in border-color, .2s ease-in background-color;
+  transition: .2s ease-in border-color, .2s ease-in background-color;
 }
 
 input[type="text"]::-webkit-input-placeholder,
@@ -738,6 +739,7 @@ input[type="search"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
 input[type="tel"]:focus {
+  background-color: #f0f0ff;
   border-color: rgba(120, 120, 92, 0.8);
 }
 
@@ -745,14 +747,13 @@ input[type="tel"]:focus {
 textarea {
   border-radius: 15px;
   background: transparent;
-  color: #000;
-  border: 1px solid currentColor;
+  border: 1px solid #e3e3e6;
   font-size: 16px;
   padding: 15px;
   resize: none;
   max-width: calc(100% - 15px*2);
-  -webkit-transition: .2s ease-in border-color;
-  transition: .2s ease-in border-color;
+  -webkit-transition: .2s ease-in border-color, .2s ease-in background-color;
+  transition: .2s ease-in border-color, .2s ease-in background-color;
 }
 
 textarea::-webkit-input-placeholder {
@@ -768,6 +769,7 @@ textarea:-ms-input-placeholder {
 }
 
 textarea:focus {
+  background-color: #f0f0ff;
   border-color: rgba(120, 120, 92, 0.8);
 }
 
@@ -1164,12 +1166,16 @@ input[type="checkbox"]:disabled + label:before {
 
 @media all and (min-width: 768px) {
   .comment-content p {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
+.comment-content p:last-child {
+  margin-bottom: 20px;
+}
+
 .comments-title {
-  font-size: 24px;
+  font: bold 36px "Open Sans", sans-serif;
   margin-top: 80px;
 }
 
@@ -1179,7 +1185,7 @@ input[type="checkbox"]:disabled + label:before {
 
 .comments-area {
   max-width: 1240px;
-  margin: auto;
+  margin: 0 auto 130px;
 }
 
 .comment-respond label {
@@ -1192,19 +1198,52 @@ input[type="checkbox"]:disabled + label:before {
 }
 
 .comment-author .avatar {
+  border-radius: 50%;
   margin: 0 10px 0 0;
+}
+
+@media all and (min-width: 768px) {
+  .comment-author .avatar {
+    margin-right: 20px;
+  }
+}
+
+.comment-author .fn {
+  line-height: 16px;
+  font-weight: 600;
+  vertical-align: top;
+}
+
+.comment-meta {
+  position: relative;
 }
 
 .comment-metadata {
   margin: 0 0 10px;
 }
 
-.comment-metadata a {
+.comment-metadata > a {
+  color: #808080;
+  font-size: 14px;
   margin: 0 10px 0 0;
+  text-decoration: none;
+  position: absolute;
+  top: 20px;
+  left: 55px;
+}
+
+@media all and (min-width: 768px) {
+  .comment-metadata > a {
+    left: 65px;
+  }
 }
 
 .comment-body {
   margin: 0 0 40px;
+}
+
+.says {
+  display: none;
 }
 
 .bypostauthor {
@@ -1330,12 +1369,14 @@ object {
 .entry-title,
 .page-title {
   margin-top: 10px;
+  font: bold 40px/1.1 "Open Sans", sans-serif;
 }
 
 @media all and (min-width: 768px) {
   .entry-title,
   .page-title {
     margin-top: 40px;
+    font-size: 60px;
   }
 }
 
@@ -1344,15 +1385,33 @@ object {
 }
 
 .blog-title {
+  font: bold 48px/1.1 "Open Sans", sans-serif;
   margin: 0 0 30px;
+}
+
+.blog-title a {
+  color: #000;
+  text-decoration: none;
 }
 
 .blog-entry {
   margin: 0 0 30px;
 }
 
+@media all and (min-width: 768px) {
+  .blog-entry {
+    margin-bottom: 60px;
+  }
+}
+
 .blog-entry:last-child {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+}
+
+@media all and (min-width: 768px) {
+  .blog-entry:last-child {
+    margin-bottom: 100px;
+  }
 }
 
 .blog-entry p {
@@ -1360,7 +1419,7 @@ object {
 }
 
 .cat-links {
-  margin: 0 20px 0 0;
+  display: none;
 }
 
 .post-navigation {
@@ -1419,8 +1478,61 @@ input.search-submit {
 
 .entry-meta,
 .blog-meta {
-  font-weight: 600;
+  font-size: 15px;
   margin: 0 0 20px;
+}
+
+.entry-content p:last-child {
+  margin-bottom: 20px;
+}
+
+.more-link {
+  display: block;
+  margin: -20px 0 0;
+  text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+  .more-link {
+    margin-top: -40px;
+  }
+}
+
+.comments-link a {
+  background: url(src/img/icons/comment.svg) no-repeat 0 center;
+  background-size: 10px auto;
+  color: #000;
+  font-size: 15px;
+  padding: 0 20px 0 18px;
+  text-decoration: none;
+  -webkit-transition: .2s ease-in-out opacity;
+  transition: .2s ease-in-out opacity;
+}
+
+.comments-link a:hover {
+  opacity: .6;
+}
+
+.comment-form {
+  margin: 0 0 60px;
+}
+
+.comment-form label {
+  display: none;
+}
+
+.comment-form textarea {
+  width: 100%;
+}
+
+.form-submit input[type="submit"] {
+  border-radius: 35px;
+  font-weight: 600;
+}
+
+.post-thumbnail img {
+  border-radius: 20px;
+  margin-bottom: 10px;
 }
 
 /*3.1 Subscribe plugin */
@@ -1472,6 +1584,10 @@ input.search-submit {
   .es_textbox_class[type="text"] {
     width: 350px;
   }
+}
+
+.es_textbox_class[type="text"]:focus {
+  background: transparent;
 }
 
 /*3.2 Underscores plugin */
@@ -1799,7 +1915,7 @@ h6,
     padding-right: 20px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    height: 145px;
+    height: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2063,14 +2179,14 @@ h6,
     -ms-flex-pack: center;
     justify-content: center;
     position: absolute;
-    top: 105px;
+    top: 85px;
     left: 0;
     right: 0;
     opacity: 0;
     visibility: hidden;
     text-align: center;
-    -webkit-transition: .2s ease-in-out opacity, .2s ease-in-out visibility .2s;
-    transition: .2s ease-in-out opacity, .2s ease-in-out visibility .2s;
+    -webkit-transition: .2s ease-in-out opacity, .2s ease-in-out visibility .2s;
+    transition: .2s ease-in-out opacity, .2s ease-in-out visibility .2s;
   }
 }
 
@@ -2081,8 +2197,8 @@ h6,
 .menu-item:hover .sub-menu {
   opacity: 1;
   visibility: visible;
-  -webkit-transition: .2s ease-in-out opacity .2s, .2s ease-in-out visibility;
-  transition: .2s ease-in-out opacity .2s, .2s ease-in-out visibility;
+  -webkit-transition: .2s ease-in-out opacity .2s, .2s ease-in-out visibility;
+  transition: .2s ease-in-out opacity .2s, .2s ease-in-out visibility;
 }
 
 /* 4.4 Social */
@@ -2327,6 +2443,31 @@ h6,
 @media all and (min-width: 768px) {
   .error404_title {
     font-size: 220px;
+  }
+}
+
+/* 4.7 Logo */
+.logo {
+  display: none;
+}
+
+@media all and (min-width: 992px) {
+  .logo {
+    color: #feffbf;
+    font: bold 40px "Montserrat", sans-serif;
+    letter-spacing: 5px;
+    text-decoration: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    text-transform: uppercase;
+  }
+  .logo:hover {
+    color: #fff;
   }
 }
 

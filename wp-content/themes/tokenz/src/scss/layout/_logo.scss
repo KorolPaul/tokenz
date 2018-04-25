@@ -1,0 +1,17 @@
+.logo {
+    display: none;
+    @include tablet-wide {
+        color: $bright_color;
+        font: bold 40px $font-family__heading;
+        letter-spacing: 5px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        position: relative;
+        text-transform: uppercase;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}

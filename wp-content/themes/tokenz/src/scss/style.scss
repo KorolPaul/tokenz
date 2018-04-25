@@ -46,6 +46,7 @@ layout
 4.4 Social
 4.5 Toggle menu button
 4.6 404 page
+4.7 Logo
 
 Other
 5.0 Net background
@@ -119,6 +120,8 @@ Styles based on Normalize @link https://github.com/necolas/normalize.css
 @import  "layout/menu-toggle";
 /* 4.6 404 page */
 @import  "layout/error-404";
+/* 4.7 Logo */
+@import  "layout/logo";
 
 /*Other*/
 /* 5.0 Net background */

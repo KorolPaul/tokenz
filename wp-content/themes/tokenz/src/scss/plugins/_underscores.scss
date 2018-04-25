@@ -152,7 +152,7 @@
     @include tablet {
 		padding-bottom: 70px;
 	}
-	
+
 	.home & {
 		padding-bottom: 0;
 	}
@@ -192,13 +192,17 @@
 		font-size: 14px;
 		margin: 0 0 20px;
 		@include tablet {
-			font-size: 16px;
-		}
+			font-size: 18px;
+        }
+
+        &:last-child {
+            margin-bottom: 20px;
+        }
     }
 }
 
 .comments-title {
-	font-size: 24px;
+    font: bold 36px $font-family;
 	margin-top: 80px;
 }
 .comment-list {
@@ -206,7 +210,7 @@
 }
 .comments-area {
     max-width: $max-width;
-    margin: auto;
+    margin: 0 auto 130px;
 }
 .comment-respond {
     label {
@@ -218,18 +222,43 @@
     margin: 0 0 10px;
 
     .avatar {
+        border-radius: 50%;
         margin: 0 10px 0 0;
+        @include tablet {
+            margin-right: 20px;
+        }
     }
+    .fn {
+        line-height: 16px;
+        font-weight: 600;
+        vertical-align: top;
+    }
+}
+.comment-meta {
+    position: relative;
 }
 .comment-metadata {
     margin: 0 0 10px;
 
-    a {
+    & > a {
+        color: #808080;
+        font-size: $font-size__small;
         margin: 0 10px 0 0;
+        text-decoration: none;
+        position: absolute;
+        top: 20px;
+        left: 55px;
+        @include tablet {
+            left: 65px;
+        }
     }
 }
 .comment-body {
     margin: 0 0 40px;
+}
+
+.says {
+    display: none;
 }
 
 .bypostauthor {
@@ -354,9 +383,11 @@ object {
 
 .entry-title,
 .page-title {
-	margin-top: 10px;
+    margin-top: 10px;
+    font: bold 40px/1.1 $font-family;
     @include tablet {
-		margin-top: 40px;
+        margin-top: 40px;
+        font-size: 60px;
 	}
 }
 
@@ -365,14 +396,26 @@ object {
 }
 
 .blog-title {
-	margin: 0 0 30px;
+    font: bold 48px/1.1 $font-family;
+    margin: 0 0 30px;
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
 }
 
 .blog-entry {
 	margin: 0 0 30px;
+    @include tablet {
+        margin-bottom: 60px;
+    }
 
 	&:last-child {
-		margin-bottom: 100px; 
+        margin-bottom: 50px;
+        @include tablet {
+            margin-bottom: 100px;
+        }
 	}
 
 	p {
@@ -381,7 +424,7 @@ object {
 }
 
 .cat-links {
-	margin: 0 20px 0 0;
+	display: none;
 }
 
 .post-navigation {
@@ -431,6 +474,58 @@ input.search-submit {
 
 .entry-meta,
 .blog-meta {
-    font-weight: 600;
+    font-size: 15px;
     margin: 0 0 20px;
+}
+
+.entry-content {
+    p:last-child {
+        margin-bottom: 20px;
+    }
+}
+
+.more-link {
+    display: block;
+    margin: -20px 0 0;
+    text-decoration: none;
+    @include tablet {
+        margin-top: -40px;
+    }
+}
+
+.comments-link a {
+    background: url(#{$img-path}/icons/comment.svg) no-repeat 0 center;
+    background-size: 10px auto;
+    color: $color;
+    font-size: 15px;
+    padding: 0 20px 0 18px;
+    text-decoration: none;
+    transition: .2s ease-in-out opacity;
+
+    &:hover {
+        opacity: .6;
+    }
+}
+.comment-form {
+    margin: 0 0 60px;
+
+    label {
+        display: none;
+    }
+    textarea {
+        width: 100%;
+    }
+}
+.form-submit {
+    input[type="submit"] {
+        border-radius: 35px;
+        font-weight: 600;
+    }
+}
+
+.post-thumbnail {
+    img {
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
 }

@@ -62,7 +62,7 @@
     }
 
     header = document.querySelector('.header_content');
-    social = document.querySelector('.social');
+    social = document.querySelector('.social, .logo');
     login = document.querySelector('.login');
     currencies = document.querySelector('.currencies');
 
@@ -167,7 +167,7 @@
             var multiplier = 40,
                 delta = (window.innerWidth / 2 - e.clientX),
                 translate = Math.floor(delta / multiplier);
-    
+
             netElement.style.transform = netElementStyles + ' translateX(' + translate + 'px)';
         });
     }

@@ -20,15 +20,14 @@
 
         if ( 'post' === get_post_type() ) : ?>
         <div class="<?php echo esc_attr( is_singular() ? 'entry-meta' : 'blog-meta') ?>">
-            <?php tokenz_posted_on(); ?>
+            <?php the_time('j M Y'); ?>
         </div><!-- .entry-meta -->
         <?php
         endif; ?>
     </header><!-- .entry-header -->
 
-    <?php tokenz_post_thumbnail(); ?>
-
     <div class="entry-content fw-col-xs-12">
+        <?php tokenz_post_thumbnail(); ?>
         <?php
             the_content( sprintf(
                 wp_kses(

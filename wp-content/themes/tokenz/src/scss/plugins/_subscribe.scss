@@ -38,5 +38,9 @@
         @include tablet {
             width: 350px;
         }
+
+        &:focus {
+            background: transparent;
+        }
     }
 }

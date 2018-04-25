@@ -176,6 +176,34 @@ if ( defined( 'JETPACK__VERSION' ) ) {
     require get_template_directory() . '/inc/jetpack.php';
 }
 
+add_filter( 'get_the_archive_title', 'tokenz_remove_name_cat' );
+function tokenz_remove_name_cat( $title ){
+	if ( is_category() ) {
+		$title = single_cat_title( '', false );
+	} elseif ( is_tag() ) {
+		$title = single_tag_title( '', false );
+	}
+	return $title;
+}
+
+add_filter('comment_form_fields', 'tokenz_reorder_comment_fields' );
+function tokenz_reorder_comment_fields( $fields ){
+	$new_fields = array();
+
+	$myorder = array('author','email','comment','url');
+
+	foreach( $myorder as $key ){
+		$new_fields[ $key ] = $fields[ $key ];
+		unset( $fields[ $key ] );
+	}
+
+	if( $fields )
+		foreach( $fields as $key => $val )
+			$new_fields[ $key ] = $val;
+
+	return $new_fields;
+}
+
 /**
  * Create custom theme fields
  */
