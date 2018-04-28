@@ -487,7 +487,7 @@ if ( ! class_exists( 'ES_Settings' ) ) {
 			$blogname = get_option('blogname');
 			$es_cron_adminmail = get_option('ig_es_cron_adminmail', '');
 			if($es_cron_adminmail == "") {
-				add_option('ig_es_cron_adminmail', "Hi Admin,\r\n\r\nCron URL has been triggered successfully on {{DATE}} for the email {{SUBJECT}}. And it sent email to {{COUNT}} recipient(s).\r\n\r\nBest,\r\n".$blogname."");
+				add_option('ig_es_cron_adminmail', "Hi Admin,\r\n\r\nCron URL has been triggered successfully on {{DATE}} for the email '{{SUBJECT}}'. And it sent email to {{COUNT}} recipient(s).\r\n\r\nBest,\r\n".$blogname."");
 				$es_cron_adminmail = get_option('ig_es_cron_adminmail');
 			}
 			$form['ig_es_cron_adminmail'] = $es_cron_adminmail;

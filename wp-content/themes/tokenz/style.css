@@ -610,7 +610,7 @@ blockquote:before {
 a.fw-btn,
 button,
 input[type="button"],
-input[type="submit"], .es_submit_button[type="button"] {
+input[type="submit"], .es_submit_button[type="button"], .es_submit_button[type="submit"] {
   color: #fff;
   background: #24186b;
   -webkit-box-sizing: border-box;
@@ -637,7 +637,7 @@ input[type="submit"], .es_submit_button[type="button"] {
 a.fw-btn:hover,
 button:hover,
 input[type="button"]:hover,
-input[type="submit"]:hover, .es_submit_button[type="button"]:hover {
+input[type="submit"]:hover, .es_submit_button[type="button"]:hover, .es_submit_button[type="submit"]:hover {
   -webkit-filter: contrast(1.4);
   filter: contrast(1.4);
   color: #fff;
@@ -1559,16 +1559,18 @@ input.search-submit {
   margin: 0 0 0 -35px;
 }
 
-.es_submit_button[type="button"] {
+.es_submit_button[type="button"], .es_submit_button[type="submit"] {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
   background: #fff;
   border-radius: 35px;
   color: #000;
   height: 40px;
   line-height: 40px;
-  min-width: 135px;
+  min-width: inherit;
 }
 
-.es_submit_button[type="button"]:hover {
+.es_submit_button[type="button"]:hover, .es_submit_button[type="submit"]:hover {
   background: #ccc;
   color: #000;
 }

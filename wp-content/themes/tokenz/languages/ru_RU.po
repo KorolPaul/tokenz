@@ -1,0 +1,492 @@
+# Copyright (C) 2017 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: _s 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2018-03-13 13:15+0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-04-28 14:46+0300\n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.0.7\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Уууупс! Страница can&rsquo;t не найденна."
+
+#: 404.php:21
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "Похоже, в этом месте ничего не найдено. Попробуйте одну из ссылок ниже или поиск?"
+
+#: 404.php:30
+msgid "Most Used Categories"
+msgstr "Популярные категории"
+
+#. translators: %1$s: smiley
+#: 404.php:47
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Попробуйте поискать в ежемесячных архивах. %1$s"
+
+#. translators: 1: title.
+#: comments.php:34
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr "Один комментарий к &ldquo;%1$s&rdquo;"
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr "Комментарии отключены."
+
+#: footer.php:18
+msgid "https://wordpress.org/"
+msgstr ""
+
+#. translators: %s: CMS name, i.e. WordPress.
+#: footer.php:20
+msgid "Proudly powered by %s"
+msgstr "Работает на %s"
+
+#. translators: 1: Theme name, 2: Theme author.
+#: footer.php:25
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: functions.php:47
+msgid "Primary"
+msgstr "Главное"
+
+#: functions.php:105
+msgid "Sidebar"
+msgstr "Cайдбар"
+
+#: functions.php:107
+msgid "Add widgets here."
+msgstr "Добавьте виджеты здесь."
+
+#: header.php:24
+msgid "Skip to content"
+msgstr "Перейти к содержанию"
+
+#: header.php:45
+msgid "Primary Menu"
+msgstr "Главное меню"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:52
+msgid ", "
+msgstr ""
+
+#. translators: 1: list of categories.
+#: inc/template-tags.php:55
+msgid "Posted in %1$s"
+msgstr "Опубликовано  %1$s"
+
+#. translators: 1: list of tags.
+#: inc/template-tags.php:62
+msgid "Tagged %1$s"
+msgstr "Помечено %1$s"
+
+#. translators: %s: post title
+#: inc/template-tags.php:72
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Оставьте комментарий <span class=\"screen-reader-text\"> по %s</span>"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:89 template-parts/content-page.php:35
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Редактировать <span class=\"screen-reader-text\">%s</span>"
+
+#. translators: %s: search query.
+#: search.php:21
+msgid "Search Results for: %s"
+msgstr "Результаты поиска для: %s"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:25
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:38
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Извините, но ничто не соответствует вашим условиям поиска. Пожалуйста, попытайтесь снова с другими ключевыми словами."
+
+#: template-parts/content-none.php:44
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Кажется, мы не можем найти то, что вы ищете. Возможно, поиск может помочь."
+
+#: template-parts/content-page.php:22 template-parts/content.php:45
+msgid "Pages:"
+msgstr "Страницы:"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:34
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Читать далее<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#. Theme Name of the plugin/theme
+msgid "_s"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://underscores.me/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Automattic"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://automattic.com/"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:40
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s  Комментария о &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s  Комментария о &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s  Комментариев о &ldquo;%2$s&rdquo;"
+
+#. translators: %s: post date.
+#: inc/template-tags.php:29
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Опубликовано %s"
+
+#. translators: %s: post author.
+#: inc/template-tags.php:35
+msgctxt "post author"
+msgid "by %s"
+msgstr "%s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:59
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/config.php:8
+msgid "Token Dividend"
+msgstr "Дивиденды"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/config.php:9
+msgid "Add a Token Dividend block"
+msgstr "Добавить блок с дивидендами"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/options.php:8
+msgid "Block title"
+msgstr "Заголовок блока"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/options.php:3
+msgid "Block intro text"
+msgstr "Вступительный текст"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/options.php:17
+msgid "Minimum invest amount"
+msgstr "Минимальная сумма инвестиций"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/options.php:22
+msgid "Maximum invest amount"
+msgstr "Максимальная сумма инвестиций"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/options.php:27
+msgid "Return percent"
+msgstr "Итоговые проценты"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:11
+msgid "Invest"
+msgstr "Инвестировать"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:21
+msgid "Projected token profit"
+msgstr "Прогнозируемая выгода"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:25
+msgid "Year 1"
+msgstr "Год 1"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:29
+msgid "Year 2"
+msgstr "Год 2"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:33
+msgid "Year 3"
+msgstr "Год 3"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:37
+msgid "Year 4"
+msgstr "Год 4"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:41
+msgid "Year 5"
+msgstr "Год 5"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:45
+msgid "Total"
+msgstr "Итого"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:51
+msgid "Get"
+msgstr "Сумма"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:52
+msgid "(Projected profit)"
+msgstr "(прогнозируемого дохода)"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:56
+msgid "Reinvestment"
+msgstr "Реинвестирование"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:64
+msgid "Y1"
+msgstr "1"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:70
+msgid "Y2"
+msgstr "2"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:76
+msgid "Y3"
+msgstr "3"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:82
+msgid "Y4"
+msgstr "4"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:88
+msgid "Y5"
+msgstr "5"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:94
+msgid "Return on Investment"
+msgstr "Прибыль на инвестиции"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:97
+msgid "Annual token profit projection based on investment"
+msgstr "Годовой прогноз маржинальной прибыли на основе инвестиций"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/dividend/views/view.php:95
+msgid "per year"
+msgstr "в год"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/media-image/options.php:28
+msgid "Full screen"
+msgstr "На весь экран"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/media-image/options.php:28
+msgid "Make full screen image"
+msgstr "Ширина изображения на весь экран"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/button/options.php:32
+msgid "Button Color"
+msgstr "Цвет кнопки"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/button/options.php:33
+msgid "Choose a color of your button"
+msgstr "Выберите цвет кнопки"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/button/options.php:36
+msgid "Default"
+msgstr "Стандартная"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/button/options.php:37
+msgid "White"
+msgstr "Белая"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/button/options.php:38
+msgid "Yellow"
+msgstr "Желтая"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/button/options.php:39
+msgid "Blue"
+msgstr "Синяя"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/button/options.php:40
+msgid "Big button"
+msgstr "Большая стандартная"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/button/options.php:41
+msgid "Big yellow"
+msgstr "Большая желтая"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/button/options.php:42
+msgid "Big white"
+msgstr "Большая белая"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/column/options.php:7
+#: framework-customizations/extensions/shortcodes/shortcodes/section/options.php:28
+msgid "Custom class"
+msgstr "Дополнительный  класс"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/column/options.php:8
+msgid "Cusom CSS class fot column"
+msgstr "Дополнительный CSS  класс для колонки"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/column/options.php:12
+msgid "Anchor"
+msgstr "Якорь"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/column/options.php:13
+msgid "Anchor for menu items"
+msgstr "Якорь для пунктов меню"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/column/options.php:17
+msgid "Slider item"
+msgstr "Слайд"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/column/options.php:18
+msgid "Use element as slider item"
+msgstr "Сделать элемент частью слайдера"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/section/options.php:7
+msgid "Full Width"
+msgstr "На весь экран"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/section/options.php:29
+msgid "Cusom CSS class fot section"
+msgstr "Дополнительный CSS  класс для секции"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/team-member/options.php:30
+msgid "Linkedin account"
+msgstr "Linkedin аккаунт"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/team-member/options.php:31
+msgid "Enter linkedin account link"
+msgstr "Введите ссылку на  linkedin аккаунт"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/team-member/options.php:36
+msgid "Facebook account"
+msgstr "Facebook аккаунт"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/team-member/options.php:37
+msgid "Enter facebook account link"
+msgstr "Введите ссылку на  facebook аккаунт"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/team-member/options.php:36
+msgid "Twitter account"
+msgstr "Twitter аккаунт"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/team-member/options.php:37
+msgid "Enter twitter account link"
+msgstr "Введите ссылку на twitter аккаунт"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/team-member/options.php:48
+msgid "Medium account"
+msgstr "Medium аккаунт"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/team-member/options.php:49
+msgid "Enter medium account link"
+msgstr "Введите ссылку на  medium аккаунт"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/team-member/options.php:54
+msgid "Compact view"
+msgstr "Компактный вид"
+
+#: framework-customizations/extensions/shortcodes/shortcodes/team-member/options.php:55
+msgid "Set compact mode"
+msgstr "Включить компактное отображение"
+
+#: 404.php:17
+msgid "404"
+msgstr ""
+
+#: 404.php:21
+msgid "Oh, bummer..."
+msgstr "Ох, облом ..."
+
+#: 404.php:22
+msgid "Seems we can't find the page you are looking for"
+msgstr "Кажется, мы не можем найти страницу, которую вы ищете"
+
+#: footer.php:19
+msgid "Subscribe for newsletter"
+msgstr "Подписаться на рассылку"
+
+#: footer.php:24
+msgid "Find us on"
+msgstr "Найти нас"
+
+#: header.php:65
+msgid "Logout"
+msgstr "Выйти"
+
+#: header.php:67
+msgid "Login"
+msgstr "Войти"
+
+#: functions.php:195
+msgid "Tokenz Settings"
+msgstr "Настройки темы"
+
+#: functions.php:313
+msgid "Layout options"
+msgstr "Отображение"
+
+#: functions.php:314
+msgid "Alternative background"
+msgstr "Альтернативный фон страницы"
+
+#: functions.php:315
+msgid "Enable background animation"
+msgstr "Анимация фонового изображения"
+
+#: functions.php:316
+msgid "Enable parallax effect"
+msgstr "Эффеккт параллакса при прокрутке"
+
+#: functions.php:317
+msgid "Currencies icon"
+msgstr "Иконка с криптовалютами"
+
+#: functions.php:323
+msgid "Social accounts"
+msgstr "Соцсети"
+
+#: functions.php:324
+msgid "Instagram Profile Url"
+msgstr "Ссылка на Instagram аккаунт"
+
+#: functions.php:325
+msgid "Twitter Profile Url"
+msgstr "Ссылка на Twitter аккаунт"
+
+#: functions.php:326
+msgid "Facebook Profile Url"
+msgstr "Ссылка на Facebook аккаунт"
+
+#: functions.php:327
+msgid "Skype Profile Url"
+msgstr "Ссылка на Skype аккаунт"
+
+#: functions.php:328
+msgid "Slack Profile Url"
+msgstr "Ссылка на Slack аккаунт"
+
+#: functions.php:329
+msgid "Linkedin Profile Url"
+msgstr "Ссылка на Linkedin аккаунт"
+
+#: functions.php:330
+msgid "Medium Profile Url"
+msgstr "Ссылка на Medium аккаунт"
+
+#: functions.php:331
+msgid "Snapchat Profile Url"
+msgstr "Ссылка на Snapchat аккаунт"
+
+#: functions.php:332
+msgid "Youtube Profile Url"
+msgstr "Ссылка на Youtube аккаунт"

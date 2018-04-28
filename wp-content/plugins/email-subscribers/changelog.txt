@@ -4,6 +4,43 @@ Author		: Icegram
 Author URI	: https://www.icegram.com/
 License		: GPLv3
 
+***********************************************************Version 3.4.12************************************************************
+
+* Fix: Some users getting 'Invalid email address' for valid email address during form submission
+* Fix: Empty email field not showing validation errors during form submission
+* Update: Make email field required in the subscribe form
+* Update: Remove extra error notices
+* Update: POT file
+* Localization: Translation for German Deutsch (de_DE) language updated (Thanks to Markus Buschmann)
+* Localization: Made all translation files up-to-date with latest POT file
+
+***********************************************************Version 3.4.11************************************************************
+
+* Fix: Special characters in the post title showing as html entities when using {{POSTTITLE}} keyword [due to `get_the_title($post)`]
+* Fix: 'Oops.. Unexpected error occurred 0.' in Email Subscribers - Group Selector form when subscriber status is unconfirmed or unsubscribed
+
+************************************************************Version 3.4.10************************************************************
+
+* New: Improvements in the subscribe form
+* New: Improvements in the form submission process
+* Fix: Prevent spam signups
+* Update: POT file
+* Localization: Made all translation files up-to-date with latest POT file
+
+************************************************************Version 3.4.9************************************************************
+
+* New: Show Viewed email count from total sent emails in Delivery Reports
+* New: Use `get_the_title($post)` for getting post title to make it extendable
+* New: Inform users that default post notifications are enabled by default
+* Fix: Prevent spam signups
+* Fix: Double header MIME Type and X-Mailer in wp_mail() causing email to bounce in some cases
+* Update: Text improvements in unsubscribe link (New users only)
+* Update: Show upgrade notice for Pro plugin only if Pro plugin is not activated
+* Update: POT file
+* Localization: Translation for Polish (pl_PL) language updated (Thanks to Witold)
+* Localization: Translation for German Deutsch (de_DE) language updated (Thanks to Markus Buschmann)
+* Localization: Made all other translation files up-to-date with latest POT file
+
 ************************************************************Version 3.4.8************************************************************
 
 * Fix: Security vulnerability (Thanks to Dominykas Gelucevicius from [ThreatPress Security](https://profiles.wordpress.org/threatpress))
@@ -422,7 +459,7 @@ License		: GPLv3
 
 * Tested upto 4.3
 * Option available to add same email address to multiple group name
-* Cron Mail option added. With this option you can schedule cron jobs for newsletter and notification emails. Using this cron option you can schedule mail (example 100 mails per hour)
+* Cron Mail option added. With this option you can schedule cron jobs `sletter and notification emails. Using this cron option you can schedule mail (example 100 mails per hour)
 * Group Name added in the export list.
 * Mail Type option has been added in the Send Mail admin page. With this option you can add the mails into cron job or you can send the mail immediately.
 * Notification Status option has been added in the notification setup page. With this option you can add notification mails into cron job or you can send the mail immediately when new post is published.

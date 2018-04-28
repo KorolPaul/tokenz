@@ -186,6 +186,7 @@ if ($es_error_found == TRUE && isset($es_errors[0]) == TRUE) {
 						?>
 					</td>
 				</tr>
+				<?php do_action('es_after_newsletter_edit_form'); ?>
 			</tbody>
 		</table>
 		<?php $nonce = wp_create_nonce( 'sendmail-nonce' ); ?>

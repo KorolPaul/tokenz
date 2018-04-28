@@ -41,7 +41,7 @@ class es_cls_default {
 			$default['ig_es_confirmcontent'] = "Hi {{NAME}},\r\n\r\nWe have received a subscription request from this email address. Please confirm it by <a href='{{LINK}}'>clicking here</a>.\r\n\r\nIf you still cannot subscribe, please copy this link and paste it in your browser :\r\n{{LINK}} \r\n\r\nThank You\r\n".$blogname;
 			$default['ig_es_optinlink'] = $optinlink;
 			$default['ig_es_unsublink'] = $unsublink;
-			$default['ig_es_unsubcontent'] = "No longer interested in emails from ".$blogname."?. Please <a href='{{LINK}}'>click here</a> to unsubscribe";
+			$default['ig_es_unsubcontent'] = "No longer interested in emails from ".$blogname."? Please <a href='{{LINK}}'>click here</a> to unsubscribe.";
 			$default['ig_es_unsubtext'] = "Thank You, You have been successfully unsubscribed. You will no longer hear from us.";
 			$default['ig_es_successmsg'] = "You have been successfully subscribed.";
 			$default['ig_es_suberror'] = "Oops.. Your request couldn't be completed. This email address seems to be already subscribed / blocked.";
@@ -139,6 +139,8 @@ class es_cls_default {
 
 		$result = es_cls_dbquery::es_view_subscriber_count(0);
 		if ($result == 0) {
+			$form['es_nonce'] = wp_create_nonce( 'es-subscribe' );
+
 			$form["es_email_mail"] = get_option('admin_email');
 			$form["es_email_name"] = "Admin";
 			$form["es_email_group"] = "Public";

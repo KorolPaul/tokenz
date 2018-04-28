@@ -1,11 +1,11 @@
 === Email Subscribers & Newsletters ===
-Contributors: icegram, niravmehta, Mansi Shah, akash123dhawade, sandhyam, storeapps, Tarun.Parswani, ravioza
+Contributors: icegram, niravmehta, Mansi Shah, sandhyam, storeapps, akash123dhawade, Tarun.Parswani, ravioza
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CPTHCDC382KVA
 Author URI: https://www.icegram.com/
 Tags: email marketing, email newsletter form, email signup, email widget, newsletter, newsletter signup, subscribe, subscription form, bulk emails, signup form, list builder, lead generation
 Requires at least: 3.4
-Tested up to: 4.9.2
-Stable tag: 3.4.8
+Tested up to: 4.9.5
+Stable tag: 3.4.12
 License: GPLv3
 License URI: http://www.gnu.org/licenses
 
@@ -160,6 +160,7 @@ Translations on [translate.wordpress.org](https://translate.wordpress.org/) :
 * Czech - Martin & Tomas ([cs_CZ](https://translate.wordpress.org/locale/cs/default/wp-plugins/email-subscribers))
 * Italian - [daepa](https://profiles.wordpress.org/daepa/) ([it_IT](https://translate.wordpress.org/locale/it/default/wp-plugins/email-subscribers))
 * Lithuanian - [kubandrius](https://profiles.wordpress.org/kubandrius/) ([lt_LT](https://translate.wordpress.org/locale/lt/default/wp-plugins/email-subscribers))
+* Russian - [ru_RU](https://translate.wordpress.org/locale/ru/default/wp-plugins/email-subscribers)
 
 You too can contribute to translations and make it 100% complete. Contribute from here - [Translate Email Subscribers into your language](https://translate.wordpress.org/projects/wp-plugins/email-subscribers)
 
@@ -202,91 +203,95 @@ Refer [here](https://www.icegram.com/documentation/es-how-to-add-subscription-bo
 
 Refer [here](https://www.icegram.com/documentation/es-general-plugin-settings/).
 
-= 4. How to Import and export email address? =
+= 4. How does Sync work? =
+
+Refer [here](https://www.icegram.com/documentation/es-how-does-sync-work/).
+
+= 5. How to Import and export email address? =
 
 Refer [here](https://www.icegram.com/documentation/es-how-to-import-or-export-email-address-to-subscriber-list/).
 
-= 5. How to change/update/translate any strings from the plugin? =
+= 6. How to change/update/translate any strings from the plugin? =
 
 Refer steps from [here](https://www.icegram.com/documentation/es-how-to-change-update-translate-any-texts-from-email-subscribers/).
 
-= 6. How to add unsubscribe link in emails? =
+= 7. How to add unsubscribe link in emails? =
 
 Refer [here](https://www.icegram.com/documentation/es-how-to-add-unsubscribe-link-in-emails/).
 
-= 7. How to Create and Send Newsletter Emails? =
+= 8. How to Create and Send Newsletter Emails? =
 
 Refer [here](https://www.icegram.com/documentation/es-how-to-create-and-send-newsletter-emails/).
 
-= 8. What are the available keywords in the Newsletters? =
+= 9. What are the available keywords in the Newsletters? =
 
 Refer [here](https://www.icegram.com/documentation/es-what-are-the-available-keywords-in-the-newsletters/).
 
-= 9. How to Create and Send Post Notification Emails when new posts are published? =
+= 10. How to Create and Send Post Notification Emails when new posts are published? =
 
 Refer [here](https://www.icegram.com/documentation/es-how-to-create-and-send-post-notification-emails-when-new-posts-are-published/).
 
-= 10. What are the available keywords in the Post Notifications? =
+= 11. What are the available keywords in the Post Notifications? =
 
 Refer [here](https://www.icegram.com/documentation/es-what-are-the-available-keywords-in-the-post-notifications/).
 
-= 11. How to send a sample new post notification email to testgroup/myself? =
+= 12. How to send a sample new post notification email to testgroup/myself? =
 
 Refer [here](https://www.icegram.com/documentation/es-how-to-send-a-sample-new-post-notification-email-to-testgroup-myself/).
 
-= 12. How to check sent emails reports? =
+= 13. How to check sent emails reports? =
 
 Refer [here](https://www.icegram.com/documentation/es-how-to-check-sent-emails/).
 
-= 13. How to Add/Update Existing Subscribers Group & Status? =
+= 14. How to Add/Update Existing Subscribers Group & Status? =
 
 Refer [here](https://www.icegram.com/documentation/es-how-to-add-update-existing-subscribers-group/).
 
-= 14. Subscribers are not receiving Emails =
+= 15. Subscribers are not receiving Emails =
 
 Check steps from [here](https://www.icegram.com/documentation/es-subscribers-are-not-receiving-emails/).
 
-= 15. How to show subscribe form inside a popup? =
+= 16. How to show subscribe form inside a popup? =
 
 Refer [here](https://www.icegram.com/documentation/es-how-to-show-subscribe-form-inside-a-popup/).
 
-= 16. How to use Rainmaker’s form in Email Subscribers? =
+= 17. How to use Rainmaker’s form in Email Subscribers? =
 
 Refer [here](https://www.icegram.com/documentation/es-how-to-use-rainmakers-form-in-email-subscribers/).
 
-= 17. How to Redirect Subscribers to a new page/url after successful sign up? =
+= 18. How to Redirect Subscribers to a new page/url after successful sign up? =
 
 Refer [here](https://www.icegram.com/documentation/es-how-to-redirect-subscribers-to-a-new-page-url-after-successful-sign-up/).
 
-= 18. How to add captcha in Subscribe form of Email Subscribers? =
+= 19. How to add captcha in Subscribe form of Email Subscribers? =
 
 Refer [here](https://www.icegram.com/documentation/es-how-to-add-captcha-in-subscribe-form-of-email-subscribers/).
 
-= 19. How to Schedule Cron Emails/auto emails? =
+= 20. How to Schedule Cron Emails/auto emails? =
 
 Refer [here](https://www.icegram.com/documentation/es-how-to-schedule-cron-emails/).
 
-= 20. How to Schedule Cron Emails in cPanel? =
+= 21. How to Schedule Cron Emails in cPanel? =
 
 Refer [here](https://www.icegram.com/documentation/es-how-to-schedule-cron-emails-in-cpanel/).
 
-= 21. How to Schedule Cron Emails in Parallels Plesk? =
+= 22. How to Schedule Cron Emails in Parallels Plesk? =
 
 Refer [here](https://www.icegram.com/documentation/es-how-to-schedule-cron-emails-in-parallels-plesk/).
 
-= 22. What to do if Hosting doesn’t support Cron Jobs? =
+= 23. What to do if Hosting doesn’t support Cron Jobs? =
 
 Refer [here](https://www.icegram.com/documentation/es-what-to-do-if-hosting-doesnt-support-cron-jobs/).
 
-= 23. CSS Help =
+= 24. CSS Help =
 
 Refer [here](https://www.icegram.com/documentation/es-css-help/).
 
-= 24. Email Subscribers FAQ =
+= 25. Email Subscribers FAQ =
 
 Refer [here](https://www.icegram.com/documentation/es-faq/).
 
-= 25. How to add group selection in front end subscription box =
+= 26. How to allow user to select the group when subscribing via subscribe form? =
 
 Use our free plugin [Email Subscribers - Group Selector](https://wordpress.org/plugins/email-subscribers-advanced-form/).
 
@@ -315,6 +320,43 @@ Use our free plugin [Email Subscribers - Group Selector](https://wordpress.org/p
 11. Admin page - Delivery Report of emails i.e. email sent, opened, viewed status, viewed date
 
 == Changelog ==
+
+= 3.4.12 (17.04.2018) =
+
+* Fix: Some users getting 'Invalid email address' for valid email address during form submission
+* Fix: Empty email field not showing validation errors during form submission
+* Update: Make email field required in the subscribe form
+* Update: Remove extra error notices
+* Update: POT file
+* Localization: Translation for German Deutsch (de_DE) language updated (Thanks to Markus Buschmann)
+* Localization: Made all translation files up-to-date with latest POT file
+
+= 3.4.11 (05.04.2018) =
+
+* Fix: Special characters in the post title showing as html entities when using {{POSTTITLE}} keyword [due to `get_the_title($post)`]
+* Fix: 'Oops.. Unexpected error occurred 0.' in Email Subscribers - Group Selector form when subscriber status is unconfirmed or unsubscribed
+
+= 3.4.10 (03.04.2018) =
+
+* New: Improvements in the subscribe form
+* New: Improvements in the form submission process
+* Fix: Prevent spam signups
+* Update: POT file
+* Localization: Made all translation files up-to-date with latest POT file
+
+= 3.4.9 (27.03.2018) =
+
+* New: Show Viewed email count from total sent emails in Delivery Reports
+* New: Use `get_the_title($post)` for getting post title to make it extendable
+* New: Inform users that default post notifications are enabled by default
+* Fix: Prevent spam signups
+* Fix: Double header MIME Type and X-Mailer in wp_mail() causing email to bounce in some cases
+* Update: Text improvements in unsubscribe link (New users only)
+* Update: Show upgrade notice for Pro plugin only if Pro plugin is not activated
+* Update: POT file
+* Localization: Translation for Polish (pl_PL) language updated (Thanks to Witold)
+* Localization: Translation for German Deutsch (de_DE) language updated (Thanks to Markus Buschmann)
+* Localization: Made all other translation files up-to-date with latest POT file
 
 = 3.4.8 (19.01.2018) =
 
@@ -721,6 +763,43 @@ Use our free plugin [Email Subscribers - Group Selector](https://wordpress.org/p
 For the changelog of earlier versions, please refer to the separate [changelog.txt](https://plugins.svn.wordpress.org/email-subscribers/trunk/changelog.txt) file.
 
 == Upgrade Notice ==
+
+= 3.4.12 (17.04.2018) =
+
+* Fix: Some users getting 'Invalid email address' for valid email address during form submission
+* Fix: Empty email field not showing validation errors during form submission
+* Update: Make email field required in the subscribe form
+* Update: Remove extra error notices
+* Update: POT file
+* Localization: Translation for German Deutsch (de_DE) language updated (Thanks to Markus Buschmann)
+* Localization: Made all translation files up-to-date with latest POT file
+
+= 3.4.11 (05.04.2018) =
+
+* Fix: Special characters in the post title showing as html entities when using {{POSTTITLE}} keyword [due to `get_the_title($post)`]
+* Fix: 'Oops.. Unexpected error occurred 0.' in Email Subscribers - Group Selector form when subscriber status is unconfirmed or unsubscribed
+
+= 3.4.10 (03.04.2018) =
+
+* New: Improvements in the subscribe form
+* New: Improvements in the form submission process
+* Fix: Prevent spam signups
+* Update: POT file
+* Localization: Made all translation files up-to-date with latest POT file
+
+= 3.4.9 (27.03.2018) =
+
+* New: Show Viewed email count from total sent emails in Delivery Reports
+* New: Use `get_the_title($post)` for getting post title to make it extendable
+* New: Inform users that default post notifications are enabled by default
+* Fix: Prevent spam signups
+* Fix: Double header MIME Type and X-Mailer in wp_mail() causing email to bounce in some cases
+* Update: Text improvements in unsubscribe link (New users only)
+* Update: Show upgrade notice for Pro plugin only if Pro plugin is not activated
+* Update: POT file
+* Localization: Translation for Polish (pl_PL) language updated (Thanks to Witold)
+* Localization: Translation for German Deutsch (de_DE) language updated (Thanks to Markus Buschmann)
+* Localization: Made all other translation files up-to-date with latest POT file
 
 = 3.4.8 (19.01.2018) =
 

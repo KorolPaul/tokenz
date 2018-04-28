@@ -41,16 +41,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 			box-shadow: 0 0 7px 0 rgba(0, 0, 0, .2);
 		}
 		.wrap.klawoo-form {
-			margin: 20px 20px 0 2px;
+			margin: 1.3em 1.3em 0 0.1em;
+			border-top: 1px dotted #ddd;
 		}
 		.es-ltr {
 			width: 20em;
 			height: 2em;
 		}
 		.es-about-text {
-			margin: 0;
-			font-size: 1.3em;
-			padding-top: 1em;
+			margin-bottom: 2em;
+			font-size: 1em;
+			padding-top: 0.5em;
+		}
+		.es-notify-about-new-post-1 {
+			margin-top: 1em;
+			margin-right: 13em;
+			margin-bottom: 0.3em;
+			font-size: 1.1em;
+		}
+		.es-notify-about-new-post-2 {
+			margin-right: 13em;
+			font-size: 1em;
+			color: gray;
 		}
 		.wrap.about-wrap h1 {
 			font-size: 2.5em;
@@ -81,12 +93,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 		.about-wrap [class$=col] .last-feature {
 			margin-right: 0
 		}
-		.about-wrap .es-badge,.es-support {
+		.es-badge,.es-support {
 			position: absolute;
 			top: 0;
 		}
 		.about-wrap .es-badge {
-			right: 1.3em;
+			right: 1.6em;
 			color: #E1564B;
 			background-color: transparent;
 			padding-top: 100px;
@@ -118,7 +130,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			text-rendering: optimizeLegibility;
 			text-align: right;
 			right: 0;
-			margin-top: 140px;
+			margin-top: 9em;
 			padding-right: 1em;
 		}
 		.es-contact-us {
@@ -147,7 +159,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		.es-integration-guide {
 			text-align:justify;
 		}
-
 		.es_feature, .es_summary {
 			line-height: 1.7em!important;
 		}
@@ -171,7 +182,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="about-header">
 		<h1><?php echo __( 'Welcome to Email Subscribers!', ES_TDOMAIN ); ?></h1>
-		<div class="es-about-text"><?php echo __( 'Thanks for installing and we hope you will enjoy using Email Subscribers.', ES_TDOMAIN ); ?></div>
+		<div class="es-about-text"><?php echo __( 'Thanks for installing and we hope you will enjoy using this plugin.', ES_TDOMAIN ); ?></div>
+		<div class="es-notify-about-new-post-1"><?php echo __( 'By default, subscribers subscribed via Email Subscribers, will receive email updates when you post a new blog. You can turn these updates off like this:', ES_TDOMAIN ); ?></div>
+		<div class="es-notify-about-new-post-2"><?php echo __( 'Email Subscribers -> Post Notification -> Edit -> Select Notification Status when a new post is published -> Disable -> Save.', ES_TDOMAIN ); ?></div>
 		<div class="wrap klawoo-form">
 			<table class="form-table">
 				<tr>
@@ -198,7 +211,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 	<div class="es-donate-link">
-		<?php echo sprintf(__( 'Like Email Subscribers? If yes, then consider %s to support further developments.', ES_TDOMAIN ), '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CPTHCDC382KVA" target="_blank">' . __( 'donating to us', ES_TDOMAIN ) .'</a>' ); ?>
+		<?php echo sprintf(__( '<b>Like Email Subscribers?</b> If yes, then consider %s to support further developments.', ES_TDOMAIN ), '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CPTHCDC382KVA" target="_blank">' . __( 'donating to us', ES_TDOMAIN ) .'</a>' ); ?>
 	</div>
 
     <script type="text/javascript">
@@ -311,6 +324,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<?php echo sprintf(__( 'Modify %s', ES_TDOMAIN ), '<a href="https://www.icegram.com/documentation/es-general-plugin-settings/?utm_source=es&utm_medium=in_app&utm_campaign=view_docs_help_page" target="_blank">' . __( 'default text, email contents', ES_TDOMAIN ) . '</a>' . __( ' (like Confirmation, Welcome, Admin emails), Cron Settings and Assign User Roles', ES_TDOMAIN ) ); ?>
 					</li>
 					<li class="es_faq">
+						<?php echo sprintf(__( '%s', ES_TDOMAIN ), '<a href="https://www.icegram.com/documentation/es-how-does-sync-work/?utm_source=es&utm_medium=in_app&utm_campaign=view_docs_help_page" target="_blank">' . __( 'How does Sync work?', ES_TDOMAIN ) . '</a>' ); ?>
+					</li>
+					<li class="es_faq">
 						<?php echo sprintf(__( '%s', ES_TDOMAIN ), '<a href="https://www.icegram.com/documentation/es-how-to-import-or-export-email-addresses/?utm_source=es&utm_medium=in_app&utm_campaign=view_docs_help_page" target="_blank">' . __( 'How to Import or Export Email Addresses?', ES_TDOMAIN ) . '</a>' ); ?>
 					</li>
 					<li class="es_faq">
@@ -393,7 +409,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<img class="es-esaf-integration" alt="Group Selector" src="<?php echo ES_URL; ?>images/es-esaf-integration.png" />
 			</div>
 			<p class="es-integration-guide">
-				<?php echo __( 'Using our free ', ES_TDOMAIN ); ?>
+				<?php echo __( 'Using our <b>free</b> ', ES_TDOMAIN ); ?>
 				<a target="_blank" href="https://wordpress.org/plugins/email-subscribers-advanced-form/"><?php echo __( 'Group Selector', ES_TDOMAIN ); ?></a>
 				<?php echo __( 'plugin, you can extend Email Subscribers Form functionality by providing an grouping option right next to the form.', ES_TDOMAIN ); ?>
 			</p>
@@ -413,7 +429,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php echo __( 'Don\'t limit your subscriber form to a widget. Embed it within popups, hello bars, slide-ins, sidebars, full screen popups etc.', ES_TDOMAIN ); ?>
 			</p>
 			<p class="es-integration-guide">
-				<?php echo __( 'Using Email Subscribers you can achieve this easily with our free plugin ', ES_TDOMAIN ); ?>
+				<?php echo __( 'Using Email Subscribers you can achieve this easily with our <b>free</b> plugin ', ES_TDOMAIN ); ?>
 				<a target="_blank" href="https://wordpress.org/plugins/icegram/"><?php echo __( 'Icegram', ES_TDOMAIN ); ?></a>
 			</p>
 			<p class="es-integration-guide">
@@ -430,7 +446,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<img class="es-rm-integration" alt="Rainmaker" src="<?php echo ES_URL; ?>images/es-rm-integration.png" />
 			</div>
 			<p class="es-integration-guide">
-				<?php echo __( 'Email subscribers easily integrates with another free plugin ', ES_TDOMAIN ); ?>
+				<?php echo __( 'Email subscribers easily integrates with another <b>free</b> plugin ', ES_TDOMAIN ); ?>
 				<a target="_blank" href="https://wordpress.org/plugins/icegram-rainmaker/"><?php echo __( 'Rainmaker', ES_TDOMAIN ); ?></a>
 			</p>
 			<p class="es-integration-guide">

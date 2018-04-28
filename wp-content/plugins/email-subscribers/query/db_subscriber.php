@@ -77,18 +77,30 @@ class es_cls_dbquery {
 
 		global $wpdb;
 
-		$result = 0;
+		// Security
+		if ( array_key_exists( 'es_nonce', $data ) ) {
+			if ( empty ( $data['es_nonce'] ) || ! wp_verify_nonce( $data['es_nonce'], 'es-subscribe' ) ) {
+				return "invalid";
+			}
+		} elseif ( array_key_exists( 'es_af_nonce', $data ) ) {
+			if ( empty ( $data['es_af_nonce'] ) || ! wp_verify_nonce( $data['es_af_nonce'], 'es_af_form_subscribers' ) ) {
+				return "invalid";
+			}
+		} else {
+			return "invalid";
+		}
 
-		if (!filter_var($data["es_email_mail"], FILTER_VALIDATE_EMAIL)) {
+		if ( !filter_var( $data["es_email_mail"], FILTER_VALIDATE_EMAIL ) ) {
 			return "invalid";
 		}
 
 		$data = apply_filters('es_validate_subscribers_email', $data);
 
-		if($data["es_email_mail"] === 'invalid'){
+		if ( $data["es_email_mail"] === 'invalid' ) {
 			return "invalid";
 		}
 
+		$result = 0;
 		$data["es_email_name"] = sanitize_text_field(esc_attr($data["es_email_name"]));
 		$data["es_email_status"] = sanitize_text_field(esc_attr($data["es_email_status"]));
 		$data["es_email_group"] = sanitize_text_field(esc_attr($data["es_email_group"]));
@@ -280,6 +292,11 @@ class es_cls_dbquery {
 				$form['es_email_group'] = sanitize_text_field(esc_attr($data["es_email_group"]));
 				$form['es_email_status'] = sanitize_text_field(esc_attr($data["es_email_status"]));
 				$form['es_email_id'] = $arrRes[0]["es_email_id"];
+				if ( array_key_exists( 'es_nonce', $data ) ) {
+					$form['es_nonce'] = $data['es_nonce'];
+				} elseif ( array_key_exists( 'es_af_nonce', $data ) ) {
+					$form['es_af_nonce'] = $data['es_af_nonce'];
+				}
 				$action = es_cls_dbquery::es_view_subscriber_ins($form, $action = "update");
 				return $action;
 			}

@@ -128,7 +128,7 @@ class es_cls_registerhook {
 
 			add_option( "ig_es_cronurl", $cronurl );
 			add_option( "ig_es_cron_mailcount", "50" );
-			add_option( "ig_es_cron_adminmail", "Hi Admin,\r\n\r\nCron URL has been triggered successfully on {{DATE}} for the email {{SUBJECT}}. And it sent email to {{COUNT}} recipient(s).\r\n\r\nBest,\r\n".$blogname."" );
+			add_option( "ig_es_cron_adminmail", "Hi Admin,\r\n\r\nCron URL has been triggered successfully on {{DATE}} for the email '{{SUBJECT}}'. And it sent email to {{COUNT}} recipient(s).\r\n\r\nBest,\r\n".$blogname."" );
 
 			update_option( "email-subscribers", "2.9" );
 		}
@@ -252,37 +252,31 @@ class es_cls_registerhook {
 
 	public static function es_load_widget_scripts_styles() {
 
-		wp_register_script( 'es-widget', ES_URL . 'widget/es-widget.js', '', '', true );
+		wp_register_script( 'es-widget', ES_URL . 'widget/es-widget.js', array ('jquery'), '', true );
 		wp_enqueue_script( 'es-widget' );
 		$es_select_params = array(
 			'es_email_notice'       => _x( 'Please enter email address', 'widget-enhanced-select', ES_TDOMAIN ),
-			'es_incorrect_email'    => _x( 'Please provide a valid email address', 'widget-enhanced-select', ES_TDOMAIN ),
-			'es_load_more'          => _x( 'loading...', 'widget-enhanced-select', ES_TDOMAIN ),
-			'es_ajax_error'         => _x( 'Cannot create XMLHTTP instance', 'widget-enhanced-select', ES_TDOMAIN ),
 			'es_success_message'    => _x( 'Successfully Subscribed.', 'widget-enhanced-select', ES_TDOMAIN ),
-			'es_success_notice'     => _x( 'Your subscription was successful! Within a few minutes, kindly check the mail in your mailbox and confirm your subscription. If you can\'t see the mail in your mailbox, please check your spam folder.', 'widget-enhanced-select', ES_TDOMAIN ),
+			'es_success_notice'     => _x( 'Your subscription was successful! Kindly check your mailbox and confirm your subscription. If you don\'t see the email within a few minutes, check the spam/junk folder.', 'widget-enhanced-select', ES_TDOMAIN ),
 			'es_email_exists'       => _x( 'Email Address already exists!', 'widget-enhanced-select', ES_TDOMAIN ),
 			'es_error'              => _x( 'Oops.. Unexpected error occurred.', 'widget-enhanced-select', ES_TDOMAIN ),
 			'es_invalid_email'      => _x( 'Invalid email address', 'widget-enhanced-select', ES_TDOMAIN ),
 			'es_try_later'          => _x( 'Please try after some time', 'widget-enhanced-select', ES_TDOMAIN ),
-			'es_problem_request'    => _x( 'There was a problem with the request', 'widget-enhanced-select', ES_TDOMAIN )
+			'es_ajax_url'           => admin_url( 'admin-ajax.php' ),
 		);
 		wp_localize_script( 'es-widget', 'es_widget_notices', $es_select_params );
 
-		wp_register_script( 'es-widget-page', ES_URL . 'widget/es-widget-page.js', '', '', true );
+		wp_register_script( 'es-widget-page', ES_URL . 'widget/es-widget-page.js', array ('jquery'), '', true );
 		wp_enqueue_script( 'es-widget-page' );
 		$es_select_params = array(
 			'es_email_notice'       => _x( 'Please enter email address', 'widget-page-enhanced-select', ES_TDOMAIN ),
-			'es_incorrect_email'    => _x( 'Please provide a valid email address', 'widget-page-enhanced-select', ES_TDOMAIN ),
-			'es_load_more'          => _x( 'loading...', 'widget-page-enhanced-select', ES_TDOMAIN ),
-			'es_ajax_error'         => _x( 'Cannot create XMLHTTP instance', 'widget-page-enhanced-select', ES_TDOMAIN ),
 			'es_success_message'    => _x( 'Successfully Subscribed.', 'widget-page-enhanced-select', ES_TDOMAIN ),
-			'es_success_notice'     => _x( 'Your subscription was successful! Within a few minutes, kindly check the mail in your mailbox and confirm your subscription. If you can\'t see the mail in your mailbox, please check your spam folder.', 'widget-page-enhanced-select', ES_TDOMAIN ),
+			'es_success_notice'     => _x( 'Your subscription was successful! Kindly check your mailbox and confirm your subscription. If you don\'t see the email within a few minutes, check the spam/junk folder.', 'widget-page-enhanced-select', ES_TDOMAIN ),
 			'es_email_exists'       => _x( 'Email Address already exists!', 'widget-page-enhanced-select', ES_TDOMAIN ),
 			'es_error'              => _x( 'Oops.. Unexpected error occurred.', 'widget-page-enhanced-select', ES_TDOMAIN ),
 			'es_invalid_email'      => _x( 'Invalid email address', 'widget-page-enhanced-select', ES_TDOMAIN ),
 			'es_try_later'          => _x( 'Please try after some time', 'widget-page-enhanced-select', ES_TDOMAIN ),
-			'es_problem_request'    => _x( 'There was a problem with the request', 'widget-page-enhanced-select', ES_TDOMAIN )
+			'es_ajax_url'           => admin_url( 'admin-ajax.php' ),
 		);
 		wp_localize_script( 'es-widget-page', 'es_widget_page_notices', $es_select_params );
 
@@ -701,13 +695,19 @@ class es_cls_registerhook {
 		$screen = get_current_screen();
 		if ( !in_array( $screen->id, array( 'toplevel_page_es-view-subscribers', 'edit-es_template', 'email-subscribers_page_es-notification', 'email-subscribers_page_es-notification', 'email-subscribers_page_es-sendemail', 'email-subscribers_page_es-settings', 'email-subscribers_page_es-sentmail', 'email-subscribers_page_es-general-information' ), true ) ) return;
 
-		$total_subscribers = es_cls_dbquery::es_view_subscriber_count(0);
+		$active_plugins = (array) get_option('active_plugins', array());
+		if (is_multisite()) {
+			$active_plugins = array_merge($active_plugins, get_site_option('active_sitewide_plugins', array()));
+		}
 
-		// To show notice for Paid plans
-		if( $total_subscribers >= 10 ) {
+		// Show ES Pro notice only if ES Pro plugin is not there
+		if ( !( in_array('email-subscribers-premium/email-subscribers-premium.php', $active_plugins) || array_key_exists('email-subscribers-premium/email-subscribers-premium.php', $active_plugins) ) ) {
+
+			$total_subscribers = es_cls_dbquery::es_view_subscriber_count(0);
 			$es_pro_plan_upsell_notice_email_subscribers = get_option( 'es_pro_plan_upsell_notice_email_subscribers' );
-			if ( $es_pro_plan_upsell_notice_email_subscribers != 'no' ) {
 
+			// Show notice if number of subscribers is more than 10 & notice is not dismissed
+			if( $total_subscribers >= 10 && $es_pro_plan_upsell_notice_email_subscribers != 'no' ) {
 				?>
 				<style type="text/css">
 					a.es-admin-btn {
@@ -739,7 +739,6 @@ class es_cls_registerhook {
 					$admin_notice_text_for_pro_plan_upsell = __( '<b>Want readymade email templates?</b> Also want to <b>clean your subscribers list?</b> Come check our Pro plan.', ES_TDOMAIN );
 					echo '<div class="notice notice-warning" style="background-color: cornsilk;"><p style="letter-spacing: 0.6px;">'.$admin_notice_text_for_pro_plan_upsell.'<a target="_blank" style="display:inline-block" class="es-admin-btn" href="'.$url.'">'.__( 'Check Pro plan&nbsp;&nbsp;', ES_TDOMAIN ).'</a><a style="display:inline-block" class="es-admin-btn es-admin-btn-secondary" href="?dismiss_admin_notice=1&option_name=es_pro_plan_upsell_notice">'.__( 'Not interested.', ES_TDOMAIN ).'</a></p></div>';
 			}
-			
 		}
 
 	}
@@ -1004,6 +1003,7 @@ function es_sync_registereduser( $user_id ) {
 			$form['es_email_mail'] = $user_mail;
 			$form['es_email_group'] = $es_sync_unserialized_data['es_registered_group'];
 			$form['es_email_status'] = "Confirmed";
+			$form['es_nonce'] = wp_create_nonce( 'es-subscribe' );
 			$action = es_cls_dbquery::es_view_subscriber_ins($form, "insert");
 
 			if($action == "sus") {
@@ -1052,15 +1052,15 @@ class es_widget_register extends WP_Widget {
 				<?php if( $es_name == "YES" ) { ?>
 					<div class="es_lablebox"><label class="es_widget_form_name"><?php echo __( 'Name', ES_TDOMAIN ); ?></label></div>
 					<div class="es_textbox">
-						<input type="text" id="es_txt_name" class="es_textbox_class" name="es_txt_name" value="" maxlength="225">
+						<input type="text" id="es_txt_name" class="es_textbox_class" name="es_txt_name" value="" maxlength="40">
 					</div>
 				<?php } ?>
 				<div class="es_lablebox"><label class="es_widget_form_email"><?php echo __( 'Email *', ES_TDOMAIN ); ?></label></div>
 				<div class="es_textbox">
-					<input type="text" id="es_txt_email" class="es_textbox_class" name="es_txt_email" onkeypress="if(event.keyCode==13) es_submit_page(event,'<?php echo $url; ?>')" value="" maxlength="225">
+					<input type="email" id="es_txt_email" class="es_textbox_class" name="es_txt_email"  value="" maxlength="40" required>
 				</div>
 				<div class="es_button">
-					<input type="button" id="es_txt_button" class="es_textbox_button es_submit_button" name="es_txt_button" onClick="return es_submit_page(event,'<?php echo $url; ?>')" value="<?php echo __( 'Subscribe', ES_TDOMAIN ); ?>">
+					<input type="submit" id="es_txt_button" class="es_textbox_button es_submit_button" name="es_txt_button" value="<?php echo __( 'Subscribe', ES_TDOMAIN ); ?>">
 				</div>
 				<div class="es_msg" id="es_widget_msg">
 					<span id="es_msg"></span>
@@ -1069,6 +1069,8 @@ class es_widget_register extends WP_Widget {
 					<input type="hidden" id="es_txt_name" name="es_txt_name" value="">
 				<?php } ?>
 				<input type="hidden" id="es_txt_group" name="es_txt_group" value="<?php echo $es_group; ?>">
+				<?php $nonce = wp_create_nonce( 'es-subscribe' ); ?>
+				<input type="hidden" name="es-subscribe" id="es-subscribe" value="<?php echo $nonce; ?>"/>
 			</form>
 		</div>
 		<?php
